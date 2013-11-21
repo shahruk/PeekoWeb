@@ -1,7 +1,3 @@
- window.onerror = function(message, url, lineNumber) {
-	console.log("Error: "+message+" in "+url+" at line "+lineNumber);
-}
-	
 $(function(){
 	var serverUrl = "http://direct.theboxngo.com:8080/";
 	var markers = [];
@@ -13,7 +9,7 @@ $(function(){
 	//When device is ready, do onSuccess.
 	function onDeviceReady(){
 		var options = { timeout: 30000 };
-		alert("READY");
+		alert(window.jQuery);
 		navigator.geolocation.watchPosition(onSuccess, onError, options);
 	}
 	
