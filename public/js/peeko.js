@@ -30,6 +30,7 @@ $(function(){
 		
 		centerMap(position.coords.latitude, position.coords.longitude);
 		url = serverUrl+'blocks/'+position.coords.longitude+'/'+position.coords.latitude;
+		alert(url);
 		$.ajax({
 			url: url,
 			success: function(response){
@@ -37,6 +38,10 @@ $(function(){
 				for(i = 0; i < response.length; i++){
 					addMarker(response[i].loc[0], response[i].loc[1], response[i]._brand[0]['active_block']);
 				}
+			},
+			error: function(a,b){
+				alert(a);
+				alert(b);
 			}
 		});
 	}
