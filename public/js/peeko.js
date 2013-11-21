@@ -9,7 +9,6 @@ $(function(){
 	//When device is ready, do onSuccess.
 	function onDeviceReady(){
 		var options = { timeout: 30000 };
-		alert(window.jQuery);
 		navigator.geolocation.watchPosition(onSuccess, onError, options);
 	}
 	
