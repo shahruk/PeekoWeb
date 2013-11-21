@@ -103,6 +103,7 @@ $(function(){
 			position: location, 
 			map: map
 		});
+		centerMap(location.lat, location.lng, true);
 	}
 	
 	google.maps.event.addListener(map, 'click', function(event) {
