@@ -46,9 +46,7 @@ $(function(){
 	
 	//Show an overlay.
 	function showOverlay(marker, data){
-		var width = $(window).width();
-		var height = $(window).height();
-		$("#productOverlay").width(width).height(height);
+		resizeOverlay();
 		$("#productOverlay").fadeIn(400);
 		$("#productName").text(data.name);
 		$("#description").html(data.description);
@@ -108,11 +106,17 @@ $(function(){
 		placeGenericMarker(event.latLng);
 	});
 	
+	function resizeOverlay(){
+		var width = $(window).width();
+		var height = $(window).height();
+		$("#productOverlay").parent().width(width).height(height);
+	}
+	
 	$("#close").click(function(){
 		$("#productOverlay").fadeOut(400);
 	});
 	
 	$(window).bind('orientationchange resize', function(event,ui){
-		//SetElementHeight();
+		resizeOverlay();
 	});
 });
