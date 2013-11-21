@@ -29,7 +29,7 @@ var locationsSchema = mongoose.Schema({
 
 //Model methods
 locationsSchema.methods.findNear = function(cb){
-	return this.model('Location').find({loc: {$nearSphere: this.loc, $maxDistance: .00055}}, cb);
+	return this.model('Location').find({loc: {$nearSphere: this.loc, $maxDistance: .00025}}, cb);
 }
 
 //Model definitions
