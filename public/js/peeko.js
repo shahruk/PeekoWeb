@@ -14,6 +14,8 @@ $(function(){
 	
 	function onSuccess(position){
 		try{
+			url = serverUrl+'blocks/'+position.coords.longitude+'/'+position.coords.latitude;
+			alert(url);
 			var geo = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 			google.maps.visualRefresh = true;
 			var mapOptions = {
@@ -29,8 +31,7 @@ $(function(){
 				icon: 'http://i.imgur.com/lmt3bW2.png'
 			});
 			centerMap(position.coords.latitude, position.coords.longitude);
-			url = serverUrl+'blocks/'+position.coords.longitude+'/'+position.coords.latitude;
-			alert(url);
+			
 			$.ajax({
 				url: 'http://192.168.1.14:8080/blocks/-74.86631203154779/40.69077840039979',
 				success: function(response){
@@ -44,7 +45,7 @@ $(function(){
 				}
 			});
 		}catch(error){
-			throw error;
+			alert(error);
 		}
 	}
 	
