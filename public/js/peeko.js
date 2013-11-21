@@ -54,7 +54,7 @@ $(function(){
 		$("#productOverlay").fadeIn(400);
 		$("#productName").text(data.name);
 		$("#description").html(data.description);
-		$("#price").data(data.price);
+		$("#price").text(data.price);
 		$("#buyOnline").attr('href', data.url);
 	}
 	
