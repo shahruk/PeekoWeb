@@ -28,7 +28,7 @@ $(function(){
 		try{
 			centerMap(position.coords.latitude, position.coords.longitude);
 			$.ajax({
-				url: 'http://192.168.1.14:8080/blocks/-74.86631203154779/40.69077840039979',
+				url: 'http://direct.theboxngo.com:8080/blocks/-74.86631203154779/40.69077840039979',
 				success: function(response){
 					alert(response.length);
 					for(i = 0; i < response.length; i++){
