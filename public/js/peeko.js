@@ -45,7 +45,6 @@ $(function(){
 	
 	//Show an overlay.
 	function showOverlay(marker, data){
-		alert(data.price);
 		var width = $(window).width() *0.7;
 		var widthOffset = ($(window).width() * 0.3)/2;
 		var height = $(window).height() *0.7;
