@@ -1,6 +1,18 @@
 $(function(){
 	var serverUrl = "http://direct.theboxngo.com:8080/";
 	var markers = [];
+	var mapOptions = {
+		center: new google.maps.LatLng(120, 60),
+		zoom: 18,
+		disableDefaultUI: true,
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	};
+	var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+	var marker = new google.maps.Marker({
+		position: new google.maps.LatLng(120, 60),
+		map: map,
+		icon: 'http://i.imgur.com/lmt3bW2.png'
+	});
 	
 	// Wait for device API libraries to load
     //
@@ -14,24 +26,7 @@ $(function(){
 	
 	function onSuccess(position){
 		try{
-			url = serverUrl+'blocks/'+position.coords.longitude+'/'+position.coords.latitude;
-			alert(url);
-			var geo = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-			google.maps.visualRefresh = true;
-			var mapOptions = {
-				center: geo,
-				zoom: 18,
-				disableDefaultUI: true,
-				mapTypeId: google.maps.MapTypeId.ROADMAP
-			};
-			var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-			var marker = new google.maps.Marker({
-				position: geo,
-				map: map,
-				icon: 'http://i.imgur.com/lmt3bW2.png'
-			});
 			centerMap(position.coords.latitude, position.coords.longitude);
-			
 			$.ajax({
 				url: 'http://192.168.1.14:8080/blocks/-74.86631203154779/40.69077840039979',
 				success: function(response){
