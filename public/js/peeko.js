@@ -14,34 +14,38 @@ $(function(){
 	}
 	
 	function onSuccess(position){
-		var geo = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-		google.maps.visualRefresh = true;
-		var mapOptions = {
-			center: geo,
-			zoom: 18,
-			disableDefaultUI: true,
-			mapTypeId: google.maps.MapTypeId.ROADMAP
-		};
-		var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-		var marker = new google.maps.Marker({
-			position: geo,
-			map: map,
-			icon: 'http://i.imgur.com/lmt3bW2.png'
-		});
-		centerMap(position.coords.latitude, position.coords.longitude);
-		url = serverUrl+'blocks/'+position.coords.longitude+'/'+position.coords.latitude;
-		$.ajax({
-			url: 'http://direct.theboxngo.com:8080/blocks/-74.86631203154779/40.69077840039979',
-			success: function(response){
-				alert(response.length);
-				for(i = 0; i < response.length; i++){
-					addMarker(response[i].loc[0], response[i].loc[1], response[i]._brand[0]['active_block']);
+		try{
+			var geo = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+			google.maps.visualRefresh = true;
+			var mapOptions = {
+				center: geo,
+				zoom: 18,
+				disableDefaultUI: true,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+			var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+			var marker = new google.maps.Marker({
+				position: geo,
+				map: map,
+				icon: 'http://i.imgur.com/lmt3bW2.png'
+			});
+			centerMap(position.coords.latitude, position.coords.longitude);
+			url = serverUrl+'blocks/'+position.coords.longitude+'/'+position.coords.latitude;
+			$.ajax({
+				url: 'http://direct.theboxngo.com:8080/blocks/-74.86631203154779/40.69077840039979',
+				success: function(response){
+					alert(response.length);
+					for(i = 0; i < response.length; i++){
+						addMarker(response[i].loc[0], response[i].loc[1], response[i]._brand[0]['active_block']);
+					}
+				},
+				error: function (a,b,c){
+					alert("TEST");
 				}
-			},
-			error: function (a,b,c){
-				alert("TEST");
-			}
-		});
+			});
+		}catch(error){
+			throw error;
+		}
 	}
 	
 	function onError(error) {
