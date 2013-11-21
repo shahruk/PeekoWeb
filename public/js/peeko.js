@@ -13,6 +13,7 @@ $(function(){
 	}
 	
 	function onSuccess(position){
+		alert("A");
 		var geo = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 		google.maps.visualRefresh = true;
 		var mapOptions = {
