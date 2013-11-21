@@ -1,6 +1,7 @@
 $(function(){
 	var serverUrl = "http://direct.theboxngo.com:8080/";
 	var markers = [];
+	var firstRun = true;
 	var mapOptions = {
 		center: new google.maps.LatLng(120, 60),
 		zoom: 18,
@@ -14,6 +15,8 @@ $(function(){
 		icon: 'http://i.imgur.com/lmt3bW2.png'
 	});
 	
+	var userMarker;
+	
 	// Wait for device API libraries to load
     //
     document.addEventListener("deviceready", onDeviceReady, false);
@@ -26,15 +29,10 @@ $(function(){
 	
 	function onSuccess(position){
 		try{
-			centerMap(position.coords.latitude, position.coords.longitude);
-			$.ajax({
-				url: serverUrl+'blocks/'+position.coords.longitude+'/'+position.coords.latitude,
-				success: function(response){
-					for(i = 0; i < response.length; i++){
-						addMarker(response[i].loc[0], response[i].loc[1], response[i]._brand[0]['active_block']);
-					}
-				}
-			});
+			centerMap(position.coords.latitude, position.coords.longitude, firstRun);
+			if(firstRun){
+				firstRun = false;
+			}
 		}catch(error){
 			alert(error);
 		}
@@ -84,11 +82,32 @@ $(function(){
 		markers.push(tmpMarker);
 	}
 	
-	function centerMap(latitude, longitude){
+	function centerMap(latitude, longitude, moveMap){
 		var geo = new google.maps.LatLng(latitude, longitude);
-		map.setCenter(geo);
+		if(moveMap){
+			map.setCenter(geo);
+		}
 		marker.setPosition(geo);
+		$.ajax({
+			url: serverUrl+'blocks/'+longitude+'/'+latitude,
+			success: function(response){
+				for(i = 0; i < response.length; i++){
+					addMarker(response[i].loc[0], response[i].loc[1], response[i]._brand[0]['active_block']);
+				}
+			}
+		});
 	}
+	
+	function placeGenericMarker(location){
+		userMarker = new google.maps.Marker({
+			position: location, 
+			map: map
+		});
+	}
+	
+	google.maps.event.addListener(map, 'click', function(event) {
+		placeGenericMarker(event.latLng);
+	});
 	
 	$("#close").click(function(){
 		$("#productOverlay").fadeOut(400);
