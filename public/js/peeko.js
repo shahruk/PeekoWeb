@@ -21,13 +21,14 @@ $(function(){
 			disableDefaultUI: true,
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
+		alert("C");
 		var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 		var marker = new google.maps.Marker({
 			position: geo,
 			map: map,
 			icon: 'http://i.imgur.com/lmt3bW2.png'
 		});
-		console.log("A");
+		alert("B");
 		centerMap(position.coords.latitude, position.coords.longitude);
 		url = serverUrl+'blocks/'+position.coords.longitude+'/'+position.coords.latitude;
 		$.ajax({
