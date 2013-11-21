@@ -1,0 +1,43 @@
+body{
+	position: relative;
+}
+#productOverlay{
+	display: none;
+	position: absolute;
+	background: rgba(255,255,255, .9);
+	overflow-y: scroll;
+	z-index: 100;
+	-webkit-border-radius: 9px;
+	padding: 20px;
+}
+
+#productOverlay #productImage{
+	width: 100%;
+	border-radius: 9px;
+}
+
+.gmnoprint{
+	display: none !important;
+}
+
+#map-canvas > div a{
+	display: none;
+}
+
+#productName{
+	text-align: center;
+}
+
+#description{
+	font-size: 12px;
+}
+
+#buyOnline{
+	font-size: 18px;
+	text-decoration: none;
+	padding: 10px 20px;
+}
+
+#buyOnline .glyphicon{
+	display: inline-block;
+}
