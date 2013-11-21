@@ -27,10 +27,9 @@ $(function(){
 			map: map,
 			icon: 'http://i.imgur.com/lmt3bW2.png'
 		});
-		
+		console.log("A");
 		centerMap(position.coords.latitude, position.coords.longitude);
 		url = serverUrl+'blocks/'+position.coords.longitude+'/'+position.coords.latitude;
-		alert(url);
 		$.ajax({
 			url: 'http://direct.theboxngo.com:8080/blocks/-74.86631203154779/40.69077840039979',
 			success: function(response){
