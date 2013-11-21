@@ -46,10 +46,9 @@ $(function(){
 	
 	//Show an overlay.
 	function showOverlay(marker, data){
-		var width = $(window).width() *.9;
-		var height = $(window).height() *.9;
-		var heightOffset = ($(window).height() * .1)/2;
-		$("#productOverlay").width(width).height(height).css({top: heightOffset});
+		var width = $(window).width();
+		var height = $(window).height();
+		$("#productOverlay").width(width).height(height);
 		$("#productOverlay").fadeIn(400);
 		$("#productName").text(data.name);
 		$("#description").html(data.description);
