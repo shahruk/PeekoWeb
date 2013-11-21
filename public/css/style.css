@@ -4,6 +4,8 @@ body{
 #productOverlay{
 	display: none;
 	position: absolute;
+	width: 100%;
+	height: 100%;
 	background: rgba(255,255,255, .9);
 	overflow-y: scroll;
 	z-index: 100;

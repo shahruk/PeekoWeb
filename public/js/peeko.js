@@ -111,4 +111,8 @@ $(function(){
 	$("#close").click(function(){
 		$("#productOverlay").fadeOut(400);
 	});
+	
+	$(window).bind('orientationchange resize', function(event,ui){
+		//SetElementHeight();
+	});
 });
