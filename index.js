@@ -9,6 +9,7 @@ app.get('/blocks/:longi/:lati', function(req, res){
 	location.findNear(
 		function(err,docs) {
 			if (!err) {
+				console.log(docs);
 				res.json(docs);
 			} else {
 				throw err;
