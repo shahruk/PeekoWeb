@@ -116,6 +116,11 @@ $(function(){
 		$("#productOverlay").fadeOut(400);
 	});
 	
+	$("#buyOnline").click(function(event){
+		event.preventDefault();
+		var ref = window.open($(this).attr('href'), '_blank', 'location=yes');
+	});
+	
 	$(window).bind('orientationchange resize', function(event,ui){
 		resizeOverlay();
 	});
