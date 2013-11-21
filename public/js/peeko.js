@@ -89,6 +89,7 @@ $(function(){
 	}
 	
 	function centerMap(latitude, longitude){
+		var geo = new google.maps.LatLng(latitude, longitude);
 		map.setCenter(geo);
 		marker.setPosition(geo);
 	}
