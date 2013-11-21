@@ -15,7 +15,10 @@ $(function(){
 		icon: 'http://i.imgur.com/lmt3bW2.png'
 	});
 	
-	var userMarker;
+	var userMarker = new google.maps.Marker({
+		position: new google.maps.LatLng(120, 60), 
+		map: map
+	});
 	
 	// Wait for device API libraries to load
     //
@@ -86,8 +89,8 @@ $(function(){
 		var geo = new google.maps.LatLng(latitude, longitude);
 		if(moveMap){
 			map.setCenter(geo);
+			marker.setPosition(geo);
 		}
-		marker.setPosition(geo);
 		$.ajax({
 			url: serverUrl+'blocks/'+longitude+'/'+latitude,
 			success: function(response){
@@ -99,12 +102,8 @@ $(function(){
 	}
 	
 	function placeGenericMarker(location){
-		userMarker = new google.maps.Marker({
-			position: location, 
-			map: map
-		});
-		alert(location.lat());
-		centerMap(location.lat(), location.lng(), true);
+		userMarker.setPosition(location);
+		centerMap(location.lat(), location.lng(), false);
 	}
 	
 	google.maps.event.addListener(map, 'click', function(event) {
