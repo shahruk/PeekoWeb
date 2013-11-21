@@ -13,6 +13,10 @@ body{
 	top: 0; left: 0; bottom: 0; right: 0;
 }
 
+button.close{
+	font-size: 42px;
+}
+
 #productOverlay #productImage{
 	width: 100%;
 	border-radius: 9px;
