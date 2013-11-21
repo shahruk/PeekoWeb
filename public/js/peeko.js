@@ -21,14 +21,12 @@ $(function(){
 			disableDefaultUI: true,
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
-		alert("C");
 		var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 		var marker = new google.maps.Marker({
 			position: geo,
 			map: map,
 			icon: 'http://i.imgur.com/lmt3bW2.png'
 		});
-		alert("B");
 		centerMap(position.coords.latitude, position.coords.longitude);
 		url = serverUrl+'blocks/'+position.coords.longitude+'/'+position.coords.latitude;
 		$.ajax({
@@ -38,6 +36,9 @@ $(function(){
 				for(i = 0; i < response.length; i++){
 					addMarker(response[i].loc[0], response[i].loc[1], response[i]._brand[0]['active_block']);
 				}
+			},
+			error: function (a,b,c){
+				alert("TEST");
 			}
 		});
 	}
