@@ -33,9 +33,6 @@ $(function(){
 					for(i = 0; i < response.length; i++){
 						addMarker(response[i].loc[0], response[i].loc[1], response[i]._brand[0]['active_block']);
 					}
-				},
-				error: function (a,b,c){
-					alert("TEST");
 				}
 			});
 		}catch(error){
@@ -48,6 +45,7 @@ $(function(){
 	
 	//Show an overlay.
 	function showOverlay(marker, data){
+		alert(data.price);
 		var width = $(window).width() *0.7;
 		var widthOffset = ($(window).width() * 0.3)/2;
 		var height = $(window).height() *0.7;
