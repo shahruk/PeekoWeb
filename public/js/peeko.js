@@ -46,15 +46,14 @@ $(function(){
 	
 	//Show an overlay.
 	function showOverlay(marker, data){
-		var width = $(window).width() *0.7;
-		var widthOffset = ($(window).width() * 0.3)/2;
-		var height = $(window).height() *0.7;
-		var heightOffset = ($(window).height() * 0.3)/2;
-		$("#productOverlay").width(width).height(height).css({left: widthOffset, top: heightOffset});
+		var width = $(window).width() *.7;
+		var height = $(window).height() *.7;
+		var heightOffset = ($(window).height() * .3)/2;
+		$("#productOverlay").width(width).height(height).css({top: heightOffset});
 		$("#productOverlay").fadeIn(400);
 		$("#productName").text(data.name);
 		$("#description").html(data.description);
-		$("#price").text(data.price);
+		$("#price").html(data.price);
 		$("#buyOnline").attr('href', data.url);
 	}
 	
