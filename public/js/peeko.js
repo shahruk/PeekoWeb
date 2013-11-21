@@ -1,3 +1,7 @@
+ window.onerror = function(message, url, lineNumber) {
+	console.log("Error: "+message+" in "+url+" at line "+lineNumber);
+}
+	
 $(function(){
 	var serverUrl = "http://direct.theboxngo.com:8080/";
 	var markers = [];
@@ -9,6 +13,7 @@ $(function(){
 	//When device is ready, do onSuccess.
 	function onDeviceReady(){
 		var options = { timeout: 30000 };
+		console.log('Javascript OK');
 		navigator.geolocation.watchPosition(onSuccess, onError, options);
 	}
 	
@@ -48,10 +53,10 @@ $(function(){
 	
 	//Show an overlay.
 	function showOverlay(marker, data){
-		var width = $(window).width() *.7;
-		var widthOffset = ($(window).width() * .3)/2;
-		var height = $(window).height() *.7;
-		var heightOffset = ($(window).height() * .3)/2;
+		var width = $(window).width() *0.7;
+		var widthOffset = ($(window).width() * 0.3)/2;
+		var height = $(window).height() *0.7;
+		var heightOffset = ($(window).height() * 0.3)/2;
 		$("#productOverlay").width(width).height(height).css({left: widthOffset, top: heightOffset});
 		$("#productOverlay").fadeIn(400);
 		$("#productName").text(data.name);
