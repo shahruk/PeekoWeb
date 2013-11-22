@@ -56,7 +56,7 @@ $(function(){
 	
 	//Add a marker
 	function addMarker(longitude, latitude, data){
-		alert(data.active_block['icon']);
+		alert(data);
 		var tmpMarker = new google.maps.Marker({
 			position: new google.maps.LatLng(latitude, longitude),
 			map: map,
