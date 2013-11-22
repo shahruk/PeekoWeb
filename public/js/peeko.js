@@ -61,7 +61,8 @@ $(function(){
 			map: map,
 			icon: {
 				url: serverUrl+'brands/'+data.active_block['icon'],
-				size: new google.maps.Size(80, 100),
+				size: new google.maps.Size(160, 200),
+				scaledSize: new google.maps.Size(80,100),
 				zIndex: 1,
 				optimized: false,
 				animation: google.maps.Animation.DROP,
