@@ -123,7 +123,7 @@ $(function(){
 	
 	$("#locateMe").on("click", function(event){
 		event.preventDefault();
-		firstRun = false;
+		firstRun = true;
 		navigator.geolocation.getCurrentPosition(onSuccess, onError);
 	});
 	
