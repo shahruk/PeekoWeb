@@ -56,7 +56,6 @@ $(function(){
 	
 	//Add a marker
 	function addMarker(longitude, latitude, data){
-		alert(serverUrl+'brands/'+data.active_block['icon'])
 		var tmpMarker = new google.maps.Marker({
 			position: new google.maps.LatLng(latitude, longitude),
 			map: map,
@@ -66,7 +65,6 @@ $(function(){
 				scaledSize: new google.maps.Size(80,100),
 				origin: new google.maps.Point(3,10),
 				zIndex: 1,
-				optimized: false,
 				animation: google.maps.Animation.DROP,
 				// The anchor for this image is the base of the flagpole at 0,32.
 				anchor: new google.maps.Point(81,190)
