@@ -30,10 +30,11 @@ $(function(){
 	//When device is ready, do onSuccess.
 	function onDeviceReady(){
 		var options = { timeout: 30000 };
-		navigator.geolocation.watchPosition(onSuccess, onError, options);
+		navigator.geolocation.getCurrentPosition(onSuccess, onError);
 	}
 	
 	function onSuccess(position){
+		alert("A");
 		try{
 			centerMap(position.coords.latitude, position.coords.longitude, firstRun);
 			if(firstRun){
@@ -123,6 +124,7 @@ $(function(){
 	
 	$("#locateMe").on("click", function(event){
 		event.preventDefault();
+		alert("B");
 		navigator.geolocation.getCurrentPosition(onSuccess, onError);
 	});
 	
