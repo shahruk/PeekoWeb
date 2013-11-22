@@ -60,22 +60,21 @@ $(function(){
 			position: new google.maps.LatLng(latitude, longitude),
 			map: map,
 			icon: {
-				url: data.icon,
-				size: new google.maps.Size(184, 69),
+				url: serverUrl+'/brands/'+data.active_block['icon'],
+				size: new google.maps.Size(80, 100),
 				zIndex: 1,
 				// The anchor for this image is the base of the flagpole at 0,32.
 				anchor: new google.maps.Point(92,70)
 			}
 		});
 		google.maps.event.addListener(tmpMarker, 'click', function() { 
-			if(tmpMarker.getZIndex() == 10){
-				showOverlay(tmpMarker, data);
-			}else{
+			if(tmpMarker.getZIndex() != 10){
 				for(i = 0; i < markers.length; i++){
 					markers[i].setZIndex(1);
 				}
-			   tmpMarker.setZIndex(10);
+				 tmpMarker.setZIndex(10);
 			}
+			showOverlay(tmpMarker, data['active_block']);
 		});
 	
 		markers.push(tmpMarker);
