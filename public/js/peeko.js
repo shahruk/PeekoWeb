@@ -12,7 +12,10 @@ $(function(){
 	var marker = new google.maps.Marker({
 		position: new google.maps.LatLng(120, 60),
 		map: map,
-		icon: 'http://i.imgur.com/lmt3bW2.png'
+		icon: {
+			url: 'http://i.imgur.com/lmt3bW2.png',
+			animation: google.maps.Animation.DROP
+		}
 	});
 	
 	var userMarker = new google.maps.Marker({
@@ -56,7 +59,6 @@ $(function(){
 	
 	//Add a marker
 	function addMarker(longitude, latitude, data){
-		try{
 		var tmpMarker = new google.maps.Marker({
 			position: new google.maps.LatLng(latitude, longitude),
 			map: map,
@@ -77,9 +79,6 @@ $(function(){
 		});
 	
 		markers.push(tmpMarker);
-	}catch(error){
-		alert(error);
-	}
 	}
 	
 	function centerMap(latitude, longitude, moveMap){
@@ -120,6 +119,11 @@ $(function(){
 	$("#buyOnline").click(function(event){
 		event.preventDefault();
 		var ref = window.open($(this).attr('href'), '_blank', 'location=yes');
+	});
+	
+	$("#locateMe").on("click", function(event){
+		event.preventDefault();
+		navigator.geolocation.getCurrentPosition(onSuccess);
 	});
 	
 	$(window).bind('orientationchange resize', function(event,ui){
