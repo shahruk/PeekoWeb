@@ -123,7 +123,7 @@ $(function(){
 	
 	$("#locateMe").on("click", function(event){
 		event.preventDefault();
-		navigator.geolocation.getCurrentPosition(onSuccess);
+		navigator.geolocation.getCurrentPosition(onSuccess, onError);
 	});
 	
 	$(window).bind('orientationchange resize', function(event,ui){
