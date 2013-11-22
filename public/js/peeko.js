@@ -34,7 +34,6 @@ $(function(){
 	}
 	
 	function onSuccess(position){
-		alert("A");
 		try{
 			centerMap(position.coords.latitude, position.coords.longitude, firstRun);
 			if(firstRun){
@@ -124,7 +123,7 @@ $(function(){
 	
 	$("#locateMe").on("click", function(event){
 		event.preventDefault();
-		alert("B");
+		firstRun = false;
 		navigator.geolocation.getCurrentPosition(onSuccess, onError);
 	});
 	
