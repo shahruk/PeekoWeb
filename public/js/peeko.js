@@ -62,11 +62,14 @@ $(function(){
 			map: map,
 			icon: {
 				url: serverUrl+'brands/'+data.active_block['icon'],
-				origin: new google.maps.Point(3,10),
-				scaledSize: new google.maps.Size(80, 100),
 				size: new google.maps.Size(160, 200),
+				scaledSize: new google.maps.Size(80,100),
+				origin: new google.maps.Point(3,10),
 				zIndex: 1,
+				optimized: false,
+				animation: google.maps.Animation.DROP,
 				// The anchor for this image is the base of the flagpole at 0,32.
+				anchor: new google.maps.Point(81,190)
 			}
 		});
 		google.maps.event.addListener(tmpMarker, 'click', function() { 
