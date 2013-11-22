@@ -124,6 +124,7 @@ $(function(){
 	$("#locateMe").on("click", function(event){
 		event.preventDefault();
 		firstRun = true;
+		map.setZoom(16);
 		navigator.geolocation.getCurrentPosition(onSuccess, onError);
 	});
 	
