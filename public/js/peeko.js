@@ -56,6 +56,7 @@ $(function(){
 	
 	//Add a marker
 	function addMarker(longitude, latitude, data){
+		alert("Z");
 		alert(serverUrl+'brands/'+data.active_block['icon']);
 		var tmpMarker = new google.maps.Marker({
 			position: new google.maps.LatLng(latitude, longitude),
@@ -87,14 +88,10 @@ $(function(){
 			map.setCenter(geo);
 			marker.setPosition(geo);
 		}
-		
-		alert("A");
 		$.ajax({
 			url: serverUrl+'blocks/'+longitude+'/'+latitude,
 			success: function(response){
-				alert(response.length);
 				for(i = 0; i < response.length; i++){
-					
 					addMarker(response[i].loc[0], response[i].loc[1], response[i]._brand[0]['active_block']);
 				}
 			}
