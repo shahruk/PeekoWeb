@@ -60,7 +60,7 @@ $(function(){
 			position: new google.maps.LatLng(latitude, longitude),
 			map: map,
 			icon: {
-				url: serverUrl+'/brands/'+data.active_block['icon'],
+				url: serverUrl+'brands/'+data.active_block['icon'],
 				size: new google.maps.Size(80, 100),
 				zIndex: 1,
 				// The anchor for this image is the base of the flagpole at 0,32.
