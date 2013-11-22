@@ -64,7 +64,7 @@ $(function(){
 				size: new google.maps.Size(80, 100),
 				zIndex: 1,
 				// The anchor for this image is the base of the flagpole at 0,32.
-				anchor: new google.maps.Point(92,70)
+				anchor: new google.maps.Point(41,95)
 			}
 		});
 		google.maps.event.addListener(tmpMarker, 'click', function() { 
