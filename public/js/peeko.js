@@ -49,12 +49,12 @@ $(function(){
 	
 	//Show an overlay.
 	function showOverlay(marker, data){
-		resizeOverlay();
-		$("#productOverlay").fadeIn(400);
 		$("#productName").text(data.name);
 		$("#description").html(data.description);
 		$("#price").html(data.price);
 		$("#buyOnline").attr('href', data.url);
+		$("#productImage").attr('src', data.images);
+		$("#productOverlay").fadeIn(400);
 	}
 	
 	//Add a marker

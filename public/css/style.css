@@ -72,3 +72,7 @@ button.close{
 	box-shadow: 0 0 5px #5aa8ff;
 	cursor: pointer;
 }
+
+#productImage{
+	max-width: 100%;
+}
