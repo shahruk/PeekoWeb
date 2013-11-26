@@ -1,6 +1,11 @@
 body, html{
 	position: relative;
 }
+
+body{
+	display: none;
+}
+
 #productOverlay{
 	display: none;
 	position: absolute;

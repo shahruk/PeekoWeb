@@ -1,4 +1,5 @@
 $(function(){
+	$("body").show();
 	var serverUrl = "http://direct.theboxngo.com:8080/";
 	var markers = [];
 	var firstRun = true;
@@ -45,6 +46,7 @@ $(function(){
 	}
 	
 	function onError(error) {
+		alert("Unfortunately it looks like you're not connected. You will need to have internet access and allow us to use your location for Peeko to work.");
 	}
 	
 	//Show an overlay.
