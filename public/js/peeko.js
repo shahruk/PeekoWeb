@@ -60,7 +60,11 @@ $(function(){
 		$("#productOverlay").fadeIn(400);
 		shareHandler = $("#share").click(function(e){
 			e.preventDefault();
-			window.plugins.socialsharing.share('$'+data.price+' - '+data.name, null, data.images, data.url);
+			try{
+				window.plugins.socialsharing.share('$'+data.price+' - '+data.name, null, data.images, data.url);
+			}catch(e){
+				alert(e);
+			}
 		});
 	}
 	
