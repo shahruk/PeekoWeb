@@ -84,4 +84,6 @@ button.close{
 
 #countdown{
 	float: right;
+	width: 250px;
+	border: none;
 }
