@@ -5,7 +5,7 @@ $(function(){
 	var firstRun = true;
 	var mapOptions = {
 		center: new google.maps.LatLng(120, 60),
-		zoom: 16,
+		zoom: 18,
 		disableDefaultUI: true,
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	};
@@ -30,7 +30,6 @@ $(function(){
 	
 	//When device is ready, do onSuccess.
 	function onDeviceReady(){
-		var options = { timeout: 30000 };
 		navigator.geolocation.getCurrentPosition(onSuccess, onError);
 	}
 	
