@@ -81,3 +81,7 @@ button.close{
 #productImage{
 	max-width: 100%;
 }
+
+#countdown{
+	float: right;
+}

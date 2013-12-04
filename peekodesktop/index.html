@@ -16,10 +16,12 @@
 		}
     </style>
 	<link rel="stylesheet" type="text/css" href="http://direct.theboxngo.com:8080/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.countdown.css">
 	<link rel="stylesheet" type="text/css" href="http://direct.theboxngo.com:8080/css/style.css">
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHE0HHujtLBkI4senB5h9FIlB3ej-yb9c&sensor=true">
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHE0HHujtLBkI4senB5h9FIlB3ej-yb9c&sensor=true"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+	<script type="text/javascript" src="js/jquery.countdown.js"></script>
 	<script src="js/peeko.js"></script>
 	<script>
 		document.addEventListener("offline", function(){ alert("Unfortunately it looks like you're not connected. You will need to have internet access and allow us to use your location for Peeko to work."); }, false);
@@ -43,6 +45,7 @@
 				</div>
 				<hr />
 				<a href="http://google.com/" class="btn btn-success" target="_system" id="buyOnline"><span class="glyphicon glyphicon-shopping-cart"></span> Visit Website</a>
+				<div id="countdown"></div>
 			</div>
 		</div>
 	</div>
