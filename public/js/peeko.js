@@ -133,8 +133,9 @@ $(function(){
 		}else{
 			targetHour = 7;
 		}
+		alert(targetHour);
 		countdown.setHours(targetHour,0,0,0);
-		$('#countdown').countdown({until: countdown}); 
+		//$('#countdown').countdown({until: countdown}); 
 	}
 	
 	$("#close").click(function(){
