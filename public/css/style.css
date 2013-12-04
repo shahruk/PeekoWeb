@@ -93,6 +93,8 @@ button.close{
 	float: right;
 }
 
+#map-canvas { height: 100% }
+#peeko { display: none; }
 @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 480px) {
