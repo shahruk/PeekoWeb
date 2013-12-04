@@ -107,6 +107,7 @@ and (max-device-width : 480px) {
 		display: block;
 		text-align: center;
 		float: none;
+		width: auto;
 	}
 
 }
