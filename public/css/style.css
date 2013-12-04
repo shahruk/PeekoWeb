@@ -88,3 +88,7 @@ button.close{
 	border: none;
 	background: none;
 }
+
+#share{
+	float: right;
+}
