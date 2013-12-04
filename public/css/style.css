@@ -92,3 +92,16 @@ button.close{
 #share{
 	float: right;
 }
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+/* Styles */
+	
+	#countdown{
+		display: block;
+		text-align: center;
+		float: none;
+	}
+
+}
