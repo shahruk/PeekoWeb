@@ -3,6 +3,8 @@ $(function(){
 	var serverUrl = "http://direct.theboxngo.com:8080/";
 	var markers = [];
 	var firstRun = true;
+	var shareHandler;
+	
 	var mapOptions = {
 		center: new google.maps.LatLng(120, 60),
 		zoom: 18,
@@ -56,6 +58,10 @@ $(function(){
 		$("#buyOnline").attr('href', data.url);
 		$("#productImage").attr('src', data.images);
 		$("#productOverlay").fadeIn(400);
+		shareHandler = $("#share").click(function(e){
+			e.preventDefault();
+			window.plugins.socialsharing.share('$'+data.price+' - '+data.name, null, data.images, data.url);
+		});
 	}
 	
 	//Add a marker

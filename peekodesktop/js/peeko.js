@@ -3,6 +3,8 @@ $(function(){
 	var serverUrl = "http://localhost:8080/";
 	var markers = [];
 	var firstRun = true;
+	var shareHandler;
+	
 	var styles = {
 		stylers: [
 			{ visibility: "off"}
@@ -79,6 +81,10 @@ $(function(){
 		$("#buyOnline").attr('href', data.url);
 		$("#productImage").attr('src', data.images);
 		$("#productOverlay").fadeIn(400);
+		shareHandler = $("#share").click(function(e){
+			e.preventDefault();
+			window.plugins.socialsharing.share('$'+data.price+' - '+data.name, null, data.images, data.url);
+		});
 	}
 	
 	//Add a marker
