@@ -98,6 +98,11 @@ and (min-device-width : 320px)
 and (max-device-width : 480px) {
 /* Styles */
 	
+	#buyOnline{
+		display: block;
+		margin-bottom: 10px;
+	}
+	
 	#countdown{
 		display: block;
 		text-align: center;
