@@ -59,7 +59,6 @@ $(function(){
 		$("#productImage").attr('src', data.images);
 		$("#productOverlay").fadeIn(400);
 		shareHandler = $("#share").click(function(e){
-			alert("A");
 			e.preventDefault();
 			try{
 				window.plugins.socialsharing.share('$'+data.price+' - '+data.name, null, data.images, data.url);

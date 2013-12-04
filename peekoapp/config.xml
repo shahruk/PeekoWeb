@@ -41,8 +41,8 @@
     <preference value='true' name='AutoHideSplashScreen'/>
     <preference value='cloud' name='BackupWebStorage'/>
     <preference value='false' name='EnableLocation'/>
-    <plugins>
-    </plugins>
+    <plugins></plugins>
+	<gap:plugin name="nl.x-services.plugins.socialsharing" />
     <preference value='false' name='disable-cursor'/>
     <preference value='none' name='permissions'/>
     <preference value='true' name='exit-on-suspend'/>
