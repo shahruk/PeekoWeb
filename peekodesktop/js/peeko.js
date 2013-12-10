@@ -12,7 +12,7 @@ $(function(){
 	};
 	var mapOptions = {
 		center: new google.maps.LatLng(120, 60),
-		zoom: 18,
+		zoom: 10,
 		disableDefaultUI: true,
 		mapTypeId: google.maps.MapTypeId.ROADMAP,
 		styles: styles
@@ -22,7 +22,8 @@ $(function(){
 		position: new google.maps.LatLng(120, 60),
 		map: map,
 		icon: {
-			url: 'http://i.imgur.com/lmt3bW2.png',
+			url: '/img/me.png',
+			scaledSize: new google.maps.Size(24,24),
 			animation: google.maps.Animation.DROP
 		}
 	});
@@ -121,6 +122,7 @@ $(function(){
 			url: serverUrl+'blocks/'+longitude+'/'+latitude,
 			success: function(response){
 				for(i = 0; i < response.length; i++){
+					map.setZoom(18);
 					addMarker(response[i].loc[0], response[i].loc[1], response[i]._brand[0]);
 				}
 			}
@@ -129,7 +131,7 @@ $(function(){
 	
 	function placeGenericMarker(location){
 		userMarker.setPosition(location);
-		centerMap(location.lat(), location.lng(), false);
+		centerMap(location.lat(), location.lng(), false);		
 	}
 	
 	google.maps.event.addListener(map, 'click', function(event) {
@@ -144,11 +146,11 @@ $(function(){
 	
 	function startCountdown(){
 		var countdown = new Date();
-		var targetHour = 0;
+		var targetHour = 7;
 		if((countdown.getHours() >= 7) && (countdown.getHours() < 14)){
-			targetHour = 14;
+			targetHour = 24; //14
 		}else{
-			targetHour = 7;
+			targetHour = 24; //7
 		}
 		countdown.setHours(targetHour,0,0,0);
 		$('#countdown').countdown({until: countdown}); 
