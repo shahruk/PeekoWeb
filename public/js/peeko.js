@@ -101,7 +101,7 @@ $(function(){
 			map.setCenter(geo);
 			marker.setPosition(geo);
 		}else{
-			map.setZoom(18);
+			map.setZoom(15);
 		}
 		$.ajax({
 			url: serverUrl+'blocks/'+longitude+'/'+latitude,
