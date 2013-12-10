@@ -17,7 +17,7 @@ $(function(){
 		map: map,
 		icon: {
 			url: serverUrl+'img/me.png',
-			scaledSize: new google.maps.Size(24,24),
+			scaledSize: new google.maps.Size(24,28),
 			animation: google.maps.Animation.DROP
 		}
 	});

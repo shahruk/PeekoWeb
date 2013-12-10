@@ -22,8 +22,8 @@ $(function(){
 		position: new google.maps.LatLng(120, 60),
 		map: map,
 		icon: {
-			url: '/img/me.png',
-			scaledSize: new google.maps.Size(24,24),
+			url: serverUrl+'img/me.png',
+			scaledSize: new google.maps.Size(24,28),
 			animation: google.maps.Animation.DROP
 		}
 	});
