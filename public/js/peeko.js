@@ -16,7 +16,7 @@ $(function(){
 		position: new google.maps.LatLng(120, 60),
 		map: map,
 		icon: {
-			url: url+'img/me.png',
+			url: serverUrl+'img/me.png',
 			scaledSize: new google.maps.Size(24,24),
 			animation: google.maps.Animation.DROP
 		}
