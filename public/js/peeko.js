@@ -16,7 +16,8 @@ $(function(){
 		position: new google.maps.LatLng(120, 60),
 		map: map,
 		icon: {
-			url: 'http://i.imgur.com/lmt3bW2.png',
+			url: '/img/me.png',
+			scaledSize: new google.maps.Size(24,24),
 			animation: google.maps.Animation.DROP
 		}
 	});
