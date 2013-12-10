@@ -7,7 +7,7 @@ $(function(){
 	
 	var mapOptions = {
 		center: new google.maps.LatLng(120, 60),
-		zoom: 15,
+		zoom: 14,
 		disableDefaultUI: true,
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	};
