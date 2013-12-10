@@ -100,6 +100,7 @@ $(function(){
 		if(moveMap){
 			map.setCenter(geo);
 			marker.setPosition(geo);
+		}else{
 			map.setZoom(18);
 		}
 		$.ajax({
