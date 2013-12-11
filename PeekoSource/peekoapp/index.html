@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Peeko</title>
+	<meta name="viewport" content="width=device-width, target-densitydpi=device-dpi,initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0; display:none; }
+       #map-canvas { height: 90% }
+	  #peeko { 
+			padding: 2px 0;
+			height: 10%;
+			background: -webkit-linear-gradient(top, rgba(58,187,252,1) 0%,rgba(28,149,255,1) 48%,rgba(66,173,244,1) 100%);
+			border-top: 1px solid #1C95FF;
+			border-bottom: 2px solid #1C95FF;
+		}
+    </style>
+	<link rel="stylesheet" type="text/css" href="http://direct.theboxngo.com:8080/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.countdown.css">
+	<link rel="stylesheet" type="text/css" href="http://direct.theboxngo.com:8080/css/style.css">
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHE0HHujtLBkI4senB5h9FIlB3ej-yb9c&sensor=true">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+	<script src="http://direct.theboxngo.com:8080/js/SocialSharing.js"></script>
+	<script type="text/javascript" src="js/jquery.countdown.js"></script>
+	<script src="http://direct.theboxngo.com:8080/js/peeko.js"></script>
+	<script>
+		document.addEventListener("offline", function(){ alert("Unfortunately it looks like you're not connected. You will need to have internet access and allow us to use your location for Peeko to work."); }, false);
+	</script>
+  </head>
+  <body>
+	<div id="locateMe"><span class="glyphicon glyphicon-pushpin"></span></div>
+	<div id="productOverlay">
+		<div class="clearfix">
+			<button id="close" type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<img id="productImage" src="" />
+			</div>
+			<div class="col-md-6">
+				<h3 id="productName"></h3>
+				<a href="#" class="btn btn-primary" id="share"><span class="glyphicon glyphicon-share"></span> Share This </a>
+				<h3 style="margin-top: 0;">$<span id="price">0.00</span></h3>
+				<hr />
+				<div id="description">
+				</div>
+				<hr />
+				<a href="http://google.com/" class="btn btn-success" target="_system" id="buyOnline"><span class="glyphicon glyphicon-shopping-cart"></span> Visit Website</a>
+				<div id="countdown"></div>
+			</div>
+		</div>
+	</div>
+	<div id="peeko">
+		<img style="height: 100%; display: block;" src="img/logo.png" />
+	</div>
+  <div id="map-canvas"></div>
+  </body>
+</html>
