@@ -148,13 +148,15 @@ $(function(){
 	
 	function startCountdown(){
 		var countdown = new Date();
-		var targetHour = 7;
-		if((countdown.getHours() >= 7) && (countdown.getHours() < 14)){
-			targetHour = 24; //14
-		}else{
-			targetHour = 24; //7
+		var targetHour = 1;
+		
+		//If greater than the time, then do it for tomorrow.
+		if(countdown.getHours() >= targetHour){
+			countdown.setDate(countdown.getDate()+1);
 		}
+		
 		countdown.setHours(targetHour,0,0,0);
+		alert(countdown);
 		$('#countdown').countdown({until: countdown}); 
 	}
 	
