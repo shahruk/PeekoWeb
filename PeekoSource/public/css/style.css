@@ -95,7 +95,8 @@ button.close{
 #storeLogo{
 	width:80px;
 	height:100px;
-	vertical-align:middle;
+	display: block;
+	margin: auto;
 }
 
 #map-canvas { height: 100% }
