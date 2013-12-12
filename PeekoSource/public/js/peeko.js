@@ -131,6 +131,7 @@ $(function(){
 	function startCountdown(){
 		var countdown = new Date();
 		var targetHour = 0;
+		alert(countdown.getHours());
 		if((countdown.getHours() >= 7) && (countdown.getHours() < 14)){
 			targetHour = 14;
 		}else{
