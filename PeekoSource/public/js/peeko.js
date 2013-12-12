@@ -130,18 +130,14 @@ $(function(){
 	
 	function startCountdown(){
 		var countdown = new Date();
-		var targetHour = 6;
-		/*
-		alert(countdown.getHours());
-		if((countdown.getHours() >= 7) && (countdown.getHours() < 14)){
-			targetHour = 14;
-		}else{
-			targetHour = 7;
+		var targetHour = 1;
+		
+		//If greater than the time, then do it for tomorrow.
+		if(countdown.getHours() >= targetHour){
+			countdown.setDate(countdown.getDate()+1);
 		}
-		alert(targetHour);
-		*/
+		
 		countdown.setHours(targetHour,0,0,0);
-		alert(countdown);
 		$('#countdown').countdown({until: countdown}); 
 	}
 	
