@@ -34,6 +34,7 @@ a.addNew{
 			<td><?php echo $this->Html->image($blocks[$i]['Block']['images'], array('url' => $blocks[$i]['Block']['url'])); ?></td>
 			<td><?php echo $this->Html->link($blocks[$i]['Block']['name'],  array('controller' => 'blocks', 'action' => 'edit', $blocks[$i]['Block']['id'])); ?></td>
 			<td>$<?php echo $blocks[$i]['Block']['price']; ?></td>
+			<td><?php echo date('m-d-Y', strtotime($elysium.' +'.$blocks[$i]['Block']['number'].' days')); ?></td>
 			<td class="actions"><?php echo $this->Html->link('Edit', array('controller' => 'blocks', 'action' => 'edit', $blocks[$i]['Block']['id'])); ?></td>
 			<td>Block #<?php echo $blocks[$i]['Block']['number']; ?></td>
 		</tr>
