@@ -156,7 +156,6 @@ $(function(){
 		}
 		
 		countdown.setHours(targetHour,0,0,0);
-		alert(countdown);
 		$('#countdown').countdown({until: countdown}); 
 	}
 	
