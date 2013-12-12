@@ -1,6 +1,6 @@
 $(function(){
 	$("body").show();
-	var serverUrl = "http://direct.theboxngo.com:8080/";
+	var serverUrl = "http://direct.peekoapp.com:8080/";
 	var markers = [];
 	var firstRun = true;
 	var shareHandler;
