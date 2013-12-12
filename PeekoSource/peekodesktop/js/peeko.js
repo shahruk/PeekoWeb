@@ -82,6 +82,7 @@ $(function(){
 		$("#buyOnline").attr('href', data.url);
 		$("#productImage").attr('src', data.images);
 		$("#productOverlay").fadeIn(400);
+		$("#storeLogo").attr('src', serverUrl+'brands/'+data.icon);
 		shareHandler = $("#share").click(function(e){
 			e.preventDefault();
 			window.plugins.socialsharing.share('$'+data.price+' - '+data.name, null, data.images, data.url);

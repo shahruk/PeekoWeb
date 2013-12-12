@@ -92,6 +92,11 @@ button.close{
 #share{
 	float: right;
 }
+#storeLogo{
+	width:80px;
+	height:100px;
+	vertical-align:middle;
+}
 
 #map-canvas { height: 100% }
 #peeko { display: none; }

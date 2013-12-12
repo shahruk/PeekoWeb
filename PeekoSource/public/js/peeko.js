@@ -1,6 +1,6 @@
 $(function(){
 	$("body").show();
-	var serverUrl = "http://direct.peekoapp.com:8080/";
+	var serverUrl = "http://peekoapp.com:8080/";
 	var markers = [];
 	var firstRun = true;
 	var shareHandler;
@@ -60,6 +60,7 @@ $(function(){
 		$("#price").html(data.price);
 		$("#buyOnline").attr('href', data.url);
 		$("#productImage").attr('src', data.images);
+		$("#storeLogo").attr('src', serverUrl+'brands/'+data.icon);
 		$("#productOverlay").fadeIn(400);
 		shareHandler = $("#share").click(function(e){
 			e.preventDefault();
