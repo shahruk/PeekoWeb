@@ -1,3 +1,0 @@
-[submodule "app/plugin/Mongodb"]
-	path = app/plugin/Mongodb
-	url = git://github.com/ichikaway/cakephp-mongodb.git
