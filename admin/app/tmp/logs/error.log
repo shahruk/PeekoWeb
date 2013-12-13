@@ -1,0 +1,658 @@
+2013-12-05 09:05:49 Error: [MissingControllerException] Controller class LocationsController could not be found.
+Exception Attributes: array (
+  'class' => 'LocationsController',
+  'plugin' => NULL,
+)
+Request URL: /peekoadmin/locations
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-05 09:12:05 Error: [MissingActionException] Action BlocksController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'BlocksController',
+  'action' => 'index',
+)
+Request URL: /peekoadmin/blocks
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BlocksController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-12-05 09:14:52 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /peekoadmin/img/hollister.png
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-05 09:14:52 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /peekoadmin/img/americaneagle.png
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-05 09:14:52 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /peekoadmin/img/mcdonalds.png
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-05 09:14:52 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /peekoadmin/img/macys.png
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-05 09:14:52 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /peekoadmin/img/apple.png
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-05 09:14:52 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /peekoadmin/img/starbucks.png
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-05 09:14:53 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /peekoadmin/img/jcpenney.png
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-05 09:14:52 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /peekoadmin/img/victoriassecret.png
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-05 09:14:53 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /peekoadmin/img/burgerking.png
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-05 09:14:53 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /peekoadmin/img/dunkindonuts.png
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-05 09:14:53 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /peekoadmin/img/handm.png
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-05 09:14:53 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /peekoadmin/img/wendys.png
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-05 09:14:53 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /peekoadmin/img/gamestop.png
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-05 09:14:53 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /peekoadmin/img/express.png
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-05 09:14:53 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /peekoadmin/img/subway.png
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-05 09:14:53 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /peekoadmin/img/forever21.png
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-05 09:14:53 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /peekoadmin/img/bestbuy.png
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-05 09:16:06 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [C:\wamp\www\peekoadmin\app\View\Pages\home.ctp, line 2]
+2013-12-05 09:16:06 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /peekoadmin/
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 2)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 2, Array)
+#2 C:\wamp\www\peekoadmin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\pee...', 2, Array)
+#3 C:\wamp\www\peekoadmin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-05 09:19:17 Error: [MissingActionException] Action BlocksController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'BlocksController',
+  'action' => 'index',
+)
+Request URL: /peekoadmin/blocks
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BlocksController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-12-05 09:19:24 Error: [MissingActionException] Action BrandsController::view() could not be found.
+Exception Attributes: array (
+  'controller' => 'BrandsController',
+  'action' => 'view',
+)
+Request URL: /peekoadmin/brands/view/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BrandsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-12-05 09:19:54 Error: [MissingViewException] View file "C:\wamp\www\peekoadmin\app\View\Brands\view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\peekoadmin\\app\\View\\Brands\\view.ctp',
+)
+Request URL: /peekoadmin/brands/view/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\View\View.php(457): View->_getViewFileName(NULL)
+#1 C:\wamp\www\peekoadmin\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#3 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BrandsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-05 09:20:02 Error: [MissingViewException] View file "C:\wamp\www\peekoadmin\app\View\Brands\view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\peekoadmin\\app\\View\\Brands\\view.ctp',
+)
+Request URL: /peekoadmin/brands/view/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\View\View.php(457): View->_getViewFileName(NULL)
+#1 C:\wamp\www\peekoadmin\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#3 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BrandsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-05 09:20:43 Error: [MissingViewException] View file "C:\wamp\www\peekoadmin\app\View\Brands\view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\peekoadmin\\app\\View\\Brands\\view.ctp',
+)
+Request URL: /peekoadmin/brands/view/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\View\View.php(457): View->_getViewFileName(NULL)
+#1 C:\wamp\www\peekoadmin\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#3 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BrandsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-05 09:20:46 Error: [MissingViewException] View file "C:\wamp\www\peekoadmin\app\View\Brands\view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\peekoadmin\\app\\View\\Brands\\view.ctp',
+)
+Request URL: /peekoadmin/brands/view/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\View\View.php(457): View->_getViewFileName(NULL)
+#1 C:\wamp\www\peekoadmin\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#3 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BrandsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-05 09:20:59 Error: [MissingViewException] View file "C:\wamp\www\peekoadmin\app\View\Brands\view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\peekoadmin\\app\\View\\Brands\\view.ctp',
+)
+Request URL: /peekoadmin/brands/view/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\View\View.php(457): View->_getViewFileName(NULL)
+#1 C:\wamp\www\peekoadmin\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#3 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BrandsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-05 09:21:44 Error: [MissingViewException] View file "C:\wamp\www\peekoadmin\app\View\Brands\view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\peekoadmin\\app\\View\\Brands\\view.ctp',
+)
+Request URL: /peekoadmin/brands/view/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\View\View.php(457): View->_getViewFileName(NULL)
+#1 C:\wamp\www\peekoadmin\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#3 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BrandsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-05 09:22:43 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [C:\wamp\www\peekoadmin\app\Controller\BrandsController.php, line 5]
+2013-12-05 09:22:43 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /peekoadmin/brands/view/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 5)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 5, Array)
+#2 C:\wamp\www\peekoadmin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\pee...', 5, Array)
+#3 C:\wamp\www\peekoadmin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-05 09:23:37 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\peekoadmin\app\Controller\BrandsController.php, line 5]
+2013-12-05 09:23:37 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /peekoadmin/brands/view/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 5)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 5, Array)
+#2 C:\wamp\www\peekoadmin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\pee...', 5, Array)
+#3 C:\wamp\www\peekoadmin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-05 09:23:54 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\peekoadmin\app\Controller\BrandsController.php, line 5]
+2013-12-05 09:23:54 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /peekoadmin/brands/view/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 5)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 5, Array)
+#2 C:\wamp\www\peekoadmin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\pee...', 5, Array)
+#3 C:\wamp\www\peekoadmin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-05 09:24:04 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\peekoadmin\app\Controller\BrandsController.php, line 5]
+2013-12-05 09:24:04 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /peekoadmin/brands/view/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 5)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 5, Array)
+#2 C:\wamp\www\peekoadmin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\pee...', 5, Array)
+#3 C:\wamp\www\peekoadmin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-05 09:28:03 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [C:\wamp\www\peekoadmin\app\View\Brands\view.ctp, line 5]
+2013-12-05 09:28:03 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /peekoadmin/brands/view/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 5)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 5, Array)
+#2 C:\wamp\www\peekoadmin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\pee...', 5, Array)
+#3 C:\wamp\www\peekoadmin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-05 09:46:28 Error: [MissingActionException] Action BlocksController::edit() could not be found.
+Exception Attributes: array (
+  'controller' => 'BlocksController',
+  'action' => 'edit',
+)
+Request URL: /peekoadmin/blocks/edit/52a0428ff046ed3c2f000029
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BlocksController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-12-05 09:47:02 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\peekoadmin\app\View\Brands\view.ctp, line 30]
+2013-12-05 09:47:02 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /peekoadmin/brands/view/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 30)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 30, Array)
+#2 C:\wamp\www\peekoadmin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\pee...', 30, Array)
+#3 C:\wamp\www\peekoadmin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-05 09:52:45 Error: [MissingActionException] Action BlocksController::new() could not be found.
+Exception Attributes: array (
+  'controller' => 'BlocksController',
+  'action' => 'new',
+)
+Request URL: /peekoadmin/blocks/new/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BlocksController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-12-05 09:53:44 Error: [MissingActionException] Action BlocksController::new() could not be found.
+Exception Attributes: array (
+  'controller' => 'BlocksController',
+  'action' => 'new',
+)
+Request URL: /peekoadmin/blocks/new/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BlocksController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-12-05 09:53:46 Error: [MissingActionException] Action BlocksController::new() could not be found.
+Exception Attributes: array (
+  'controller' => 'BlocksController',
+  'action' => 'new',
+)
+Request URL: /peekoadmin/blocks/new/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BlocksController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-12-05 09:53:52 Error: Fatal Error (4): syntax error, unexpected 'new' (T_NEW), expecting identifier (T_STRING) in [C:\wamp\www\peekoadmin\app\Controller\BlocksController.php, line 3]
+2013-12-05 09:53:52 Error: [FatalErrorException] syntax error, unexpected 'new' (T_NEW), expecting identifier (T_STRING)
+Request URL: /peekoadmin/blocks/new/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 3)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 3, Array)
+#2 C:\wamp\www\peekoadmin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\pee...', 3, Array)
+#3 C:\wamp\www\peekoadmin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-05 09:54:04 Error: [MissingActionException] Action BlocksController::new() could not be found.
+Exception Attributes: array (
+  'controller' => 'BlocksController',
+  'action' => 'new',
+)
+Request URL: /peekoadmin/blocks/new/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BlocksController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-12-05 09:54:16 Error: [MissingViewException] View file "C:\wamp\www\peekoadmin\app\View\Blocks\add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\peekoadmin\\app\\View\\Blocks\\add.ctp',
+)
+Request URL: /peekoadmin/blocks/add/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\View\View.php(457): View->_getViewFileName(NULL)
+#1 C:\wamp\www\peekoadmin\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#3 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BlocksController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-05 09:54:32 Error: [MissingViewException] View file "C:\wamp\www\peekoadmin\app\View\Blocks\add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\peekoadmin\\app\\View\\Blocks\\add.ctp',
+)
+Request URL: /peekoadmin/blocks/add/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\View\View.php(457): View->_getViewFileName(NULL)
+#1 C:\wamp\www\peekoadmin\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#3 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BlocksController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-05 09:54:34 Error: [MissingViewException] View file "C:\wamp\www\peekoadmin\app\View\Blocks\add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\peekoadmin\\app\\View\\Blocks\\add.ctp',
+)
+Request URL: /peekoadmin/blocks/add/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\View\View.php(457): View->_getViewFileName(NULL)
+#1 C:\wamp\www\peekoadmin\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#3 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BlocksController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-05 09:54:50 Error: [MissingViewException] View file "C:\wamp\www\peekoadmin\app\View\Blocks\add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\peekoadmin\\app\\View\\Blocks\\add.ctp',
+)
+Request URL: /peekoadmin/blocks/add/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\View\View.php(457): View->_getViewFileName(NULL)
+#1 C:\wamp\www\peekoadmin\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#3 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BlocksController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-05 09:55:17 Error: [MissingViewException] View file "C:\wamp\www\peekoadmin\app\View\Blocks\add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\peekoadmin\\app\\View\\Blocks\\add.ctp',
+)
+Request URL: /peekoadmin/blocks/add/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\View\View.php(457): View->_getViewFileName(NULL)
+#1 C:\wamp\www\peekoadmin\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#3 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BlocksController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-05 09:55:19 Error: [MissingViewException] View file "C:\wamp\www\peekoadmin\app\View\Blocks\add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\peekoadmin\\app\\View\\Blocks\\add.ctp',
+)
+Request URL: /peekoadmin/blocks/add/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\View\View.php(457): View->_getViewFileName(NULL)
+#1 C:\wamp\www\peekoadmin\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#3 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BlocksController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-05 09:56:17 Error: [MissingViewException] View file "C:\wamp\www\peekoadmin\app\View\Blocks\add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\peekoadmin\\app\\View\\Blocks\\add.ctp',
+)
+Request URL: /peekoadmin/blocks/add/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\View\View.php(457): View->_getViewFileName(NULL)
+#1 C:\wamp\www\peekoadmin\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#3 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BlocksController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-05 09:56:28 Error: [MissingViewException] View file "C:\wamp\www\peekoadmin\app\View\Blocks\add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\peekoadmin\\app\\View\\Blocks\\add.ctp',
+)
+Request URL: /peekoadmin/blocks/add/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\View\View.php(457): View->_getViewFileName(NULL)
+#1 C:\wamp\www\peekoadmin\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#3 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BlocksController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-05 09:56:40 Error: [MissingViewException] View file "C:\wamp\www\peekoadmin\app\View\Blocks\add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\peekoadmin\\app\\View\\Blocks\\add.ctp',
+)
+Request URL: /peekoadmin/blocks/add/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\View\View.php(457): View->_getViewFileName(NULL)
+#1 C:\wamp\www\peekoadmin\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#3 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BlocksController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-05 09:56:43 Error: [MissingViewException] View file "C:\wamp\www\peekoadmin\app\View\Blocks\add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\peekoadmin\\app\\View\\Blocks\\add.ctp',
+)
+Request URL: /peekoadmin/blocks/add/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\View\View.php(457): View->_getViewFileName(NULL)
+#1 C:\wamp\www\peekoadmin\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#3 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BlocksController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-05 09:56:45 Error: [MissingViewException] View file "C:\wamp\www\peekoadmin\app\View\Blocks\add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\peekoadmin\\app\\View\\Blocks\\add.ctp',
+)
+Request URL: /peekoadmin/blocks/add/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\View\View.php(457): View->_getViewFileName(NULL)
+#1 C:\wamp\www\peekoadmin\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#3 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BlocksController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-05 09:57:40 Error: [MissingViewException] View file "C:\wamp\www\peekoadmin\app\View\Blocks\add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\peekoadmin\\app\\View\\Blocks\\add.ctp',
+)
+Request URL: /peekoadmin/blocks/add/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\View\View.php(457): View->_getViewFileName(NULL)
+#1 C:\wamp\www\peekoadmin\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#3 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BlocksController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-05 09:57:58 Error: [MissingViewException] View file "C:\wamp\www\peekoadmin\app\View\Blocks\add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\peekoadmin\\app\\View\\Blocks\\add.ctp',
+)
+Request URL: /peekoadmin/blocks/add/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\View\View.php(457): View->_getViewFileName(NULL)
+#1 C:\wamp\www\peekoadmin\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#3 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BlocksController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-05 09:58:01 Error: [MissingViewException] View file "C:\wamp\www\peekoadmin\app\View\Blocks\add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\peekoadmin\\app\\View\\Blocks\\add.ctp',
+)
+Request URL: /peekoadmin/blocks/add/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\View\View.php(457): View->_getViewFileName(NULL)
+#1 C:\wamp\www\peekoadmin\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#3 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BlocksController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-05 10:04:35 Error: Fatal Error (4): syntax error, unexpected ''description'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [C:\wamp\www\peekoadmin\app\Model\Block.php, line 17]
+2013-12-05 10:04:35 Error: [FatalErrorException] syntax error, unexpected ''description'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /peekoadmin/blocks/add/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 17)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 17, Array)
+#2 C:\wamp\www\peekoadmin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\pee...', 17, Array)
+#3 C:\wamp\www\peekoadmin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-05 10:11:40 Error: [MissingActionException] Action BlocksController::edit() could not be found.
+Exception Attributes: array (
+  'controller' => 'BlocksController',
+  'action' => 'edit',
+)
+Request URL: /peekoadmin/blocks/edit/52a05152f046ed7823000029
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BlocksController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-12-05 10:13:09 Error: [MissingActionException] Action BlocksController::edit() could not be found.
+Exception Attributes: array (
+  'controller' => 'BlocksController',
+  'action' => 'edit',
+)
+Request URL: /peekoadmin/blocks/edit/52a05152f046ed7823000029
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\peekoadmin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BlocksController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-12-05 10:16:06 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /peekoadmin/img/Test
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-05 10:16:08 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /peekoadmin/img/Test
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-05 10:17:33 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /peekoadmin/img/Test
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-05 10:17:57 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /peekoadmin/img/Test
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-05 10:20:23 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [C:\wamp\www\peekoadmin\app\View\Blocks\edit.ctp, line 9]
+2013-12-05 10:20:23 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /peekoadmin/blocks/edit/52a05327f046edac2200002a
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 9)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 9, Array)
+#2 C:\wamp\www\peekoadmin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\pee...', 9, Array)
+#3 C:\wamp\www\peekoadmin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-05 10:22:02 Error: Fatal Error (4): syntax error, unexpected 'if' (T_IF) in [C:\wamp\www\peekoadmin\app\Controller\BlocksController.php, line 24]
+2013-12-05 10:22:02 Error: [FatalErrorException] syntax error, unexpected 'if' (T_IF)
+Request URL: /peekoadmin/blocks/edit/52a05327f046edac2200002a
+Stack Trace:
+#0 C:\wamp\www\peekoadmin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 24)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 24, Array)
+#2 C:\wamp\www\peekoadmin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\pee...', 24, Array)
+#3 C:\wamp\www\peekoadmin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
