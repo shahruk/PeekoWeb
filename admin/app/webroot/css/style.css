@@ -1,0 +1,115 @@
+body, html{
+	position: relative;
+}
+
+body{
+	display: none;
+}
+
+#productOverlay{
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255, .9);
+	overflow-y: scroll;
+	z-index: 100;
+	-webkit-border-radius: 9px;
+	padding: 20px;
+	margin: auto;
+	top: 0; left: 0; bottom: 0; right: 0;
+}
+
+button.close{
+	font-size: 42px;
+}
+
+#productOverlay #productImage{
+	width: 100%;
+	border-radius: 9px;
+}
+
+.gmnoprint{
+	display: none !important;
+}
+
+#map-canvas > div a{
+	display: none;
+}
+
+#productName{
+	text-align: center;
+}
+
+#description{
+	font-size: 12px;
+}
+
+#buyOnline{
+	font-size: 18px;
+	text-decoration: none;
+	padding: 10px 20px;
+}
+
+#buyOnline .glyphicon{
+	display: inline-block;
+}
+
+#locateMe{
+	background: #FFF;
+	position: absolute;
+	left: 12px;
+	bottom: 40px;
+	z-index: 99;
+	font-size: 24px;
+	padding: 10px 10px 4px 10px;
+	transition: all .4s;
+	-webkit-transition: all .4s;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 5px #888;
+}
+
+#locateMe:hover{
+	color: #5aa8ff;
+	-moz-box-shadow: 0 0 5px #5aa8ff;
+	-webkit-box-shadow: 0 0 5px #5aa8ff;
+	box-shadow: 0 0 5px #5aa8ff;
+	cursor: pointer;
+}
+
+#productImage{
+	max-width: 100%;
+}
+
+#countdown{
+	float: right;
+	width: 250px;
+	border: none;
+	background: none;
+}
+
+#share{
+	float: right;
+}
+
+#map-canvas { height: 100% }
+#peeko { display: none; }
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+/* Styles */
+	
+	#buyOnline{
+		display: block;
+		margin-bottom: 10px;
+	}
+	
+	#countdown{
+		display: block;
+		text-align: center;
+		float: none;
+		width: auto;
+	}
+
+}
