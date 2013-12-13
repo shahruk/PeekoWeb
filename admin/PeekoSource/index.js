@@ -15,6 +15,6 @@ app.get('/blocks/:longi/:lati', function(req, res){
 			}
 		}
 	).populate('_brand');
-	response.end("Hello World\n");
+	//response.end("Hello World\n");
 	//database.Block.findOne({brand_id: docs[i]._brand[0]['_id'], timestamp: {$lte: new Date()}}, function(error, results){
 });
