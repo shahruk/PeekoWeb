@@ -191,7 +191,7 @@ h2 {
 	font-size: 0.85em;
 	line-height: 1.5em;
 	padding: 15px 0;
-	border-top: 0 solid #CCC;
+	border-top: none;
 }
 
 #copyright {
