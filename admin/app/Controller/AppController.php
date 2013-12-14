@@ -32,13 +32,23 @@ App::uses('Controller', 'Controller');
 class AppController extends Controller {
 	public $uses = array('Block', 'Brand', 'Location');
 	
-	/*
 	function beforeFilter(){
-		$a = $this->Brand->find('all');
-		for($i = 0; $i < count($a); $i++){ 
-			$this->Brand->id = $a[$i]['Brand']['id'];
-			$this->Brand->saveField('counter', 1);
+		if(!in_array($this->request->clientIp(), array('67.244.78.79', '127.0.0.1'))){
+			$this->redirect('http://peekoapp.com/');
 		}
+		//$this->Location->getLocations();
+		/*$brands = $this->Brand->find('all');
+		for($i = 0; $i < count($brands); $i++){
+			$block = $this->Block->find("first", array("conditions" => array("number" => (string)$brands[$i]['Brand']['counter'], "brand_id" => $brands[$i]['Brand']['id'])));
+			
+			if($block){
+				debug($block);
+				$this->Brand->id = $brands[$i]['Brand']['id'];
+				$this->Brand->saveField("active_block", $block['Block']);
+				
+				$this->Brand->saveField("counter", $brands[$i]['Brand']['counter']+1);
+			}
+		}
+		*/
 	}
-	*/
 }
