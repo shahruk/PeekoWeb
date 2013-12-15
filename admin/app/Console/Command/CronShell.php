@@ -1,8 +1,9 @@
 <?php
 	class CronShell extends AppShell{
 		public $uses = array('Block', 'Brand', 'Location');
-		
 		public function updateBlocks(){
+		
+			parent::sendEmail();
 			$brands = $this->Brand->find('all');
 			for($i = 0; $i < count($brands); $i++){
 				$block = $this->Block->find("first", array("conditions" => array("number" => (string)$brands[$i]['Brand']['counter'], "brand_id" => $brands[$i]['Brand']['id'])));
