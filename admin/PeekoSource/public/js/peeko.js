@@ -25,7 +25,8 @@ $(function(){
 	
 	var userMarker = new google.maps.Marker({
 		position: new google.maps.LatLng(120, 60), 
-		map: map
+		map: map,
+		zindex: 12
 	});
 	
 	startCountdown();
@@ -116,6 +117,7 @@ $(function(){
 	}
 	
 	function placeGenericMarker(location){
+		map.setZoom(17);
 		userMarker.setPosition(location);
 		centerMap(location.lat(), location.lng(), false);
 	}
