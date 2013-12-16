@@ -7,7 +7,7 @@ $(function(){
 	
 	var mapOptions = {
 		center: new google.maps.LatLng(120, 60),
-		zoom: 14,
+		zoom: 16,
 		disableDefaultUI: true,
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	};
@@ -19,7 +19,8 @@ $(function(){
 			url: serverUrl+'img/me.png',
 			scaledSize: new google.maps.Size(24,28),
 			animation: google.maps.Animation.DROP
-		}
+		},
+		zindex: 12
 	});
 	
 	var userMarker = new google.maps.Marker({
@@ -154,7 +155,7 @@ $(function(){
 	$("#locateMe").on("click", function(event){
 		event.preventDefault();
 		firstRun = true;
-		map.setZoom(16);
+		map.setZoom(17);
 		navigator.geolocation.getCurrentPosition(onSuccess, onError);
 	});
 	
