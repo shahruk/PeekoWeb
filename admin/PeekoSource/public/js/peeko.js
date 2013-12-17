@@ -117,9 +117,10 @@ $(function(){
 	}
 	
 	function placeGenericMarker(location){
-		map.setZoom(17);
+		
 		userMarker.setPosition(location);
 		centerMap(location.lat(), location.lng(), false);
+		map.setZoom(17);
 	}
 	
 	google.maps.event.addListener(map, 'click', function(event) {
