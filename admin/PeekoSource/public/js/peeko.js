@@ -120,7 +120,7 @@ $(function(){
 		
 		userMarker.setPosition(location);
 		centerMap(location.lat(), location.lng(), false);
-		map.setZoom(16);
+		//map.setZoom(16);
 	}
 	
 	google.maps.event.addListener(map, 'click', function(event) {
