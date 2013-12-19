@@ -51,7 +51,7 @@ class AppController extends Controller {
 			}
 		}
 		*/
-		$this->updateBlocks();
+		//$this->updateBlocks();
 	}
 	
 	public function updateBlocks(){
@@ -60,7 +60,7 @@ class AppController extends Controller {
 				$block = $this->Block->find("first", array("conditions" => array("number" => (string)$brands[$i]['Brand']['counter'], "brand_id" => $brands[$i]['Brand']['id'])));
 				
 				if($block){
-					debug($block);
+					//debug($block);
 					$this->Brand->id = $brands[$i]['Brand']['id'];
 					//$this->Brand->saveField("active_block", $block['Block']);
 					
