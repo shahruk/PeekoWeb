@@ -68,7 +68,7 @@ $(function(){
 		shareHandler = $("#share").click(function(e){
 			e.preventDefault();
 			try{
-				window.plugins.socialsharing.share('$'+data.price+' - '+data.name+' via Peeko iOS', null, data.images, data.url);
+				window.plugins.socialsharing.share(data.price+' - '+data.name+' via Peeko iOS', null, data.images, data.url);
 			}catch(e){
 				alert(e);
 			}
