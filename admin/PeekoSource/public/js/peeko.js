@@ -5,15 +5,16 @@ $(function(){
 	var firstRun = true;
 	var shareHandler;
 	
+	var initialCenter = new google.maps.LatLng(40.758895, -73.985131);
 	var mapOptions = {
-		center: new google.maps.LatLng(120, 60),
-		zoom: 16,
+		center: initialCenter,
+		zoom: 14,
 		disableDefaultUI: true,
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	};
 	var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 	var marker = new google.maps.Marker({
-		position: new google.maps.LatLng(120, 60),
+		position: initialCenter,
 		map: map,
 		icon: {
 			url: serverUrl+'img/me.png',
