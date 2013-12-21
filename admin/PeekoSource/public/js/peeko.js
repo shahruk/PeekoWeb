@@ -3,7 +3,7 @@ $(function(){
 	var serverUrl = "http://peekoapp.com:8080/";
 	var markers = [];
 	var firstRun = true;
-	var shareHandler;
+	//var shareHandler;
 	
 	var initialCenter = new google.maps.LatLng(40.758895, -73.985131);
 	var mapOptions = {
