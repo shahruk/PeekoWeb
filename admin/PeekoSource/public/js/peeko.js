@@ -65,12 +65,7 @@ $(function(){
 		$("#productImage").attr('src', data.images);
 		$("#storeLogo").attr('src', serverUrl+'brands/'+data.icon);
 		$("#productOverlay").fadeIn(400);
-		$("#share").on('click', function(e){
-			e.preventDefault();
-			alert(data.name);
-			window.plugins.socialsharing.share(data.price+' - '+data.name+' via Peeko iOS', null, data.images, data.url);
-			delete window.plugins.socialsharing;
-		});
+		
 	}
 	
 	//Add a marker
@@ -152,6 +147,11 @@ $(function(){
 	$("#buyOnline").click(function(event){
 		event.preventDefault();
 		var ref = window.open($(this).attr('href'), '_blank', 'location=yes');
+	});
+	
+	$("#share").on('click', function(e){
+		e.preventDefault();
+		window.plugins.socialsharing.share($("#price").html()+' - '+$("#productName").text()+' via Peeko iOS', null, $("#productImage").attr('src'), $("#buyOnline").attr('href'));
 	});
 	
 	$("#locateMe").on("click", function(event){
