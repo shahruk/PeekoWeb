@@ -65,7 +65,7 @@ $(function(){
 		$("#productImage").attr('src', data.images);
 		$("#storeLogo").attr('src', serverUrl+'brands/'+data.icon);
 		$("#productOverlay").fadeIn(400);
-		$("#share").click(function(e){
+		$("#share").on('click', function(e){
 			e.preventDefault();
 			window.plugins.socialsharing.share(data.price+' - '+data.name+' via Peeko iOS', null, data.images, data.url);
 		});
