@@ -68,6 +68,7 @@ $(function(){
 		$("#share").on('click', function(e){
 			e.preventDefault();
 			window.plugins.socialsharing.share(data.price+' - '+data.name+' via Peeko iOS', null, data.images, data.url);
+			delete window.plugins.socialsharing;
 		});
 	}
 	
