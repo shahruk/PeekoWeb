@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.peekoapp.android" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+   <name>Peeko</name>
+    <description>
+        Quick and easy window shopping. Find cool stuff to browse and buy around you with a single tap.
+    </description>
+    <author href='http://google.com/' email='shahruksemail@gmail.com'>
+        Shahruk Khan
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+</widget>

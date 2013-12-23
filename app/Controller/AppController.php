@@ -33,10 +33,6 @@ class AppController extends Controller {
 	public $uses = array('Block', 'Brand', 'Location');
 	
 	public function beforeFilter(){
-		$blocks = $this->Block->find('all');
-		for($i = 0; $i < count($blocks); $i++){
-			$this->Block->addPermalink($blocks[$i]['Block']['id'], $blocks[$i]['Block']['name']);
-			
-		}
+		$this->set('elysium', 'December 18, 2013');
 	}
 }

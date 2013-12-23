@@ -15,8 +15,8 @@
 <![endif]-->
 
 
-<?php echo $this->Html->css(array('/font/stylesheet.css', 'bootstrap.min.css', 'bootstrap-responsive.min.css', 'styles.css', 'media-queries.css', '/fancybox/jquery.fancybox-1.3.4')); ?>
-
+<?php echo $this->Html->css(array('/font/stylesheet.css', 'bootstrap.min.css', 'bootstrap-responsive.min.css', 'styles.css', 'media-queries.css')); ?>
+<?php echo $this->fetch('css'); ?>
 
 <meta name="viewport" />
  
@@ -29,14 +29,13 @@
 <body>
 
 <!-- TOP MENU NAVIGATION -->
-<div class="navbar navbar-fixed-top">
+<div class="navbar">
 	<div class="navbar-inner">
 		<div class="container">
-	
-			<a class="brand pull-left" href="#">
+			<a class="brand pull-left" href="/">
 			Peeko
 			</a>
-	
+		<?php /*
 			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
@@ -45,21 +44,20 @@
 		
 			<div class="nav-collapse collapse">
 				<ul id="nav-list" class="nav pull-right">
-					<li><a href="#home">Home</a></li>
+					<li><a href="/">Get the App</a></li>
 					<li><a href="#about">About</a></li>
 					<li><a href="#updates">Updates</a></li>
 					<li><a href="#screenshots">Screenshots</a></li>
 				</ul>
 			</div>
-		
+		<?php */ ?>
 		</div>
 	</div>
 </div>
 <div class="container content container-fluid" id="home">
 <?php echo $this->fetch('content'); ?>
-</div>
-
-<?php echo $this->Html->script(array('bootstrap.min', 'bootstrap-collapse', 'bootstrap-scrollspy', '/fancybox/jquery.mousewheel-3.0.4.pack', '/fancybox/jquery.fancybox-1.3.4.pack', 'init')); ?>
+</div><script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<?php echo $this->Html->script(array('bootstrap.min')); ?>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

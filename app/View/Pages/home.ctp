@@ -23,7 +23,12 @@
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
 <link href='http://fonts.googleapis.com/css?family=Exo:400,800' rel='stylesheet' type='text/css'>
-
+<style>
+	@media only screen and (min-width : 1224px) {
+	.content{
+		padding: 80px 120px;
+	}
+</style>
 </head>
 
 <body id="bg" data-spy="scroll">
@@ -263,7 +268,7 @@
 	</div>
 	
 </div>
-
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 <?php echo $this->Html->script(array('bootstrap.min', 'bootstrap-collapse', 'bootstrap-scrollspy', '/fancybox/jquery.mousewheel-3.0.4.pack', '/fancybox/jquery.fancybox-1.3.4.pack', 'init')); ?>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

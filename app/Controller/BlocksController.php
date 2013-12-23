@@ -5,7 +5,7 @@
 			if(!$block){
 				throw new NotFoundException();
 			}else{
-				debug($block);
+				$this->set(compact('block'));
 			}
 		}
 	}

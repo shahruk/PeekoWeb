@@ -37,6 +37,7 @@ class AppController extends Controller {
 			die($this->request->clientIp());
 			$this->redirect('http://peekoapp.com/');
 		}
+		$this->set('elysium', 'December 18, 2013');
 		//$this->Location->getLocations();
 		/*$brands = $this->Brand->find('all');
 		for($i = 0; $i < count($brands); $i++){
