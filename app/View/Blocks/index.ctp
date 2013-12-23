@@ -27,7 +27,7 @@ $this->end(); ?>
 			<h3>Visit Website / More Info</h3>: <a href="<?php echo $block['Block']['url']; ?>">Click Here</a>
 		</div>
 		<div class="section">
-			<div class="share42init"></div>
+			<div data-zero-counter="0" data-title="<?php echo $block['Block']['name']; ?>" data-description="via Peeko iOS - <?php echo h($block['Block']['description']); ?>" data-image="<?php echo $block['Block']['images']; ?>" class="share42init"></div>
 		</div>
 	</div>
 </div>
