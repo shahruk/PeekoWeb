@@ -48,6 +48,7 @@
 	<gap:splash src="splash/ios/Default-Portrait_at_2x.png" gap:platform="ios" width="1536" height="2008" />
 
 	<gap:platform name='ios' />
+	<gap:platform name='android' />
     <access origin='*'/>
     <!-- <content src='http://mysite.com/myapp.html' /> for external pages -->
     <content src='index.html'/>
@@ -78,17 +79,29 @@
 	<feature name="Geolocation">
 		<param name="ios-package" value="CDVLocation" />
 	</feature>
+	<feature name="Geolocation">
+		<param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
+	</feature>
 	
 	<feature name="NetworkStatus">
 		<param name="ios-package" value="CDVConnection" />
 	</feature>
-
+	<feature name="NetworkStatus">
+		<param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
+	</feature>
+	
 	<feature name="InAppBrowser">
 		<param name="ios-package" value="CDVInAppBrowser" />
+	</feature>
+	<feature name="InAppBrowser">
+		<param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
 	</feature>
 	
 	<feature name="SocialSharing">
 		<param name="ios-package" value="SocialSharing" />
+	</feature>
+	<feature name="SocialSharing">
+		<param name="android-package" value="nl.xservices.plugins.SocialSharing" />
 	</feature>
 
 </widget>

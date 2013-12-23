@@ -26,7 +26,7 @@
 
 </head>
 
-<body data-spy="scroll">
+<body id="bg" data-spy="scroll">
 
 <!-- TOP MENU NAVIGATION -->
 <div class="navbar navbar-fixed-top">

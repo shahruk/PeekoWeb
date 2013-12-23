@@ -27,7 +27,37 @@
 </head>
 
 <body>
+
+<!-- TOP MENU NAVIGATION -->
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+	
+			<a class="brand pull-left" href="#">
+			Peeko
+			</a>
+	
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+		
+			<div class="nav-collapse collapse">
+				<ul id="nav-list" class="nav pull-right">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#updates">Updates</a></li>
+					<li><a href="#screenshots">Screenshots</a></li>
+				</ul>
+			</div>
+		
+		</div>
+	</div>
+</div>
+<div class="container content container-fluid" id="home">
 <?php echo $this->fetch('content'); ?>
+</div>
 
 <?php echo $this->Html->script(array('bootstrap.min', 'bootstrap-collapse', 'bootstrap-scrollspy', '/fancybox/jquery.mousewheel-3.0.4.pack', '/fancybox/jquery.fancybox-1.3.4.pack', 'init')); ?>
 <script>
