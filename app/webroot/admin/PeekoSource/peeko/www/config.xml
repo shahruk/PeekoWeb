@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ 'License'); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ 'AS IS' BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied.  See the License for the
+ specific language governing permissions and limitations
+ under the License.
+-->
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.peeko.app"
+        version   = "1.0.1">
+	<name>
+        Peeko
+    </name>
+    <description>
+        Quick and easy window shopping. Find cool stuff to browse and buy around you with a single tap.
+    </description>
+    <author href='http://google.com/' email='shahruksemail@gmail.com'>
+        Shahruk Khan
+    </author>
+	<icon gap:platform="ios" height="57" src="icon/ios/icon-57.png" width="57" />
+	<icon gap:platform="ios" height="72" src="icon/ios/icon-72.png" width="72" />
+	<icon gap:platform="ios" height="114" src="icon/ios/icon-57@2x.png" width="114" />
+	<icon gap:platform="ios" height="144" src="icon/ios/icon-72@2x.png" width="144" />
+	<icon gap:platform="ios" height="76" src="icon/ios/icon-76.png" width="76" />
+	<icon gap:platform="ios" height="152" src="icon/ios/icon-76@2x.png" width="152" />
+	<icon gap:platform="ios" height="120" src="icon/ios/icon-120.png" width="120" />
+	<gap:splash src="splash/ios/Default.png" gap:platform="ios" width="320" height="480" />
+	<gap:splash src="splash/ios/Default_at_2x.png" gap:platform="ios" width="640" height="960" />
+	<gap:splash src="splash/ios/Default_iphone5.png" gap:platform="ios" width="640" height="1136" />
+	<gap:splash src="splash/ios/Default-Landscape.png" gap:platform="ios" width="1024" height="748" />
+	<gap:splash src="splash/ios/Default-Portrait.png" gap:platform="ios" width="768" height="1004" />
+
+	<!-- retina iPad support: PhoneGap 2.5.0+ only -->
+	<gap:splash src="splash/ios/Default-Landscape_at_2x.png" gap:platform="ios" width="2048" height="1496" />
+	<gap:splash src="splash/ios/Default-Portrait_at_2x.png" gap:platform="ios" width="1536" height="2008" />
+
+	<gap:platform name='ios' />
+	<gap:platform name='android' />
+    <access origin='*'/>
+    <!-- <content src='http://mysite.com/myapp.html' /> for external pages -->
+    <content src='index.html'/>
+    <!-- Preferences for iOS -->
+    <preference value='false' name='AllowInlineMediaPlayback'/>
+    <preference value='true' name='AutoHideSplashScreen'/>
+    <preference value='cloud' name='BackupWebStorage'/>
+    <preference value='true' name='EnableLocation'/>
+    <plugins></plugins>
+	<gap:plugin name="nl.x-services.plugins.socialsharing" />
+    <preference value='false' name='disable-cursor'/>
+    <preference value='none' name='permissions'/>
+    <preference value='true' name='exit-on-suspend'/>
+    <preference value='7' name='android-minSdkVersion'/>
+    <preference value='black-opaque' name='ios-statusbarstyle'/>
+    <preference value='auto' name='android-installLocation'/>
+    <preference value='true' name='auto-hide-splash-screen'/>
+    <preference value='true' name='detect-data-types'/>
+    <preference value='universal' name='target-device'/>
+    <preference value='default' name='orientation'/>
+    <preference value='false' name='fullscreen'/>
+    <preference value='false' name='UIWebViewBounce'/>
+    <preference value='true' name='DisallowOverscroll'/>
+    <preference value='false' name='ShowSplashScreenSpinner'/>
+    <preference value='false' name='stay-in-webview'/>
+    <preference value='true' name='prerendered-icon'/>
+	
+	<feature name="Geolocation">
+		<param name="ios-package" value="CDVLocation" />
+	</feature>
+	<feature name="Geolocation">
+		<param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
+	</feature>
+	
+	<feature name="NetworkStatus">
+		<param name="ios-package" value="CDVConnection" />
+	</feature>
+	<feature name="NetworkStatus">
+		<param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
+	</feature>
+	
+	<feature name="InAppBrowser">
+		<param name="ios-package" value="CDVInAppBrowser" />
+	</feature>
+	<feature name="InAppBrowser">
+		<param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
+	</feature>
+	
+	<feature name="SocialSharing">
+		<param name="ios-package" value="SocialSharing" />
+	</feature>
+	<feature name="SocialSharing">
+		<param name="android-package" value="nl.xservices.plugins.SocialSharing" />
+	</feature>
+
+</widget>
