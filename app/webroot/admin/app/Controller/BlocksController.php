@@ -21,7 +21,7 @@
 		
 		public function edit($id){
 			$block = $this->Block->findById($id);
-			$brand = $this->Brand->find('first', array('id' => $block['Block']['brand_id']));
+			$brand = $this->Brand->findById($block['Block']['brand_id']);
 			if($this->request->is('put')){
 				$this->Block->id = $id;
 				if($this->Block->save($this->request->data)){
