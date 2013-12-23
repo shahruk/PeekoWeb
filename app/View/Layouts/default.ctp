@@ -58,6 +58,7 @@
 <?php echo $this->fetch('content'); ?>
 </div><script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <?php echo $this->Html->script(array('bootstrap.min')); ?>
+<?php echo $this->fetch('scriptBottom'); ?>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

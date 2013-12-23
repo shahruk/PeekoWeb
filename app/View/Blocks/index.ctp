@@ -1,6 +1,10 @@
 <?php $this->start('css');
 echo $this->Html->css('blocks');
 $this->end(); ?>
+<?php $this->start('scriptBottom');
+echo $this->Html->script('share42/share42');
+$this->end(); ?>
+
 <?php //debug($block); ?>
 <div class="row-fluid">
 	<div class="span8">
@@ -21,6 +25,9 @@ $this->end(); ?>
 		</div>
 		<div class="section">
 			<h3>Visit Website / More Info</h3>: <a href="<?php echo $block['Block']['url']; ?>">Click Here</a>
+		</div>
+		<div class="section">
+			<div class="share42init"></div>
 		</div>
 	</div>
 </div>
