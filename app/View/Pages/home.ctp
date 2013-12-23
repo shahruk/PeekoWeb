@@ -118,7 +118,7 @@
 		
 			<!-- DOWNLOAD & REQUIREMENT BOX -->
 			<div class="download-box">
-				<a href="http://bit.ly/1ccj9H6"><img src="img/available-on-the-app-store.png"></a>
+				<a href="http://bit.ly/JZgZPx"><img src="img/available-on-the-app-store.png"></a>
 			</div>
 
 			<div class="download-box">
