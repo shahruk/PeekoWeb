@@ -31,7 +31,7 @@ h2 {
 }
  
  .content {
-	padding:40px 15px;
+	padding:60px 15px 10px 15px;
 	font-size: 1.1em;
 	line-height: 1.8em;
 	background: rgba(255,255,255, .9);
