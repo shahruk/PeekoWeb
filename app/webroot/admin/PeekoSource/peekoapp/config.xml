@@ -75,10 +75,33 @@
     <preference value='false' name='ShowSplashScreenSpinner'/>
     <preference value='false' name='stay-in-webview'/>
     <preference value='true' name='prerendered-icon'/>
-	<plugins>
-		<gap:plugin name="org.apache.cordova.geolocation" />
-		<gap:plugin name="org.apache.cordova.network-information" />
-		<gap:plugin name="org.apache.cordova.inappbrowser" version="0.1.0" />
-		<gap:plugin name="nl.x-services.plugins.socialsharing" />
-	</plugins>
+	
+	<feature name="Geolocation">
+		<param name="ios-package" value="CDVLocation" />
+	</feature>
+	<feature name="Geolocation">
+		<param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
+	</feature>
+	
+	<feature name="NetworkStatus">
+		<param name="ios-package" value="CDVConnection" />
+	</feature>
+	<feature name="NetworkStatus">
+		<param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
+	</feature>
+	
+	<feature name="InAppBrowser">
+		<param name="ios-package" value="CDVInAppBrowser" />
+	</feature>
+	<feature name="InAppBrowser">
+		<param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
+	</feature>
+	
+	<feature name="SocialSharing">
+		<param name="ios-package" value="SocialSharing" />
+	</feature>
+	<feature name="SocialSharing">
+		<param name="android-package" value="nl.xservices.plugins.SocialSharing" />
+	</feature>
+
 </widget>
