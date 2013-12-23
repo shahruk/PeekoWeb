@@ -26,7 +26,7 @@
 				$this->Block->id = $id;
 				if($this->Block->save($this->request->data)){
 					$this->Session->setFlash('Congratulations. Saved.');
-					$this->redirect(array('controller' => 'brands', 'action' => 'view', $brand['Brand']['id']));
+					$this->redirect(array('controller' => 'brands', 'action' => 'index'));
 				}else{
 					$this->Session->setFlash('Error! Fix below.');
 				}
