@@ -375,3 +375,9 @@ Cache::config('_cake_model_', array(
 	'serialize' => ($engine === 'File'),
 	'duration' => $duration
 ));
+
+if(stristr(env('HTTP_HOST'), 'peeko.local')){ 
+    Configure::write('debug', 2); 
+}else{ 
+    Configure::write('debug', 0); 
+}
