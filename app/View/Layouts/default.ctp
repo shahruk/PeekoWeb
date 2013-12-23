@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<title>Peeko - Shopping in NYC Made Fast and Convenient</title>
+<title><?php echo $title_for_layout; ?> - Peeko</title>
 
 <!-- media-queries.js -->
 <!--[if lt IE 9]>

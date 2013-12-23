@@ -5,7 +5,8 @@
 			if(!$block){
 				throw new NotFoundException();
 			}else{
-				$this->set(compact('block'));
+				$title_for_layout = $block['Block']['price']." ".$block['Block']['name'];
+				$this->set(compact('block', 'title_for_layout'));
 			}
 		}
 	}
