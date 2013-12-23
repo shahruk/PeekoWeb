@@ -5,6 +5,8 @@ $(function(){
 	var firstRun = true;
 	//var shareHandler;
 	
+	var dataHolder;
+	
 	var initialCenter = new google.maps.LatLng(40.758895, -73.985131);
 	var mapOptions = {
 		center: initialCenter,
@@ -60,6 +62,7 @@ $(function(){
 	
 	//Show an overlay.
 	function showOverlay(marker, data){
+		dataHolder = data;
 		$("#productName").text(data.name);
 		$("#description").html(data.description);
 		$("#price").html(data.price);
@@ -153,7 +156,7 @@ $(function(){
 	
 	$("#share").on('click', function(e){
 		e.preventDefault();
-		window.plugins.socialsharing.share($("#price").html()+' - '+$("#productName").text()+' via Peeko iOS', null, $("#productImage").attr('src'), $("#buyOnline").attr('href'));
+		window.plugins.socialsharing.share($("#price").html()+' - '+$("#productName").text()+' via Peeko iOS', null, $("#productImage").attr('src'), 'http://peekoapp.com/blocks/'+dataHolder.number+'/'+dataHolder.permalink);
 	});
 	
 	$("#locateMe").on("click", function(event){
