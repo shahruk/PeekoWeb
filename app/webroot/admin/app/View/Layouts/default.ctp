@@ -26,6 +26,7 @@ $cakeDescription = __d('cake_dev', 'Peeko Admin Panel');
 		<?php echo $cakeDescription ?>:
 		<?php echo $title_for_layout; ?>
 	</title>
+	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 	<?php
 		echo $this->Html->meta('icon');
 

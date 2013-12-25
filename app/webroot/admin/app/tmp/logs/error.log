@@ -212,3 +212,372 @@ Stack Trace:
 #3 C:\wamp\www\peeko\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-12-25 08:30:13 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /app/webroot/admin/admin/
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-25 08:33:39 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /app/webroot/admin/js/ajaxscraper.js
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-25 08:33:45 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /app/webroot/admin/js/ajaxscraper.js
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-25 08:34:07 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /app/webroot/admin/js/ajaxscraper.js
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-25 08:34:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /app/webroot/admin/js/ajaxscraper.js
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-25 08:34:35 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /app/webroot/admin/js/ajaxscraper.js
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-25 08:34:39 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /app/webroot/admin/js/ajaxscraper.js
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-25 08:34:47 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /app/webroot/admin/js/ajaxscraper.js
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-25 08:34:56 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /app/webroot/admin/js/ajaxscraper.js
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-25 08:35:02 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /app/webroot/admin/js/ajaxscraper.js
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-25 08:43:13 Error: [MissingActionException] Action BlocksController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'BlocksController',
+  'action' => 'index',
+)
+Request URL: /app/webroot/admin/blocks/
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BlocksController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\peeko\app\webroot\admin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-12-25 08:54:26 Error: [NotFoundException] Not Found
+Request URL: /app/webroot/admin/blocks/getsite
+Stack Trace:
+#0 [internal function]: BlocksController->getsite()
+#1 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(BlocksController), Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BlocksController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\peeko\app\webroot\admin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-25 08:55:45 Warning: Warning (4096): Object of class CakeRequest could not be converted to string in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 44]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 44
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-25 08:55:56 Warning: Warning (4096): Object of class CakeRequest could not be converted to string in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 44]
+Trace:
+printf - [internal], line ??
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 44
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-25 09:05:55 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 65]
+2013-12-25 09:05:55 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /app/webroot/admin/blocks/getsite
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 65)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 65, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\pee...', 65, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-25 09:05:58 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 65]
+2013-12-25 09:05:58 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /app/webroot/admin/blocks/add/528e3a836e13ee9c29006794
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 65)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 65, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\pee...', 65, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-25 09:05:59 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 65]
+2013-12-25 09:05:59 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /app/webroot/admin/blocks/add/528e3a836e13ee9c29006794
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 65)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 65, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\pee...', 65, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-25 09:06:16 Warning: Warning (2): trim() expects parameter 1 to be string, array given in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 65]
+Trace:
+trim - [internal], line ??
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 65
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-25 09:07:10 Error: Fatal Error (64): Only variables can be passed by reference in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 68]
+2013-12-25 09:07:10 Error: [FatalErrorException] Only variables can be passed by reference
+Request URL: /app/webroot/admin/blocks/add/528e3a836e13ee9c29006794
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(64, 'Only variables ...', 'C:\wamp\www\pee...', 68)
+#1 [internal function]: ErrorHandler::handleError(64, 'Only variables ...', 'C:\wamp\www\pee...', 68, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 64, 'Only variables ...', 'C:\wamp\www\pee...', 68, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-25 09:08:02 Warning: Warning (2): trim() expects parameter 1 to be string, array given in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 65]
+Trace:
+trim - [internal], line ??
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 65
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-25 17:05:22 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php, line 196]
+2013-12-25 17:05:22 Error: [InternalErrorException] Internal Server Error
+Request URL: /app/webroot/admin/blocks/getsite
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 196)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 196, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\pee...', 196, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-25 17:23:09 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 78]
+2013-12-25 17:23:09 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /app/webroot/admin/blocks/getsite
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\pee...', 78)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\pee...', 78, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\pee...', 78, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-25 17:23:11 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php, line 196]
+2013-12-25 17:23:11 Error: [InternalErrorException] Internal Server Error
+Request URL: /app/webroot/admin/blocks/getsite
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 196)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 196, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\pee...', 196, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-25 17:23:58 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 78]
+2013-12-25 17:23:58 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /app/webroot/admin/blocks/getsite
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\pee...', 78)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\pee...', 78, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\pee...', 78, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-25 17:24:26 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 79]
+2013-12-25 17:24:26 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /app/webroot/admin/blocks/getsite
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\pee...', 79)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\pee...', 79, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\pee...', 79, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-25 17:24:31 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php, line 196]
+2013-12-25 17:24:31 Error: [InternalErrorException] Internal Server Error
+Request URL: /app/webroot/admin/blocks/getsite
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 196)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 196, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\pee...', 196, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-25 17:28:14 Error: Fatal Error (1): Call to undefined function curl_init() in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 51]
+2013-12-25 17:28:14 Error: [FatalErrorException] Call to undefined function curl_init()
+Request URL: /app/webroot/admin/blocks/getsite
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\wamp\www\pee...', 51)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\wamp\www\pee...', 51, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\wamp\www\pee...', 51, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-25 17:31:56 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 55]
+2013-12-25 17:31:56 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /app/webroot/admin/blocks/getsite
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 55)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 55, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\pee...', 55, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-25 17:32:38 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 55]
+2013-12-25 17:32:38 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /app/webroot/admin/blocks/getsite
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 55)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 55, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\pee...', 55, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-25 17:34:27 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 55]
+2013-12-25 17:34:27 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /app/webroot/admin/blocks/getsite
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 55)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 55, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\pee...', 55, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-25 17:35:44 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 55]
+2013-12-25 17:35:44 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /app/webroot/admin/blocks/getsite
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 55)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 55, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\pee...', 55, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-25 17:40:33 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 286107 bytes) in [C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Utility\Debugger.php, line 611]
+2013-12-25 17:40:33 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 286107 bytes)
+Request URL: /app/webroot/admin/blocks/getsite
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Allowed memory ...', 'C:\wamp\www\pee...', 611)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', 'C:\wamp\www\pee...', 611, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', 'C:\wamp\www\pee...', 611, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-25 17:40:55 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 55]
+2013-12-25 17:40:55 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /app/webroot/admin/blocks/getsite
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 55)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 55, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\pee...', 55, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-25 17:45:09 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 43074029 bytes) in [C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Utility\Debugger.php, line 611]
+2013-12-25 17:45:09 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 43074029 bytes)
+Request URL: /app/webroot/admin/blocks/getsite
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Allowed memory ...', 'C:\wamp\www\pee...', 611)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', 'C:\wamp\www\pee...', 611, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', 'C:\wamp\www\pee...', 611, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-25 17:48:16 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 55]
+2013-12-25 17:48:16 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /app/webroot/admin/blocks/getsite
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 55)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 55, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\pee...', 55, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-25 18:05:53 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 383711 bytes) in [C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Utility\Debugger.php, line 611]
+2013-12-25 18:05:53 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 383711 bytes)
+Request URL: /app/webroot/admin/blocks/getsite
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Allowed memory ...', 'C:\wamp\www\pee...', 611)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', 'C:\wamp\www\pee...', 611, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', 'C:\wamp\www\pee...', 611, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-25 18:14:47 Error: Fatal Error (1): Cannot use object of type simple_html_dom_node as array in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 113]
+2013-12-25 18:14:47 Error: [FatalErrorException] Cannot use object of type simple_html_dom_node as array
+Request URL: /app/webroot/admin/blocks/getsite
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Cannot use obje...', 'C:\wamp\www\pee...', 113)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', 'C:\wamp\www\pee...', 113, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', 'C:\wamp\www\pee...', 113, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-25 18:15:21 Error: Fatal Error (1): Cannot use object of type simple_html_dom_node as array in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 114]
+2013-12-25 18:15:21 Error: [FatalErrorException] Cannot use object of type simple_html_dom_node as array
+Request URL: /app/webroot/admin/blocks/getsite
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Cannot use obje...', 'C:\wamp\www\pee...', 114)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', 'C:\wamp\www\pee...', 114, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', 'C:\wamp\www\pee...', 114, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
