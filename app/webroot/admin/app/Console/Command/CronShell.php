@@ -13,12 +13,13 @@
 			}
 			$brands = $this->Brand->find('all');
 			for($i = 0; $i < count($brands); $i++){
-				$block = $this->Block->find("first", array("conditions" => array("number" => (string)$brands[$i]['Brand']['counter'], "brand_id" => $brands[$i]['Brand']['id'])));
+				$block = $this->Block->find("first", array("conditions" => array("number" => (string)($brands[$i]['Brand']['counter']-1), "brand_id" => $brands[$i]['Brand']['id'])));
 				
 				if(!$block){
-					$block = $this->Block->find("first", array("conditions" => array("number" => (string)($brands[$i]['Brand']['counter']-1), "brand_id" => $brands[$i]['Brand']['id'])));
+					$block = $this->Block->find("first", array("conditions" => array("number" => (string)($brands[$i]['Brand']['counter']-2), "brand_id" => $brands[$i]['Brand']['id'])));
 					$this->Block->create();
-					$block['Block']['number']++;
+					unset($block['Block']['id']);
+					$block['Block']['number'] = (string)($block['Block']['number']+1);
 					$this->Block->save($block);
 				}
 				$this->Brand->id = $brands[$i]['Brand']['id'];
