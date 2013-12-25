@@ -41,7 +41,7 @@
 				
 				if(!$block){
 					$block = $this->Block->find("first", array("conditions" => array("number" => (string)($brands[$i]['Brand']['counter']-2), "brand_id" => $brands[$i]['Brand']['id'])));
-					$block['Block']['number']++;
+					$block['Block']['number'] = (string)($block['Block']['number']+1);
 					$this->Block->save($block);
 				}
 				$this->Brand->id = $brands[$i]['Brand']['id'];
