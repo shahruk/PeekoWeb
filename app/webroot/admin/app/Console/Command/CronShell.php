@@ -37,16 +37,16 @@
 		public function resetBlocks(){
 			$brands = $this->Brand->find('all');
 			for($i = 0; $i < count($brands); $i++){
-				$block = $this->Block->find("first", array("conditions" => array("number" => (string)$brands[$i]['Brand']['counter'], "brand_id" => $brands[$i]['Brand']['id'])));
+				$block = $this->Block->find("first", array("conditions" => array("number" => (string)$brands[$i]['Brand']['counter']-1, "brand_id" => $brands[$i]['Brand']['id'])));
 				
 				if(!$block){
-					$block = $this->Block->find("first", array("conditions" => array("number" => (string)($brands[$i]['Brand']['counter']-1), "brand_id" => $brands[$i]['Brand']['id'])));
+					$block = $this->Block->find("first", array("conditions" => array("number" => (string)($brands[$i]['Brand']['counter']-2), "brand_id" => $brands[$i]['Brand']['id'])));
 					$block['Block']['number']++;
 					$this->Block->save($block);
 				}
 				$this->Brand->id = $brands[$i]['Brand']['id'];
 				$this->Brand->saveField("active_block", $block['Block']);
-				$this->Brand->saveField("counter", $brands[$i]['Brand']['counter']+1);
+				//$this->Brand->saveField("counter", $brands[$i]['Brand']['counter']+1);
 			}
 		}
 	}
