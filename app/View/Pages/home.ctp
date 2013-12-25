@@ -95,7 +95,7 @@
             
 			<!-- TAGLINE -->
 			<div id="tagline">
-				Quick and Easy Window Shopping
+				Find Local Deals and Selections
 			</div>
 		
 			<!-- PHONES IMAGE FOR TABLET MEDIA QUERY -->
@@ -105,7 +105,7 @@
             
 			<!-- DESCRIPTION -->
 			<div id="description">
-				Peeko allows you to browse new daily selections at large retailers near you. Use Peeko to find new deals, hot fashion trends, electronics, and much more.
+				Peeko lets you find local deals and selections at stores near you. Use Peeko to find the latest sales, products, trends, and more.
 			</div>
             
 			<!-- FEATURES -->
