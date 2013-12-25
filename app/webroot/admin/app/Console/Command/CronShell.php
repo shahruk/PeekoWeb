@@ -57,9 +57,9 @@
 		public function fixNumber(){
 			$brands = $this->Brand->find('all');
 			for($i = 0; $i < count($brands); $i++){
-				$block = $this->Block->find("first", array("conditions" => array("number" => 6, "brand_id" => $brands[$i]['Brand']['id'])));
+				$block = $this->Block->find("first", array("conditions" => array("number" => "6", "brand_id" => $brands[$i]['Brand']['id'])));
 				$this->Block->id = $block['Block']['id'];
-				$this->Block->saveField("number", "6");
+				$this->Block->saveField("number", "5");
 			}
 		}
 	}
