@@ -27,7 +27,7 @@
 				$this->Brand->saveField("counter", $brands[$i]['Brand']['counter']+1);
 			}
 		}
-		/*
+		
 		public function addPermalinks(){
 			$blocks = $this->Block->find('all');
 			for($i = 0; $i < count($blocks); $i++){
@@ -35,7 +35,7 @@
 				
 			}
 		}
-		
+		/*
 		public function resetBlocks(){
 			$brands = $this->Brand->find('all');
 			for($i = 0; $i < count($brands); $i++){
