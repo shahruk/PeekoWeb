@@ -60,5 +60,6 @@
 				$block = $this->Block->find("first", array("conditions" => array("number" => 6, "brand_id" => $brands[$i]['Brand']['id'])));
 				$this->Block->id = $block['Block']['id'];
 				$this->Block->saveField("number", "6");
+			}
 		}
 	}
