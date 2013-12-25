@@ -53,4 +53,12 @@
 				//$this->Brand->saveField("counter", $brands[$i]['Brand']['counter']+1);
 			}
 		}
+		
+		public function fixNumber(){
+			$brands = $this->Brand->find('all');
+			for($i = 0; $i < count($brands); $i++){
+				$block = $this->Block->find("first", array("conditions" => array("number" => 6, "brand_id" => $brands[$i]['Brand']['id'])));
+				$this->Block->id = $block['Block']['id'];
+				$this->Block->saveField("number", "6");
+		}
 	}
