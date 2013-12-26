@@ -37,7 +37,7 @@
 
 		public function addPermalink($listingId, $listingName){
 			$block = $this->findById($listingId);
-			if(!$block['Block']['permalink']){
+			if(!isset($block['Block']['permalink'])){
 				$tmpPerma = $this->permalink($listingName);
 				$this->id = $listingId;
 				$this->saveField('permalink', $tmpPerma);

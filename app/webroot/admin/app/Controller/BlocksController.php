@@ -2,6 +2,8 @@
 	class BlocksController extends AppController{
 		public function add($id){
 			if($this->request->is('post')){
+				//Number type casting.
+				$this->request->data['Block']['number'] = (int)$this->request->data['Block']['number'];
 				if($this->Block->save($this->request->data)){
 					$this->Session->setFlash('Congratulations. Saved.');
 					$this->redirect(array('controller' => 'brands', 'action' => 'view', $id));
