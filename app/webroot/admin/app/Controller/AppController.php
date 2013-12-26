@@ -38,6 +38,7 @@ class AppController extends Controller {
 			$this->redirect('http://peekoapp.com/');
 		}
 		$this->set('elysium', 'December 18, 2013');
+		$this->set('elysium2', 'December 26, 2013');
 		//$this->Location->getLocations();
 		/*$brands = $this->Brand->find('all');
 		for($i = 0; $i < count($brands); $i++){
