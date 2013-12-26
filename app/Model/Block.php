@@ -14,7 +14,7 @@
 				'rule' => 'notEmpty',
 				'message' => 'You need a description.'
 			),
-			'image' => array(
+			'images' => array(
 				'rule' => 'notEmpty',
 				'message' => 'You need a image.'
 			),

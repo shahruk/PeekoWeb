@@ -1,5 +1,5 @@
 $(function(){
-	//$("body").show();
+	$("body").show();
 	var serverUrl = "http://localhost:8080/";
 	var markers = [];
 	var firstRun = true;

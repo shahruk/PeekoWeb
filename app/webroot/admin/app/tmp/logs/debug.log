@@ -377,3 +377,435 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
 [main] - APP\webroot\index.php, line 108
 
+2013-12-26 19:18:39 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 71]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 71
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 19:18:39 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 75]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 75
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 19:20:14 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 71]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 71
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 19:21:23 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 71]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 71
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 19:26:19 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 71]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 71
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 19:50:40 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 86]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 86
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 19:50:40 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 87]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 87
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 19:50:40 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 88]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 88
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 19:50:40 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 92]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 92
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 19:50:46 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 86]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 86
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 19:50:46 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 87]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 87
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 19:50:46 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 88]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 88
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 19:50:46 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 92]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 92
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 19:51:00 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 86]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 86
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 19:51:00 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 87]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 87
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 19:51:00 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 88]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 88
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 19:51:00 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 92]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 92
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 19:51:13 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 87]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 87
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 19:51:13 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 88]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 88
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 19:51:13 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 89]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 89
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 19:51:13 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 93]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 93
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 19:58:14 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 65]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 65
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 20:00:07 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 65]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 65
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 20:09:16 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 65]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 65
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 20:10:27 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 112]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 112
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 20:10:27 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 114]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 114
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 20:54:54 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 178]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 178
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 20:54:54 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 182]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 182
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 20:55:25 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 178]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 178
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 20:55:25 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 182]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 182
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 20:55:29 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 178]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 178
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 20:55:29 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 182]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 182
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 20:55:54 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 178]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 178
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 20:55:54 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 182]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 182
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 20:56:15 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 182]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 182
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 20:56:24 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 182]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 182
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 20:56:31 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 182]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 182
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 20:56:57 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 182]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 182
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 20:57:07 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 182]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 182
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 20:57:13 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 182]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 182
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 20:58:57 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 182]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 182
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 20:59:06 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 182]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 182
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 20:59:16 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 182]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 182
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 20:59:41 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 182]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 182
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 21:00:24 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 182]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 182
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 21:00:44 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 182]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 182
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 21:00:55 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 182]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 182
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2013-12-26 21:01:11 Debug: Notice (8): Trying to get property of non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\BlocksController.php, line 182]
+Trace:
+BlocksController::getsite() - APP\Controller\BlocksController.php, line 182
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 490
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+

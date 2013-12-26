@@ -110,9 +110,8 @@
             
 			<!-- FEATURES -->
 			<ul id="features">
-				<li>Daily new selections at large retailers near you</li>
-				<li>Over 17 brands (Macy's, Express, American Eagle, H&M, McDonalds, Gamestop, Victoria's Secret, and much more!)</li>
-				<li>Fast, Fun, and Convenient Shopping for your Phone</li>
+				<li>Daily new selections near you</li>
+				<li>Over $5,000 in sales, deals, and more per hour!</li>
 				<li>Shop over 3,000+ Locations in major cities like New York, Palo Alto, San Francisco, San Diego, and more!</li>
 			</ul>
 		

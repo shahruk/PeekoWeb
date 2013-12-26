@@ -44,6 +44,8 @@
 				$this->autoRender = false;
 				$url = $this->request->data['url'];
 				$site = str_ireplace('www.', '', parse_url($url, PHP_URL_HOST));
+				$site = str_ireplace('www1.', '', $site);
+				
 				$site = explode('.', $site);
 				$site = $site[0]; //bestbuy.com -> bestbuy
 				//Start the scraping once we have the cleanest domain name.
@@ -54,6 +56,7 @@
 				curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);  
 				curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 10);  
 				$str = curl_exec($curl); 
+				echo ($str);
 				curl_close($curl);  
 				$html = str_get_html($str);
 				//Create array Product and pass to client via JSON
@@ -62,8 +65,25 @@
 					$product['name'] = $html->find('h1.product-title', 0)->plaintext;
 					$product['description'] = $html->find('span[id=product_overview]', 0)->plaintext;
 					$product['price'] = $html->find('p.product-price', 0)->plaintext;
+					
+					if(!$product['price']){
+						$product['price'] = $html->find('p.was-now-price', 0)->innertext;
+					}
+					
 					$product['images'] = $html->find('img[id=ctl00_MainContent_productImage]', 0)->src;
 					
+				}
+				elseif($site == "ae"){
+					$product['name'] = $html->find('h1.pName', 0)->plaintext;
+					$product['description'] = $html->find('div.addlEquity', 0)->plaintext;
+					$check = $html->find('div.salePrice', 0)->plaintext;
+					$product['price'] = trim($html->find('span.currency', 0)->plaintext).trim($html->find('span.dollars', 0)->plaintext).".".$html->find('span.cents', 0)->plaintext;	
+					//If no deal, then do the original price.
+					if($check){
+						$product['price'] = "Sale ".$product['price'];
+					}
+					
+					$product['images'] = "http:".$html->find('div[id=imgHolder] img', 0)->src;
 				}
 				elseif($site == "mcdonalds"){
 					$product['name'] = $html->find('p.food_detail_title', 0)->plaintext;
@@ -92,7 +112,7 @@
 				elseif($site == "bestbuy"){
 					$product['name'] = $html->find('div[id=sku-title] h1', 0)->plaintext;
 					$product['description'] = $html->find('div[id=long-description]', 0)->plaintext;
-					$product['price'] = $html->find('div.item-price', 0)->plaintext;
+					$product['price'] = str_replace(' ', '', $html->find('div.item-price', 0)->plaintext);
 					$product['images'] = $html->find('div.image-gallery-main-slide a img', 0)->src;
 				}
 				elseif($site == "victoriassecret"){
@@ -110,9 +130,61 @@
 					if(!$product['price']){
 						$product['price'] = $html->find('h4.list-price', 0)->plaintext;
 					}
+					
+					//Grab image element and then use data-image attribute for source.
 					$product['images'] = $html->find('div.wanelo', 0);
 					$product['images'] = $product['images']->{'data-image'};
 				}
+				elseif($site == "jcpenney"){
+					$product['name'] = $html->find('a.pdp_title', 0)->plaintext;
+					$product['description'] = $html->find('div[id=longCopyCont]', 0)->plaintext;
+					$product['price'] = $html->find('span.comparisonPrice', 0)->plaintext;
+					if(!$product['price']){
+						$product['price'] = $html->find('span.price_normal', 0)->plaintext;
+					}
+					//$product['images'] = $html->find('div[id=izView]', 0);
+				}
+				elseif($site == "macys"){
+					$product['name'] = $html->find('h1[id=productTitle]', 0)->plaintext;
+					$product['description'] = $html->find('div[id=longDescription]', 0)->plaintext;
+					$product['price'] = $html->find('span.priceSale', 0)->plaintext;
+					if(!$product['price']){
+						$product['price'] = $html->find('div.standardProdPricingGroup span', 0)->plaintext;
+					}
+					$product['images'] = $html->find('div[id=izView]', 0);
+				}
+				elseif($site == "bk"){
+					$product['name'] = $html->find('div.staticContent h1', 0)->innertext;
+					$product['description'] = $html->find('div.staticContent h3', 0)->innertext;
+					$product['images'] = $html->find('div[id=menu-header-group]', 0);
+				}
+				elseif($site == "dunkindonuts"){
+					$product['name'] = $html->find('h1.titleRight', 0)->innertext;
+					$product['description'] = $html->find('div.contentblock_text', 0)->plaintext;
+					$product['images'] = "http://www.dunkindonuts.com".$html->find('div.contentblock_image img', 0)->src;
+				}
+				elseif($site == "hm"){
+					$product['name'] = explode('$', $html->find('h1', 0)->plaintext)[0];
+					$product['description'] = $html->find('div.description p', 0)->plaintext;
+					$product['price'] = "Sale ".$html->find('span[id=text-price] .new', 0)->innertext;
+					if(!$product['price']){
+						$product['price'] = $html->find('span[id=text-price]', 0)->plaintext;
+					}
+					$product['images'] = "http:".$html->find('img[id=product-image]', 0)->src;
+				}
+				elseif($site == "express"){
+					$product['name'] = $html->find('h1', 0)->plaintext;
+					$product['description'] = $html->find('div.cat-pro-desc', 0)->plaintext;
+					$product['price'] = str_replace(' ', '', $html->find('span.cat-glo-tex-saleP', 0)->plaintext);
+					if(!$product['price']){
+						$product['price'] = $html->find('span.cat-glo-tex-saleP', 0)->plaintext;
+					}
+					$product['images'] = $html->find('img[id=i2]', 0)->src;
+				}
+				else{
+					echo ($site);
+				}
+				
 				
 				echo json_encode(array_map('trim', $product));
 			}else{
