@@ -169,9 +169,11 @@
 					$name = explode('$', $html->find('h1', 0)->plaintext);
 					$product['name'] = $name[0];
 					$product['description'] = $html->find('div.description p', 0)->plaintext;
-					$product['price'] = "Sale ".$html->find('span[id=text-price] .new', 0)->innertext;
+					$product['price'] = $html->find('span[id=text-price] .new', 0)->innertext;
 					if(!$product['price']){
 						$product['price'] = $html->find('span[id=text-price]', 0)->plaintext;
+					}else{
+						$product['price'] = "Sale ".$product['price'];
 					}
 					$product['images'] = "http:".$html->find('img[id=product-image]', 0)->src;
 				}
