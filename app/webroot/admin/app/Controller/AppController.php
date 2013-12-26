@@ -38,11 +38,6 @@ class AppController extends Controller {
 			$this->redirect('http://peekoapp.com/');
 		}
 		
-		$blocks = $this->Block->find('all');
-		for($i = 0; $i < count($blocks); $i++){
-			$this->Block->id = $blocks[$i]['Block']['id'];
-			$this->Block->saveField("number", (int)$blocks[$i]['Block']['number']);
-		}
 		$this->set('elysium', 'December 18, 2013');
 		$this->set('elysium2', 'December 26, 2013');
 		//$this->Location->getLocations();
