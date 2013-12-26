@@ -158,7 +158,7 @@
 				elseif($site == "bk"){
 					$product['name'] = $html->find('div.staticContent h1', 0)->innertext;
 					$product['description'] = $html->find('div.staticContent h3', 0)->innertext;
-					$product['images'] = $html->find('div[id=menu-header-group]', 0);
+					//$product['images'] = $html->find('div[id=menu-header-group]', 0);
 				}
 				elseif($site == "dunkindonuts"){
 					$product['name'] = $html->find('h1.titleRight', 0)->innertext;
