@@ -38,7 +38,7 @@
 		}
 		
 		public function getsite(){
-			//Configure::write ('debug', 0);
+			Configure::write ('debug', 0);
 			
 			if($this->request->is('ajax')){
 				$this->autoRender = false;
@@ -56,7 +56,7 @@
 				curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);  
 				curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 10);  
 				$str = curl_exec($curl); 
-				echo ($str);
+				//echo ($str);
 				curl_close($curl);  
 				$html = str_get_html($str);
 				//Create array Product and pass to client via JSON
