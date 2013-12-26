@@ -4,6 +4,7 @@ $(function(){
 	var markers = [];
 	var firstRun = true;
 	var shareHandler;
+	var dataHandler;
 	
 	var styles = {
 		stylers: [
@@ -34,7 +35,7 @@ $(function(){
 	});
 	
 	startCountdown();
-
+	
 	/*
 	
 	// Wait for device API libraries to load
@@ -76,6 +77,8 @@ $(function(){
 	
 	//Show an overlay.
 	function showOverlay(marker, data){
+		dataHandler = data;
+		console.log(data);
 		$("#productName").text(data.name);
 		$("#description").html(data.description);
 		$("#price").html(data.price);
@@ -153,7 +156,11 @@ $(function(){
 		
 		//If greater than the time, then do it for tomorrow.
 		if(countdown.getHours() >= targetHour){
-			countdown.setDate(countdown.getDate()+1);
+			if(countdown.getHours() >= 13){
+				countdown.setDate(countdown.getDate()+1);
+			}else{
+				targetHour = 13;
+			}
 		}
 		
 		countdown.setHours(targetHour,0,0,0);

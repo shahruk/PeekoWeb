@@ -138,7 +138,11 @@ $(function(){
 		
 		//If greater than the time, then do it for tomorrow.
 		if(countdown.getHours() >= targetHour){
-			countdown.setDate(countdown.getDate()+1);
+			if(countdown.getHours() >= 13){
+				countdown.setDate(countdown.getDate()+1);
+			}else{
+				targetHour = 13;
+			}
 		}
 		
 		countdown.setHours(targetHour,0,0,0);

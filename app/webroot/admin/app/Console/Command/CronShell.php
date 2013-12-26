@@ -24,6 +24,11 @@
 				}
 				$this->Brand->id = $brands[$i]['Brand']['id'];
 				$this->Brand->saveField("active_block", $block['Block']);
+				//$this->Brand->saveField("time", 
+				$blockFuture = $this->Brand->find("first", array("conditions" => array("number" => (string)$brands[$i]['Brand']['counter']+1, "brand_id" => $brands[$i]['Brand']['id'])));
+				if($blockFuture['Block']['time']){
+					$this->Brand->saveField("time", $blockFuture['Block']['time']);
+				}
 				$this->Brand->saveField("counter", $brands[$i]['Brand']['counter']+1);
 			}
 		}

@@ -581,3 +581,13 @@ Stack Trace:
 #3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-12-26 21:38:10 Error: Fatal Error (4): syntax error, unexpected '' days'' (T_CONSTANT_ENCAPSED_STRING) in [C:\wamp\www\peeko\app\webroot\admin\app\View\Brands\view.ctp, line 37]
+2013-12-26 21:38:10 Error: [FatalErrorException] syntax error, unexpected '' days'' (T_CONSTANT_ENCAPSED_STRING)
+Request URL: /app/webroot/admin/brands/view/528e3ad46e13ee9c290068c1
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 37)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 37, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\pee...', 37, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

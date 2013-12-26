@@ -20,6 +20,7 @@
 <?php echo $this->Form->input('description'); ?>
 <?php echo $this->Form->input('price'); ?>
 <?php echo $this->Form->input('images'); ?>
+<?php //echo $this->Form->dateTime('time'); ?>
 
 <?php echo $this->Form->hidden('number', array('default' => $number, 'label' => 'Number (You can leave this alone. This is automatic.)')); ?>
 <?php echo $this->Form->hidden('icon', array('default' => $brand['Brand']['active_block']['icon'])); ?>
