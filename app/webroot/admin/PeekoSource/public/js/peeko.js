@@ -40,6 +40,10 @@ $(function(){
 	
 	//When device is ready, do onSuccess.
 	function onDeviceReady(){
+		getLocation();
+	}
+	
+	function getLocation(){
 		navigator.geolocation.getCurrentPosition(onSuccess, onError, {timeout: 5000, enableHighAccuracy: true});
 	}
 	
@@ -168,7 +172,7 @@ $(function(){
 		event.preventDefault();
 		firstRun = true;
 		map.setZoom(17);
-		navigator.geolocation.getCurrentPosition(onSuccess, onError);
+		getLocation();
 	});
 	
 	$(window).bind('orientationchange resize', function(event,ui){
