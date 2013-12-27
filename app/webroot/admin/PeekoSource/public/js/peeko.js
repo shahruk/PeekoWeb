@@ -1,5 +1,17 @@
 $(function(){
-	$("body").show();
+	var applaunchCount = window.localStorage.getItem('launchCount');
+
+	//Check if it already exists or not
+	if(applaunchCount){
+		$("body").show();
+	}else{
+		alert("NEVER LAUNCHED");
+	  //Local storage is not set, hence first time launch. set the local storage item
+	  window.localStorage.setItem('launchCount',1);
+
+	  //Do the other stuff related to first time launch
+	}
+	
 	var serverUrl = "http://peekoapp.com:8080/";
 	var markers = [];
 	var firstRun = true;
