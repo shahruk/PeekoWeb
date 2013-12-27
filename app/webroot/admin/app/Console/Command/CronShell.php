@@ -19,7 +19,7 @@
 				$this->Brand->id = $brands[$i]['Brand']['id'];
 				$this->Brand->saveField("active_block", $block['Block']);
 
-				$this->Brand->saveField("counter", 10);
+				$this->Brand->saveField("counter", (int)$brands[$i]['Brand']['counter']+1);
 			}
 		}
 		
