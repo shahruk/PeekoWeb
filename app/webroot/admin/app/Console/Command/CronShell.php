@@ -53,8 +53,8 @@
 			$brands = $this->Brand->find('all');
 			for($i = 0; $i < count($brands); $i++){
 				$this->Brand->id = $brands[$i]['Brand']['id'];
-				$this->Brand->saveField("counter", 11);
-				$block = $this->Block->find("first", array("conditions" => array("number" => 10, "brand_id" => $brands[$i]['Brand']['id'])));
+				$this->Brand->saveField("counter", 10);
+				$block = $this->Block->find("first", array("conditions" => array("number" => 9, "brand_id" => $brands[$i]['Brand']['id'])));
 				$this->Brand->saveField("active_block", $block['Block']);
 			}
 		}
