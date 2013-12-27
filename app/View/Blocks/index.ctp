@@ -17,6 +17,7 @@ $this->end(); ?>
 		</div>
 	</div>
 	<div class="span4">
+		<img src="http://peekoapp.com:8080/brands/<?php echo $block['Block']['icon']; ?>" />
 		<div class="section">
 			<h3>Date</h3>: <?php $date = date('m-d-Y', strtotime($elysium.' +'.(int)($block['Block']['number']).' days')); 
 					if($date >= "12-26-2013"){
