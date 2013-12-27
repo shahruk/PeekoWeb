@@ -4,18 +4,13 @@
 		public function updateBlocks(){
 		
 			parent::sendEmail();
-			
-			//Add permalinks
-			//$blocks = $this->Block->find('all');
-			/*for($i = 0; $i < count($blocks); $i++){
-				$this->Block->addPermalink($blocks[$i]['Block']['id'], $blocks[$i]['Block']['name']);
-				
-			}*/
+
 			$brands = $this->Brand->find('all');
 			for($i = 0; $i < count($brands); $i++){
 				$block = $this->Block->find("first", array("conditions" => array("number" => (int)($brands[$i]['Brand']['counter']-1)), "brand_id" => $brands[$i]['Brand']['id']));
 				
 				if(!$block){
+					die("A");
 					$block = $this->Block->find("first", array("conditions" => array("number" => (int)($brands[$i]['Brand']['counter']-2)), "brand_id" => $brands[$i]['Brand']['id']));
 					$this->Block->create();
 					unset($block['Block']['id']);
