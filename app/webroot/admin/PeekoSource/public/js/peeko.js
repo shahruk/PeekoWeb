@@ -56,7 +56,7 @@ $(function(){
 	
 	function onError(error) {
 		//alert("Error!");
-		//alert(error);
+		alert(error);
 		alert("Unfortunately it looks like you're not connected. You will need to have internet access and allow us to use your location for Peeko to work.");
 	}
 	
