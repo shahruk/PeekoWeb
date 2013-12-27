@@ -18,7 +18,7 @@
 				$number = 0;
 			}
 			$number = $number['Block']['number'] +1;
-			$this->set('number', $number);
+			$this->set('number', (int)$number);
 			$this->set('brand', $brand);
 		}
 		

@@ -18,7 +18,11 @@ $this->end(); ?>
 	</div>
 	<div class="span4">
 		<div class="section">
-			<h3>Date</h3>: <?php echo date('m-d-Y', strtotime($elysium.' +'.$block['Block']['number'].' days')); ?>
+			<h3>Date</h3>: <?php $date = date('m-d-Y', strtotime($elysium.' +'.(int)($block['Block']['number']).' days')); 
+					if($date >= "12-26-2013"){
+						$date = date('m-d-Y', strtotime($elysium2.' +'.(int)(($block['Block']['number']-7)/2).' days')); 
+					}
+					echo $date; ?>
 		</div>
 		<div class="section">
 			<h3>Price</h3>: <?php echo $block['Block']['price']; ?>
