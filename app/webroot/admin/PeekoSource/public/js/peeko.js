@@ -40,7 +40,7 @@ $(function(){
 	
 	//When device is ready, do onSuccess.
 	function onDeviceReady(){
-		navigator.geolocation.getCurrentPosition(onSuccess, onError, {timeout: 30000});
+		navigator.geolocation.getCurrentPosition(onSuccess, onError, {timeout: 5000});
 	}
 	
 	function onSuccess(position){
@@ -56,7 +56,8 @@ $(function(){
 	
 	function onError(error) {
 		//alert("Error!");
-		alert(error);
+		alert(error.code);
+		alert(error.message);
 		alert("Unfortunately it looks like you're not connected. You will need to have internet access and allow us to use your location for Peeko to work.");
 	}
 	
