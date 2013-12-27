@@ -5,7 +5,7 @@ $(function(){
 	if(applaunchCount){
 		$("body").show();
 	}else{
-		alert("NEVER LAUNCHED");
+		
 	  //Local storage is not set, hence first time launch. set the local storage item
 	  window.localStorage.setItem('launchCount',1);
 
