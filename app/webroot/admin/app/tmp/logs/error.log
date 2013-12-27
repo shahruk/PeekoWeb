@@ -611,3 +611,35 @@ Stack Trace:
 #3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-12-27 02:13:22 Error: [MissingActionException] Action BlocksController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'BlocksController',
+  'action' => 'index',
+)
+Request URL: /app/webroot/admin/blocks/index/2/wii-remote-plus-mario-by-nintendo-of-america
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BlocksController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\peeko\app\webroot\admin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-12-27 02:14:09 Error: [MissingActionException] Action BlocksController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'BlocksController',
+  'action' => 'index',
+)
+Request URL: /app/webroot/admin/blocks/index/2/wii-remote-plus-mario-by-nintendo-of-america
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BlocksController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\peeko\app\webroot\admin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-12-27 02:14:16 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [C:\wamp\www\peeko\app\webroot\admin\app\View\Brands\view.ctp, line 48]
+2013-12-27 02:14:16 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /app/webroot/admin/brands/view/528e3ab96e13ee9c29006863
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 48)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 48, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\pee...', 48, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
