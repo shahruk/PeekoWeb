@@ -45,7 +45,7 @@ a.addNew{
 			
 			</td>
 			<td class="actions"><?php echo $this->Html->link('Edit', array('controller' => 'blocks', 'action' => 'edit', $blocks[$i]['Block']['id'])); ?></td>
-			<td class="actions"><a href="http://peeko.local/blocks/<?php echo $blocks[$i]['Block']['number']."/".$blocks[$i]['Block']['permalink']; ?>">Visit Peeko Page</a></td>
+			<td class="actions"><a href="http://peekoapp.com/blocks/<?php echo $blocks[$i]['Block']['number']."/".$blocks[$i]['Block']['permalink']; ?>">Visit Peeko Page</a></td>
 			<td>Block #<?php echo $blocks[$i]['Block']['number']; ?></td>
 		</tr>
 	<?php } ?>
