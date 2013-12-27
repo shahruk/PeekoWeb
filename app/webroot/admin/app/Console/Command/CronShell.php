@@ -10,7 +10,6 @@
 				$block = $this->Block->find("first", array("conditions" => array("number" => (int)($brands[$i]['Brand']['counter']-1)), "brand_id" => $brands[$i]['Brand']['id']));
 				
 				if(!$block){
-					die("A");
 					$block = $this->Block->find("first", array("conditions" => array("number" => (int)($brands[$i]['Brand']['counter']-2)), "brand_id" => $brands[$i]['Brand']['id']));
 					$this->Block->create();
 					unset($block['Block']['id']);
@@ -19,12 +18,8 @@
 				}
 				$this->Brand->id = $brands[$i]['Brand']['id'];
 				$this->Brand->saveField("active_block", $block['Block']);
-				//$this->Brand->saveField("time", 
-				/*$blockFuture = $this->Brand->find("first", array("conditions" => array("number" => $brands[$i]['Brand']['counter']+1, "brand_id" => $brands[$i]['Brand']['id'])));
-				if($blockFuture['Block']['time']){
-					$this->Brand->saveField("time", $blockFuture['Block']['time']);
-				}*/
-				$this->Brand->saveField("counter", (int)($brands[$i]['Brand']['counter']+1));
+
+				$this->Brand->saveField("counter", 10);
 			}
 		}
 		
@@ -53,15 +48,14 @@
 				//$this->Brand->saveField("counter", $brands[$i]['Brand']['counter']+1);
 			}
 		}
-		
+		*/
 		public function fixNumber(){
 			$brands = $this->Brand->find('all');
 			for($i = 0; $i < count($brands); $i++){
-				$block = $this->Block->find("first", array("conditions" => array("number" => "6", "brand_id" => $brands[$i]['Brand']['id'])));
-				$this->Block->id = $block['Block']['id'];
-				$this->Block->saveField("number", "5");
+				$this->Brand->id = $brands[$i]['Brand']['id'];
+				$this->Brand->saveField("counter", 11);
+				$block = $this->Block->find("first", array("conditions" => array("number" => 10, "brand_id" => $brands[$i]['Brand']['id'])));
+				$this->Brand->saveField("active_block", $block['Block']);
 			}
 		}
-		
-		*/
 	}
