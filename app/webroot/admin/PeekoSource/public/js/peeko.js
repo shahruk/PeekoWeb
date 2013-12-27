@@ -40,7 +40,7 @@ $(function(){
 	
 	//When device is ready, do onSuccess.
 	function onDeviceReady(){
-		navigator.geolocation.getCurrentPosition(onSuccess, onError, {timeout: 5000});
+		navigator.geolocation.getCurrentPosition(onSuccess, onError, {timeout: 5000, enableHighAccuracy: true});
 	}
 	
 	function onSuccess(position){
