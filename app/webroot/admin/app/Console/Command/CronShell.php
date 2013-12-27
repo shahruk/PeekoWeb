@@ -6,11 +6,11 @@
 			parent::sendEmail();
 			
 			//Add permalinks
-			$blocks = $this->Block->find('all');
-			for($i = 0; $i < count($blocks); $i++){
+			//$blocks = $this->Block->find('all');
+			/*for($i = 0; $i < count($blocks); $i++){
 				$this->Block->addPermalink($blocks[$i]['Block']['id'], $blocks[$i]['Block']['name']);
 				
-			}
+			}*/
 			$brands = $this->Brand->find('all');
 			for($i = 0; $i < count($brands); $i++){
 				$block = $this->Block->find("first", array("conditions" => array("number" => $brands[$i]['Brand']['counter']-1), "brand_id" => $brands[$i]['Brand']['id']));
@@ -25,10 +25,10 @@
 				$this->Brand->id = $brands[$i]['Brand']['id'];
 				$this->Brand->saveField("active_block", $block['Block']);
 				//$this->Brand->saveField("time", 
-				$blockFuture = $this->Brand->find("first", array("conditions" => array("number" => $brands[$i]['Brand']['counter']+1, "brand_id" => $brands[$i]['Brand']['id'])));
+				/*$blockFuture = $this->Brand->find("first", array("conditions" => array("number" => $brands[$i]['Brand']['counter']+1, "brand_id" => $brands[$i]['Brand']['id'])));
 				if($blockFuture['Block']['time']){
 					$this->Brand->saveField("time", $blockFuture['Block']['time']);
-				}
+				}*/
 				$this->Brand->saveField("counter", (int)($brands[$i]['Brand']['counter']+1));
 			}
 		}

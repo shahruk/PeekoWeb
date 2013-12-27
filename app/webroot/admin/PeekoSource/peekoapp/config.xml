@@ -24,6 +24,7 @@
 	<name>
         Peeko
     </name>
+	<preference name="phonegap-version" value="2.9.0" />
     <description>
         Quick and easy window shopping. Find cool stuff to browse and buy around you with a single tap.
     </description>
@@ -78,32 +79,10 @@
 	
 	<feature name="http://api.phonegap.com/1.0/geolocation"/>
 	<feature name="http://api.phonegap.com/1.0/network"/>
-	<feature name="Geolocation">
-		<param name="ios-package" value="CDVLocation" />
-	</feature>
-	<feature name="Geolocation">
-		<param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
-	</feature>
 	
-	<feature name="NetworkStatus">
-		<param name="ios-package" value="CDVConnection" />
-	</feature>
-	<feature name="NetworkStatus">
-		<param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
-	</feature>
+	<gap:plugin name="org.apache.cordova.geolocation" />
+	<gap:plugin name="org.apache.cordova.network-information" version="0.2.3" />
+	<gap:plugin name="org.apache.cordova.inappbrowser" />
+	<gap:plugin name="nl.x-services.plugins.socialsharing" />
 	
-	<feature name="InAppBrowser">
-		<param name="ios-package" value="CDVInAppBrowser" />
-	</feature>
-	<feature name="InAppBrowser">
-		<param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
-	</feature>
-	
-	<feature name="SocialSharing">
-		<param name="ios-package" value="SocialSharing" />
-	</feature>
-	<feature name="SocialSharing">
-		<param name="android-package" value="nl.xservices.plugins.SocialSharing" />
-	</feature>
-
 </widget>
