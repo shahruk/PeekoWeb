@@ -61,13 +61,12 @@ $(function(){
 	}
 	
 	function getLocation(){
-		//navigator.geolocation.getCurrentPosition(onSuccess, onError, {maximumAge: 3000, timeout: 3000, enableHighAccuracy: true});
-		navigator.geolocation.getCurrentPosition(onSuccess);
+		navigator.geolocation.getCurrentPosition(onSuccess, onError, {maximumAge: 3000, timeout: 3000, enableHighAccuracy: true});
+		//navigator.geolocation.getCurrentPosition(onSuccess);
 	}
 	
 	function onSuccess(position){
 		try{
-			alert("Finding stores near you!");
 			centerMap(position.coords.latitude, position.coords.longitude, firstRun);
 			if(firstRun){
 				firstRun = false;
@@ -78,9 +77,9 @@ $(function(){
 	}
 	
 	function onError(error) {
-		//alert("Error!");
-		alert(error.code + " " +error.message);
-		alert("Unfortunately it looks like you're not connected. You will need to have internet access and allow us to use your location for Peeko to work.");
+		navigator.geolocation.getCurrentPosition(onSuccess);
+		/*alert(error.code + " " +error.message);
+		alert("Unfortunately it looks like you're not connected. You will need to have internet access and allow us to use your location for Peeko to work.");*/
 	}
 	
 	//Show an overlay.
