@@ -30,6 +30,15 @@
 				
 			}
 		}
+		
+		public function number(){
+			$blocks = $this->Block->find('all');
+			for($i = 0; $i < count($blocks); $i++){
+				$this->Block->id = $blocks[$i]['Block']['id'];
+				$this->Block->saveField((int)$blocks[$i]['Block']['number']);
+				
+			}
+		}
 		/*
 		public function resetBlocks(){
 			$brands = $this->Brand->find('all');

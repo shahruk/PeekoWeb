@@ -17,7 +17,7 @@
 			if(empty($number)){
 				$number = 0;
 			}
-			$number = $number['Block']['number'] +1;
+			$number = $number['Block']['number']+1;
 			$this->set('number', (int)$number);
 			$this->set('brand', $brand);
 		}
