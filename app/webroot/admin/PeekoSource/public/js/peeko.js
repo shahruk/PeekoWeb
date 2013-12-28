@@ -79,7 +79,7 @@ $(function(){
 	function onError(error) {
 		navigator.geolocation.getCurrentPosition(onSuccess, function(){
 			alert(error.code + " " +error.message);
-			alert("Unfortunately it looks like you're not connected. You will need to have internet access and allow us to use your location for Peeko to work.");*/
+			alert("Unfortunately it looks like you're not connected. You will need to have internet access and allow us to use your location for Peeko to work.");
 		});
 		
 	}
