@@ -124,6 +124,14 @@
 				<strong>Requirements:</strong><br>
 				Compatible with iPhone, iPad, and iPod touch. Requires iOS 6.0 or later. A network connection is required.
 			</div>
+			<div class="download-box">
+				<a href="http://bit.ly/1cdnQL3"><img src="img/android_app_on_play_logo_large.png"></a>
+			</div>
+
+			<div class="download-box">
+				<strong>Requirements:</strong><br>
+				Compatible with most Android devices. Requires Android 2.1 or later. A network connection is required.
+			</div>
 		</div>
 	</div>
 	
