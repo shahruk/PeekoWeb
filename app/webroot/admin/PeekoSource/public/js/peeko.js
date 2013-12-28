@@ -1,5 +1,5 @@
 $(function(){
-	var applaunchCount = window.localStorage.getItem('launchCounter');
+	var applaunchCount = window.localStorage.getItem('appLaunchCounter');
 	$("body").show();
 	//Check if it already exists or not
 	if(!applaunchCount){
@@ -8,7 +8,9 @@ $(function(){
 		e.preventDefault();
 		$("#tutorial").remove();
 		//Local storage is not set, hence first time launch. set the local storage item
-		window.localStorage.setItem('launchCounter',1);
+		if($(this).text() == "Continue"){
+			window.localStorage.setItem('appLaunchCounter',1);
+		}
 	  });
 	  
 
