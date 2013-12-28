@@ -40,13 +40,13 @@ $(function(){
 			scaledSize: new google.maps.Size(24,28),
 			animation: google.maps.Animation.DROP
 		},
-		zindex: 12
+		zindex: 100
 	});
 	
 	var userMarker = new google.maps.Marker({
 		position: new google.maps.LatLng(120, 60), 
 		map: map,
-		zindex: 12
+		zindex: 100
 	});
 	
 	startCountdown();
