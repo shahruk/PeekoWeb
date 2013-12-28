@@ -61,7 +61,7 @@ $(function(){
 	}
 	
 	function getLocation(){
-		navigator.geolocation.getCurrentPosition(onSuccess, onError, {timeout: 10000, enableHighAccuracy: true});
+		navigator.geolocation.getCurrentPosition(onSuccess, onError, {timeout: 30000, enableHighAccuracy: true});
 	}
 	
 	function onSuccess(position){
@@ -77,8 +77,7 @@ $(function(){
 	
 	function onError(error) {
 		//alert("Error!");
-		alert(error.code);
-		alert(error.message);
+		alert(error.code + " " +error.message);
 		alert("Unfortunately it looks like you're not connected. You will need to have internet access and allow us to use your location for Peeko to work.");
 	}
 	
