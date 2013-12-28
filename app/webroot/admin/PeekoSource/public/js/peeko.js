@@ -27,7 +27,7 @@ $(function(){
 	var initialCenter = new google.maps.LatLng(40.758895, -73.985131);
 	var mapOptions = {
 		center: initialCenter,
-		zoom: 15,
+		zoom: 14,
 		disableDefaultUI: true,
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	};
@@ -167,7 +167,7 @@ $(function(){
 		}
 		
 		countdown.setHours(targetHour,0,0,0);
-		$('#countdown').countdown({until: countdown}); 
+		$('#countdown').countdown({until: $.countdown.UTCDate(-5, countdown)}); 
 	}
 	
 	$("#close").click(function(){
