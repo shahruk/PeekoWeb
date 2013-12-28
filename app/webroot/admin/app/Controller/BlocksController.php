@@ -5,7 +5,7 @@
 				//Number type casting.
 				$this->request->data['Block']['number'] = (int)$this->request->data['Block']['number'];
 				if($this->Block->save($this->request->data)){
-					$this->Block->saveField('permalink', $this->Block->addPermalink($this->Block->id, $this->request->data['Block']['name']));
+					$this->Block->addPermalink($this->Block->id, $this->request->data['Block']['name']);
 					$this->Session->setFlash('Congratulations. Saved.');
 					$this->redirect(array('controller' => 'brands', 'action' => 'view', $id));
 				}else{
@@ -28,7 +28,7 @@
 			if($this->request->is('put')){
 				$this->Block->id = $id;
 				if($this->Block->save($this->request->data)){
-					$this->Block->saveField('permalink', $this->Block->addPermalink($this->Block->id, $this->request->data['Block']['name']));
+					$this->Block->addPermalink($this->Block->id, $this->request->data['Block']['name']);
 					$this->Session->setFlash('Congratulations. Saved.');
 					$this->redirect(array('controller' => 'brands', 'action' => 'index'));
 				}else{
