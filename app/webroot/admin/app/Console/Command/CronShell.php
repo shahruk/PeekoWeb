@@ -35,7 +35,7 @@
 			$blocks = $this->Block->find('all');
 			for($i = 0; $i < count($blocks); $i++){
 				$this->Block->id = $blocks[$i]['Block']['id'];
-				$this->Block->saveField((int)$blocks[$i]['Block']['number']);
+				$this->Block->saveField('number', (int)$blocks[$i]['Block']['number']);
 				
 			}
 		}
