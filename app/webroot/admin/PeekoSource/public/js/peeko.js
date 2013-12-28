@@ -61,11 +61,13 @@ $(function(){
 	}
 	
 	function getLocation(){
-		navigator.geolocation.getCurrentPosition(onSuccess, onError, {maximumAge: 3000, timeout: 3000, enableHighAccuracy: true});
+		//navigator.geolocation.getCurrentPosition(onSuccess, onError, {maximumAge: 3000, timeout: 3000, enableHighAccuracy: true});
+		navigator.geolocation.getCurrentPosition(onSuccess);
 	}
 	
 	function onSuccess(position){
 		try{
+			alert("Finding stores near you!");
 			centerMap(position.coords.latitude, position.coords.longitude, firstRun);
 			if(firstRun){
 				firstRun = false;
