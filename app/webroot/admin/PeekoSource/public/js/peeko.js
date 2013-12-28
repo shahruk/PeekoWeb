@@ -61,7 +61,7 @@ $(function(){
 	}
 	
 	function getLocation(){
-		navigator.geolocation.getCurrentPosition(onSuccess, onError, {timeout: 5000, enableHighAccuracy: true});
+		navigator.geolocation.getCurrentPosition(onSuccess, onError, {timeout: 10000, enableHighAccuracy: true});
 	}
 	
 	function onSuccess(position){
