@@ -1,5 +1,13 @@
 $(function(){
 	$("body").show();
+	 $("body").prepend("<div id='tutorial'><a class='endTutorial btn btn-primary btn-lg' href='#'>Skip Tutorial</a><div id='steps'><div><img src='http://i.imgur.com/qTcG9T2.png' /> <h2>Find Daily Deals and Selections Near You</h2><div class='description'>Browse popular stores like H&M, Forever 21, Best Buy, Starbucks, American Eagle, Macy's, and much more straight from your phone. There's always a new deal or selection to browse from!</div></div><div><img src='http://i.imgur.com/sFRTOkn.png' /> <h2>Shop In Store or Online</h2>Browse reviews, photos, details, and more about the things you see straight from the official website. When you see something you like, either purchase online or swing by and checkout in person!</div></div><a class='endTutorial btn btn-success btn-lg' href='#'>Continue</a></div>");
+	  $("body").on('click', '.endTutorial', function(e){
+		e.preventDefault();
+		$("#tutorial").fadeOut(300);
+		$("body").show();
+		//Local storage is not set, hence first time launch. set the local storage item
+		window.localStorage.setItem('launchCount',1);
+	  });
 	var serverUrl = "http://localhost:8080/";
 	var markers = [];
 	var firstRun = true;
