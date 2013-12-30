@@ -186,7 +186,7 @@
 					if(!$product['price']){
 						$product['price'] = $html->find('span.cat-glo-tex-saleP', 0)->plaintext;
 					}
-					if($product['price']){
+					if(!$product['price']){
 						$product['price'] = $html->find('div.cat-pro-price', 0)->plaintext;
 					}
 					$product['images'] = $html->find('img[id=i2]', 0)->src;
