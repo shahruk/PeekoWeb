@@ -169,12 +169,10 @@
 			<!-- UPDATES & RELEASE NOTES -->
 			<hr>
 		
-			<h3 class="version">Version 1.0.1</h3>
 			<span class="release-date">Released on December 16th, 2013</span>
-			<ul>
-				<li><span class="label label-info">NEW</span>Initial Release</li>
-			</ul>
+			<div class="clearfix"><span class="label label-info">NEW</span>iOS App Released</div>
 			
+			<div class="clearfix"><span class="release-date">Released on December 28th, 2013</span><span class="label label-info">NEW</span>Android App Released</div>
 		</div>
 	
 	</div>
