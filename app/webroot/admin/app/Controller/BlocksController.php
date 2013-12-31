@@ -41,6 +41,28 @@
 
 		}
 		
+		public function copy($id){
+			$block = $this->Block->findById($id);
+			$block['Block']['number'] = $this->Block->find('count', array('conditions' => array('brand_id' => $block['Block']['brand_id'])))+1;
+			unset($block['Block']['id']);
+			$this->Block->save($block);
+			$this->Session->setFlash("Duplicated record!");
+			$this->redirect($this->referer());
+			
+		}
+		
+		public function delete($id){
+			$block = $this->Block->findById($id);
+			$this->Block->delete($id);
+			$blocks = $this->Block->find('all', array('conditions' => array('brand_id' => $block['Block']['brand_id']), 'order' =>array('number' => 1)));
+			for($i = 0; $i <= count($blocks); $i++){
+				$this->Block->id = $blocks[$i]['Block']['id'];
+				$this->Block->saveField('number', $i+1);
+			}
+			$this->Session->setFlash("DELETED record!");
+			$this->redirect($this->referer());
+		}
+		
 		public function getsite(){
 			Configure::write ('debug', 0);
 			

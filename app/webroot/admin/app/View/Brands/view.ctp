@@ -44,9 +44,23 @@ a.addNew{
 				?>
 			
 			</td>
-			<td class="actions"><?php echo $this->Html->link('Edit', array('controller' => 'blocks', 'action' => 'edit', $blocks[$i]['Block']['id'])); ?></td>
+			<td class="actions">
+			<?php 
+				if($blocks[$i]['Block']['number'] > $brand['Brand']['counter']){
+					echo $this->Html->link('Edit', array('controller' => 'blocks', 'action' => 'edit', $blocks[$i]['Block']['id']));
+				}
+				echo $this->Html->link('Copy', array('controller' => 'blocks', 'action' => 'copy', $blocks[$i]['Block']['id']));
+			?>
+			</td>
 			<td class="actions"><a href="http://peekoapp.com/blocks/<?php echo $blocks[$i]['Block']['number']."/".$blocks[$i]['Block']['permalink']; ?>">Visit Peeko Page</a></td>
 			<td>Block #<?php echo $blocks[$i]['Block']['number']; ?></td>
+			<td class="actions">
+			<?php 
+				if($blocks[$i]['Block']['number'] > $brand['Brand']['counter']){
+					echo $this->Html->link('DELETE', array('controller' => 'blocks', 'action' => 'delete', $blocks[$i]['Block']['id']));
+				}
+			?>
+			</td>
 		</tr>
 	<?php } ?>
 </table>

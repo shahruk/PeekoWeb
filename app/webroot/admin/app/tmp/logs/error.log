@@ -643,3 +643,35 @@ Stack Trace:
 #3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-12-30 05:26:06 Error: Fatal Error (4): syntax error, unexpected end of file in [C:\wamp\www\peeko\app\webroot\admin\app\View\Brands\view.ctp, line 57]
+2013-12-30 05:26:06 Error: [FatalErrorException] syntax error, unexpected end of file
+Request URL: /app/webroot/admin/brands/view/528e3a886e13ee9c29006795
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 57)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 57, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\pee...', 57, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-30 05:28:16 Error: Fatal Error (4): syntax error, unexpected end of file in [C:\wamp\www\peeko\app\webroot\admin\app\View\Brands\view.ctp, line 64]
+2013-12-30 05:28:16 Error: [FatalErrorException] syntax error, unexpected end of file
+Request URL: /app/webroot/admin/brands/view/528e3a886e13ee9c29006795
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 64)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 64, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\pee...', 64, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-30 05:32:19 Error: [MissingViewException] View file "C:\wamp\www\peeko\app\webroot\admin\app\View\Blocks\copy.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\peeko\\app\\webroot\\admin\\app\\View\\Blocks\\copy.ctp',
+)
+Request URL: /app/webroot/admin/blocks/copy/52be327dec2d2f3f7c8a3158
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\View\View.php(457): View->_getViewFileName(NULL)
+#1 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BlocksController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\peeko\app\webroot\admin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
