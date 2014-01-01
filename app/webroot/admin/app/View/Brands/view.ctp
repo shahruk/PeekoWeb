@@ -32,7 +32,7 @@ a.addNew{
 	<?php for($i = 0; $i < count($blocks); $i++){ ?>
 		<tr>
 			<td><?php echo $this->Html->image($blocks[$i]['Block']['images'], array('url' => $blocks[$i]['Block']['url'])); ?></td>
-			<td><?php echo $this->Html->link($blocks[$i]['Block']['name'],  array('controller' => 'blocks', 'action' => 'edit', $blocks[$i]['Block']['id'])); ?></td>
+			<td><?php echo $blocks[$i]['Block']['name']; ?></td>
 			<td><?php echo $blocks[$i]['Block']['price']; ?></td>
 			<td>
 				<?php 
@@ -46,7 +46,7 @@ a.addNew{
 			</td>
 			<td class="actions">
 			<?php 
-				if($blocks[$i]['Block']['number'] > $brand['Brand']['counter']){
+				if($blocks[$i]['Block']['number'] >= $brand['Brand']['counter']){
 					echo $this->Html->link('Edit', array('controller' => 'blocks', 'action' => 'edit', $blocks[$i]['Block']['id']));
 				}
 				echo $this->Html->link('Copy', array('controller' => 'blocks', 'action' => 'copy', $blocks[$i]['Block']['id']));
