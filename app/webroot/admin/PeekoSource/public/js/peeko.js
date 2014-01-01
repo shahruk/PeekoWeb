@@ -104,7 +104,7 @@ $(function(){
 			map: map,
 			icon: {
 				url: serverUrl+'brands/'+data.active_block['icon'],
-				scaledSize: new google.maps.Size(40,50),
+				scaledSize: new google.maps.Size(50,70),
 				zIndex: 1,
 			}
 		});
