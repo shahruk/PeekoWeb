@@ -43,7 +43,7 @@
 		
 		public function copy($id){
 			$block = $this->Block->findById($id);
-			$block['Block']['number'] = $this->Block->find('count', array('conditions' => array('brand_id' => $block['Block']['brand_id'])))+1;
+			$block['Block']['number'] = (int)($this->Block->find('count', array('conditions' => array('brand_id' => $block['Block']['brand_id'])))+1);
 			unset($block['Block']['id']);
 			$this->Block->save($block);
 			$this->Session->setFlash("Duplicated record!");
