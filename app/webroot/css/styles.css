@@ -20,6 +20,7 @@ header{
 	height: 645px;
 	position: relative;
 	background: url('/img/bg.png');
+	background-size:100% auto;
 	
 }
 
