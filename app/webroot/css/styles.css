@@ -45,6 +45,7 @@ img.phones{
 	position: absolute;
 	right: 0;
 	top: 75px;
+	z-index: 3;
 }
 
 img.phones.shifted{
@@ -73,7 +74,11 @@ img.phones.shifted{
 
 .panel{
 	padding: 150px 0;
-	min-height: 476px;
+	min-height: 777px;
+}
+
+.panel h2{
+	font-size: 28px;
 }
 
 .instantshopping .info{
@@ -86,8 +91,16 @@ img.phones.shifted{
 	position: absolute;
 }
 
+.panel .info p{
+	color: #8D8D8D;
+}
+
 .instantshopping img{
 	left: 0;
+}
+
+.browsedeals h2{
+	color: #595959;
 }
 
 .browsedeals img{
@@ -102,6 +115,79 @@ img.phones.shifted{
 
 .browsedeals .info{
 	margin-right: 500px;
+}
+
+.twelveHours{
+	margin: 80px auto;
+	border: 1px solid #DDD;
+	border-width: 1px 0 1px 0;
+	padding: 40px 0;
+}
+
+.twelveHours .subtext{
+	float: right;
+	font-size: 42px;
+	width: 340px;
+	margin-top: 55px;
+	display: block;
+	color: #666;
+}
+
+.twelveHours span.glyphicon{
+	font-size: 140px;
+	color: #222;
+}
+
+.twelveHours p{
+	margin-top: 40px;
+}
+
+.founders > h2{
+	font-size: 44px;
+	text-align: center;
+}
+
+.founders > .info > p{
+	width: 800px;
+	margin: auto;
+	margin-bottom: 60px; 
+}
+
+.panel section img{
+	position: static;
+}
+
+.founders .aboutfounders{
+	text-align: center;
+}
+
+.founders .aboutfounders p{
+	text-align: left;
+}
+
+.founders .aboutfounders h3{
+	margin-bottom: 0;
+}
+
+.founders .aboutfounders h4{
+	margin-bottom: 20px;
+	margin-top: 0;
+}
+
+.founders .aboutfounders img{
+	border-radius: 4px;
+	width: auto;
+}
+
+.founders section{
+	margin: 0 20px;
+	width: 400px;
+	display: inline-block;
+}
+
+.founders .info > p{
+	font-size: 25px;
+	line-height: 40px;
 }
 
 @media screen and (min-width: 1800px) {
