@@ -30,10 +30,37 @@
 			<img class="phones" src="/img/phone2.png" />
 			<div class="description helvreg">
 				<h1 class="helvbold">Deals and Selections Near You</h1>
-				Find the latest deals and selections hand-picked at stores near you.
+				<p>
+					Find the latest deals and selections at stores near you, all from your smartphone. There's always something new to browse every 12 hours. 
+				</p>
+				
+				<p>Shopping on the go has never been more fun and convenient.</p>
+				<div class="downloadLinks">
+					<a class="ios" href="http://bit.ly/JZgZPx"><img src="/img/available-on-the-app-store.png" /></a>
+					<a class="android" href="http://bit.ly/1cdnQL3"><img src="/img/android_app_on_play_logo_large.png" /></a>
+				</div>
 			</div>
+			
 		</div>
 	</header>
+	<div class="wrapper panel instantshopping">
+		<img src="/img/instantshopping.png" />
+		<div class="info helvreg">
+			<h2 class="helvbold">Instant Shopping</h2>
+			<p>We bring the power of shopping to your smartphone. Never miss out on great deals and products near you ever again. Simply tap on the icon of a store near you to browse.</p>
+			<p>No surveys, no logins, just simple shopping.</p>
+		</div>
+	</div>
+	<div class="panel browsedeals">
+		<div class="wrapper">
+			<img src="/img/browsedeals.png" />
+			<div class="info helvreg">
+				<h2 class="helvbold">Browse the Latest Deals and Selections</h2>
+				<p>We bring the power of shopping to your smartphone. Never miss out on great deals and products near you ever again. Simply tap on the icon of a store near you to browse.</p>
+				<p>No surveys, no logins, just simple shopping.</p>
+			</div>
+		</div>
+	</div>
 <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 <?php echo $this->Html->script(array('bootstrap.min', 'init')); ?>
 <script>

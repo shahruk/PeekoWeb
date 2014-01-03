@@ -1,3 +1,9 @@
+p{
+	font-family: inherit;
+	font-size: 14px;
+	line-height: 20px;
+}
+
 .helvbold{
 	font-family: 'helvetica_neuebold', 'Helvetica', 'Arial', sans-serif;
 }
@@ -47,16 +53,56 @@ img.phones.shifted{
 
 .description{
 	margin-right: 550px;
-	margin-top: 400px;
+	margin-top: 225px;
 	color: #FFF;
 	font-size: 14px;
 }
 
 .description h1{
 	font-size: 30px;
-	line-height: 40px;
+	line-height: 50px;
 }
 
+.downloadLinks{
+	margin-top: 40px;
+}
+
+.downloadLinks > .android{
+	margin-left: 25px;
+}
+
+.panel{
+	padding: 150px 0;
+	min-height: 476px;
+}
+
+.instantshopping .info{
+	margin-left: 560px;
+	margin-top: 220px;
+}
+
+.panel img{
+	width: 480px;
+	position: absolute;
+}
+
+.instantshopping img{
+	left: 0;
+}
+
+.browsedeals img{
+	right: 0;
+	top: 0;
+	width: 280px;
+}
+
+.panel.browsedeals{
+	background: #F4F4F4;
+}
+
+.browsedeals .info{
+	margin-right: 500px;
+}
 
 @media screen and (min-width: 1800px) {
 
