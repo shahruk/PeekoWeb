@@ -8,7 +8,7 @@ $this->end(); ?>
 <?php //debug($block); ?>
 <div class="row-fluid">
 	<div class="span8">
-		<h2 style="text-align: center; padding: 20px;"><?php echo $block['Block']['name']; ?></h2>
+		<h2 style="text-align: center; padding: 20px; font-size: 24px;"><?php echo $block['Block']['name']; ?></h2>
 
 		<img class="main-block" src="<?php echo $block['Block']['images']; ?>" />
 		<div>
