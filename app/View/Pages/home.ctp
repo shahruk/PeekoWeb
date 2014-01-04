@@ -47,7 +47,7 @@
 			<h2 class="helvbold">Instant Shopping</h2>
 			<p>We bring the power of shopping to your smartphone. Never miss out on great deals and products near you ever again. Simply tap on the icon of a store near you to browse.</p>
 			<p>No surveys, no logins, just simple shopping.</p>
-			<a id="shopCurrent" href="/currentdeals">Shop Current Deals</a>
+			<a id="shopCurrent" href="/currentdeals" class="helvlight">Shop Current Deals <span class="glyphicon glyphicon-play"></span></a>
 		</div>
 	</div>
 	

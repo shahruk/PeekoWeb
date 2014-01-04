@@ -120,16 +120,22 @@ img.phones.shifted{
 }
 
 #shopCurrent{
-	color: #0089ff;
-	font-size: 24px;
+	font-size: 34px;
 	transition: .1s;
 	-webkit-transition: .1s;
 	display: block;
-	margin-top: 40px;
+	margin-top: 60px;
+}
+
+#shopCurrent span{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 12px;
 }
 
 #shopCurrent:hover{
-	color: #7ec3ff;
+	text-decoration: none;
+	color: #666;
 }
 
 .browsedeals h2{
