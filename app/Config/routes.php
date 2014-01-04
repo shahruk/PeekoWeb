@@ -28,6 +28,7 @@
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
  */
+	Router::connect('/currentdeals', array('controller' => 'pages', 'action' => 'currentdeals'));
 	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
 	Router::connect('/blocks/:id/:slug', array('controller' => 'blocks', 'action' => 'index'), array('pass' => array('id', 'slug')));
 /**

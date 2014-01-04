@@ -30,7 +30,7 @@ header{
 	position: relative;
 }
 
-#logo, #getapp{
+#logo{
 	font-family: 'helvetica_neuebold', 'Helvetica', 'Arial', sans-serif;
 	font-size: 28px;
 	line-height: 60px;
@@ -39,14 +39,19 @@ header{
 
 #logo.dark{
 	color: #000;
+	border-bottom: 1px solid #EEE;
 }
 
-#getapp{
+.link{
 	float: right;
-	font-size: 19px;
-	margin: 0 20px;
-	color: #000;
-	font-family: 'helvetica_neuelight', 'Helvetica', 'Arial', sans-serif;
+	font-size: 14px;
+	margin: 22px 20px 0 0;
+	color: #666;
+	font-family: 'helvetica_neueregular', 'Helvetica', 'Arial', sans-serif;
+}
+
+.link.light{
+	color: #FFF;
 }
 
 #logo > a{

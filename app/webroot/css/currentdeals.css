@@ -1,0 +1,16 @@
+.brand{
+	width: 120px;
+	height: 114px;
+	background-position: -20px -34px;
+}
+
+.block{
+	border: 1px solid #DDD;
+	border-radius: 2px;
+	display: inline-block;
+}
+
+.allblocks{
+	text-align: center;
+	margin-top: 40px;
+}

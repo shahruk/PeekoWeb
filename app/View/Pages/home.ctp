@@ -22,6 +22,7 @@
 <body>
 	<header>
 		<div class="wrapper">
+			<a id="currentdeals" class="link light" href="/currentdeals">Current Deals</a>
 			<div id="logo"><a href="/">Peeko</a></div>
 			<img class="phones shifted" src="/img/phone1.png" alt="iPhone showing Peeko" />
 			<img class="phones" src="/img/phone2.png" alt="iPhone showing Peeko" />

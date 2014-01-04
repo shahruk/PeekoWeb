@@ -22,9 +22,10 @@
 
 <body>
 	<div class="wrapper">
-		<a id="getapp" href="/">Get the App</a>
+		<a id="getapp" class="link" href="/">Get the App</a>
+		<a id="currentdeals" class="link" href="/currentdeals">Current Deals</a>
 		<div class="dark" id="logo"><a href="/">Peeko</a></div>
-		<div class="container content container-fluid" id="home">
+		<div class="content" id="home">
 			<?php echo $this->fetch('content'); ?>
 		</div>
 	</div>

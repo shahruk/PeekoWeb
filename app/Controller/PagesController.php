@@ -76,4 +76,8 @@ class PagesController extends AppController {
 			throw new NotFoundException();
 		}
 	}
+	
+	public function currentdeals(){
+		$this->set('brands', $this->Brand->find('all'));
+	}
 }
