@@ -36,9 +36,12 @@ a.addNew{
 			<td><?php echo $blocks[$i]['Block']['price']; ?></td>
 			<td>
 				<?php 
-					$date = date('m-d-Y', strtotime($elysium.' +'.(int)($blocks[$i]['Block']['number']).' days')); 
-					if($date >= "12-26-2013"){
-						$date = date('m-d-Y', strtotime($elysium2.' +'.(int)(($blocks[$i]['Block']['number']-7)/2).' days')); 
+					$date = date('m-d-Y', strtotime($elysium.' +'.(int)($blocks[$i]['Block']['number']+1).' days')); 
+					if(strtotime($date) >= strtotime("12-26-2013")){
+						$date = date('m-d-Y', strtotime($elysium2.' +'.(int)((($blocks[$i]['Block']['number']-7)+1)/2).' days')); 
+						if(($blocks[$i]['Block']['number'] % 2) == 0){
+							echo "<b style='color: red;'>1 AM</b><br />";
+						}
 					}
 					echo $date;
 				?>
