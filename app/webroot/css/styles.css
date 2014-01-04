@@ -93,6 +93,8 @@ img.phones.shifted{
 .panel{
 	padding: 150px 0;
 	min-height: 777px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
 }
 
 .panel h2{
@@ -115,6 +117,19 @@ img.phones.shifted{
 
 .instantshopping img{
 	left: 0;
+}
+
+#shopCurrent{
+	color: #0089ff;
+	font-size: 24px;
+	transition: .2s;
+	-webkit-transition: .2s;
+	display: block;
+	margin-top: 40px;
+}
+
+#shopCurrent:hover{
+	color: #7ec3ff;
 }
 
 .browsedeals h2{
