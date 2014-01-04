@@ -119,18 +119,25 @@ img.phones.shifted{
 	left: 0;
 }
 
+.currentContainer{
+	margin-top: 40px;
+}
+
+#shopCurrent, .currentContainer span{
+	display: block;
+	float: left;
+}
+
 #shopCurrent{
 	font-size: 34px;
 	transition: .1s;
 	-webkit-transition: .1s;
 	display: block;
-	margin-top: 60px;
 }
-
-#shopCurrent span{
-	display: inline-block;
-	vertical-align: middle;
-	font-size: 12px;
+.currentContainer span{
+	margin-top: 18px;
+	margin-left: 3px;
+	font-size: 16px;
 }
 
 #shopCurrent:hover{
