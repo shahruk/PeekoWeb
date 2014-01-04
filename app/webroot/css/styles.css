@@ -126,6 +126,7 @@ img.phones.shifted{
 #shopCurrent, .currentContainer span{
 	display: block;
 	float: left;
+	color: #428bca;
 }
 
 #shopCurrent{
@@ -140,7 +141,7 @@ img.phones.shifted{
 	font-size: 16px;
 }
 
-#shopCurrent:hover{
+#shopCurrent:hover, #shopCurrent:hover + span{
 	text-decoration: none;
 	color: #666;
 }
