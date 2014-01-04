@@ -14,3 +14,14 @@
 	text-align: center;
 	margin-top: 40px;
 }
+
+#countdown{
+	width: 250px;
+	float: right;
+}
+
+#countdown+h2{
+	margin-top: 10px;
+	font-size: 24px;
+	color: #222;
+}
