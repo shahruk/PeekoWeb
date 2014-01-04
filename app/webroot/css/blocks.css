@@ -23,7 +23,9 @@ h3{
 }
 
 .main-block{
-	width: 100%;
+	max-width: 100%;
+	display: block;
+	margin: auto;
 	max-height: 450px;
 	border: 1px solid #EEE;
 }
