@@ -895,3 +895,37 @@ Stack Trace:
 #3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-01-05 20:36:24 Error: [SocketException] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+Request URL: /app/webroot/admin/
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Network\CakeSocket.php(272): CakeSocket->connect()
+#1 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Network\Http\HttpSocket.php(371): CakeSocket->write('GET /maps/api/p...')
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Network\Http\HttpSocket.php(459): HttpSocket->request(Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\app\Model\Location.php(108): HttpSocket->get('https://maps.go...')
+#4 C:\wamp\www\peeko\app\webroot\admin\app\Model\Location.php(84): Location->scrape('Macy???s', '528e3a8e6e13ee9...', '36.746842,-119....')
+#5 C:\wamp\www\peeko\app\webroot\admin\app\Controller\AppController.php(47): Location->getLocations()
+#6 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#7 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Event\CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#8 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#9 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Routing\Dispatcher.php(182): Controller->startupProcess()
+#10 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\peeko\app\webroot\admin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-01-05 20:41:32 Error: [SocketException] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+Request URL: /app/webroot/admin/
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Network\CakeSocket.php(272): CakeSocket->connect()
+#1 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Network\Http\HttpSocket.php(371): CakeSocket->write('GET /maps/api/p...')
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Network\Http\HttpSocket.php(459): HttpSocket->request(Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\app\Model\Location.php(108): HttpSocket->get('https://maps.go...')
+#4 C:\wamp\www\peeko\app\webroot\admin\app\Model\Location.php(84): Location->scrape('McDonald???s', '528e3a836e13ee9...', '40.7142700,-74....')
+#5 C:\wamp\www\peeko\app\webroot\admin\app\Controller\AppController.php(47): Location->getLocations()
+#6 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#7 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Event\CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#8 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#9 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Routing\Dispatcher.php(182): Controller->startupProcess()
+#10 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\peeko\app\webroot\admin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}

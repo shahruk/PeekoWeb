@@ -78,6 +78,7 @@ class PagesController extends AppController {
 	}
 	
 	public function currentdeals(){
+		$this->set('title_for_layout', 'Current Active Deals - Peeko');
 		$this->set('brands', $this->Brand->find('all'));
 	}
 }

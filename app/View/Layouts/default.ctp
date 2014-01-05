@@ -3,7 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<title>Peeko - Daily Local Deals and Selections</title>
+<title><?php echo $title_for_layout; ?></title>
+
+<?php echo $this->fetch('og'); ?>
 
 <!-- media-queries.js -->
 <!--[if lt IE 9]>

@@ -10,11 +10,10 @@
 			
 			for($i = 0; $i < count($results); $i++){
 				$count = $this->find('count', array('conditions' => array('_brand' => $results[$i]['Brand']['id'])));
-				if($count == 0){
+				if($count < 50){
 					$name = str_replace("'", "", $results[$i]['Brand']['name']);
-					die("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA ".$name);
 					if($name == "Express")
-						$name = "Express Clothing";
+						$name = "Express";
 					
 					//0 = NYC
 					//1 = LOS ANGELES
@@ -82,7 +81,10 @@
 						'30' => '42.886447,-78.878369'
 						);
 					for($j = 0; $j < count($coords);$j++){
-						$this->scrape($name, $results[$i]['Brand']['id'], $coords[$j]);
+						if($name == "Subway Restaurant"){
+							$this->scrape("SUBWAY Restaurants", $results[$i]['Brand']['id'], $coords[$j]);
+						}
+						//$this->scrape($name, $results[$i]['Brand']['id'], $coords[$j]);
 					}
 					//
 					echo "<br />";
@@ -103,7 +105,7 @@
 			$http = new HttpSocket();
 			$results = $http->get($url);
 			$results = json_decode($results);
-			//die(debug($results));
+			//die(debug($searchTerm));
 			for($i = 0; $i < count($results->results); $i++){
 				$url = "https://maps.googleapis.com/maps/api/place/details/json?reference=".$results->results[$i]->reference."&sensor=false&key=".$key;
 				$resultsRef = $http->get($url);
@@ -113,11 +115,13 @@
 				
 				//If this place is unique
 				if(empty($loc)){
+
 					//Get first word and compare
-					$resultName = explode(' ', trim($place->name));
-					$resultName = str_replace("'", "", $resultName);
-					$searchName = explode(' ', trim($searchTerm));
-					if($resultName[0] == $searchName[0]){
+					//$resultName = explode(' ', trim($place->name));
+					//$resultName = str_replace("'", "", $resultName);
+					//$searchName = explode(' ', trim($searchTerm));
+					//die(debug($searchName));
+				//	if($resultName[0] == $searchName[0]){
 						$this->create();
 						$data = array();
 						$data['Location']['_brand'] = $id;
@@ -125,14 +129,15 @@
 						$data['Location']['loc'] = array(0 => $place->geometry->location->lng, 1 => $place->geometry->location->lat);
 						$data['Location']['name'] = $place->name;
 						if($this->save($data)){
-						
+
+						}else{
 						}
-					}
+					//}
 				}
 			}
 			sleep(2);
 			if(!empty($results->next_page_token)){
-				die("A");
+				//die("A");
 				$url = "https://maps.googleapis.com/maps/api/place/radarsearch/json?location=".$coords."&name=".urlencode($searchTerm)."&radius=20000&sensor=false&key=".$key."&pagetoken=".$results->next_page_token;
 				$this->scrape($searchTerm, $id, $coords, $url);
 			}
