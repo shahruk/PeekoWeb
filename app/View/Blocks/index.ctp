@@ -9,7 +9,6 @@ $this->end(); ?>
 <meta property="og:image" content="<?php echo $block['Block']['images']; ?>" />
 <meta property="og:description" content="Find more deals and products like this near you at www.peekoapp.com" />
 <meta property="og:url" content="<?php echo $this->Html->url( null, true ); ?>" />
-<meta property="og:type" content="website" />
 <?php $this->end(); ?>
 
 <?php //debug($block); ?>
