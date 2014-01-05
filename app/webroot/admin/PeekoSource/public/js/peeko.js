@@ -1,7 +1,9 @@
-$(function(){
-	var script = document.createElement("script");
+var script = document.createElement("script");
 	script.setAttribute("src",'https://maps.googleapis.com/maps/api/js?key=AIzaSyAGbtVZdTdW227zjB-jfmJjzrpHCiayTzc&sensor=true');
 	document.getElementsByTagName("head")[0].appendChild(script);
+	
+$(function(){
+	
 	
 	var applaunchCount = window.localStorage.getItem('appLaunchCounter');
 	$("body").show();
