@@ -5,4 +5,12 @@
 			$this->set('brand', $this->Brand->findById($id));
 			$this->set('blocks', $blocks);
 		}
+		
+		public function add(){
+			if($this->request->is('post')){
+				$this->request->data['Brand']['counter'] = 0;
+				$this->Brand->save($this->request->data);
+				$this->Session->setFlash("SAVED!");
+			}
+		}
 	}

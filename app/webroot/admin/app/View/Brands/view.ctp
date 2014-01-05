@@ -20,7 +20,11 @@ a.addNew{
 </style>
 
 <div class="icon">
-	<?php echo $this->Html->image('http://direct.theboxngo.com:8080/brands/'.$brand['Brand']['active_block']['icon']); ?>
+	<?php if(isset($brand['Brand']['active_block'])){
+			echo $this->Html->image('http://direct.theboxngo.com:8080/brands/'.$brand['Brand']['active_block']['icon']);
+		}else{
+			echo $this->Html->image('http://direct.theboxngo.com:8080/brands/'.$brand['Brand']['icon']);
+		}?>
 </div>
 <div class="info">
 	<?php echo $this->Html->link('Add New Block', array('controller' => 'blocks', 'action' => 'add', $brand['Brand']['id']), array('class' => 'addNew')); ?>

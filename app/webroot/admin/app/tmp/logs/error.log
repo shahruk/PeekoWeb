@@ -675,3 +675,223 @@ Stack Trace:
 #3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BlocksController), Object(CakeRequest), Object(CakeResponse))
 #4 C:\wamp\www\peeko\app\webroot\admin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2014-01-04 18:57:45 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /app/webroot/admin/admin/blocks/add
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-04 18:57:49 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /app/webroot/admin/admin/brands/add
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-04 18:58:26 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /app/webroot/admin/admin/brands/add
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-04 18:58:36 Error: [MissingViewException] View file "C:\wamp\www\peeko\app\webroot\admin\app\View\Brands\add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\peeko\\app\\webroot\\admin\\app\\View\\Brands\\add.ctp',
+)
+Request URL: /app/webroot/admin/brands/add
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\View\View.php(457): View->_getViewFileName(NULL)
+#1 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(BrandsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\peeko\app\webroot\admin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-01-04 19:49:52 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [C:\wamp\www\peeko\app\webroot\admin\app\Model\Location.php, line 72]
+2014-01-04 19:49:52 Error: [FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /app/webroot/admin/pages
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 72)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 72, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\pee...', 72, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-04 19:50:10 Error: [MongoException] Cannot run command count(): exception: geo values have to be numbers :: caused by :: { 0: "-116.986971", 1: "32.838558" }
+Request URL: /app/webroot/admin/pages
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\app\Plugin\Mongodb\Model\Datasource\MongodbSource.php(1065): MongoCursor->count(true)
+#1 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Model\Model.php(2897): MongodbSource->read(Object(Location), Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Model\Model.php(2869): Model->_readDataSource('first', Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\app\Controller\AppController.php(36): Model->find('first', Array)
+#4 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#5 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Event\CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#6 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#7 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Routing\Dispatcher.php(182): Controller->startupProcess()
+#8 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\peeko\app\webroot\admin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-01-04 19:56:08 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\peeko\app\webroot\admin\app\Model\Location.php, line 120]
+2014-01-04 19:56:08 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /app/webroot/admin/
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\pee...', 120)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\pee...', 120, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\pee...', 120, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-04 20:09:53 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Network\CakeSocket.php, line 159]
+2014-01-04 20:09:53 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /app/webroot/admin/
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 159)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 159, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\pee...', 159, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-04 20:11:24 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Network\CakeSocket.php, line 159]
+2014-01-04 20:11:24 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /app/webroot/admin/
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 159)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 159, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\pee...', 159, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-04 20:11:42 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\peeko\app\webroot\admin\app\Model\Location.php, line 141]
+2014-01-04 20:11:42 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /app/webroot/admin/
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 141)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 141, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\pee...', 141, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-04 20:12:30 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Network\CakeSocket.php, line 159]
+2014-01-04 20:12:30 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /app/webroot/admin/
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 159)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 159, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\pee...', 159, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-04 20:13:36 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Network\CakeSocket.php, line 159]
+2014-01-04 20:13:36 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /app/webroot/admin/
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 159)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 159, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\pee...', 159, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-04 20:17:51 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Network\CakeSocket.php, line 159]
+2014-01-04 20:17:51 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /app/webroot/admin/
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 159)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 159, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\pee...', 159, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-04 20:24:32 Error: [SocketException] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+
+Request URL: /app/webroot/admin/
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Network\CakeSocket.php(272): CakeSocket->connect()
+#1 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Network\Http\HttpSocket.php(371): CakeSocket->write('GET /maps/api/p...')
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Network\Http\HttpSocket.php(459): HttpSocket->request(Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\app\Model\Location.php(117): HttpSocket->get('https://maps.go...')
+#4 C:\wamp\www\peeko\app\webroot\admin\app\Model\Location.php(83): Location->scrape('Best Buy', '528e3a886e13ee9...', '31.769956,-106....')
+#5 C:\wamp\www\peeko\app\webroot\admin\app\Controller\AppController.php(44): Location->getLocations()
+#6 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#7 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Event\CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#8 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Controller\Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#9 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Routing\Dispatcher.php(182): Controller->startupProcess()
+#10 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\peeko\app\webroot\admin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-01-04 20:46:23 Error: Fatal Error (1): Maximum execution time of 3000 seconds exceeded in [C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Network\CakeSocket.php, line 301]
+2014-01-04 20:46:23 Error: [FatalErrorException] Maximum execution time of 3000 seconds exceeded
+Request URL: /app/webroot/admin/
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 301)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 301, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\pee...', 301, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-04 20:48:42 Error: Fatal Error (1): Maximum execution time of 3000 seconds exceeded in [C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Network\CakeSocket.php, line 159]
+2014-01-04 20:48:42 Error: [FatalErrorException] Maximum execution time of 3000 seconds exceeded
+Request URL: /app/webroot/admin/
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 159)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 159, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\pee...', 159, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-04 20:51:17 Error: Fatal Error (1): Maximum execution time of 3000 seconds exceeded in [C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Network\CakeSocket.php, line 301]
+2014-01-04 20:51:17 Error: [FatalErrorException] Maximum execution time of 3000 seconds exceeded
+Request URL: /app/webroot/admin/
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 301)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 301, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\pee...', 301, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-04 20:52:23 Error: Fatal Error (1): Maximum execution time of 3000 seconds exceeded in [C:\wamp\www\peeko\app\webroot\admin\app\Model\Location.php, line 141]
+2014-01-04 20:52:23 Error: [FatalErrorException] Maximum execution time of 3000 seconds exceeded
+Request URL: /app/webroot/admin/
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 141)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 141, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\pee...', 141, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-04 20:57:31 Error: Fatal Error (1): Maximum execution time of 3000 seconds exceeded in [C:\wamp\www\peeko\app\webroot\admin\app\Model\Location.php, line 141]
+2014-01-04 20:57:31 Error: [FatalErrorException] Maximum execution time of 3000 seconds exceeded
+Request URL: /app/webroot/admin/
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 141)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 141, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\pee...', 141, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-04 20:58:22 Error: Fatal Error (1): Maximum execution time of 3000 seconds exceeded in [C:\wamp\www\peeko\app\webroot\admin\app\Model\Location.php, line 141]
+2014-01-04 20:58:22 Error: [FatalErrorException] Maximum execution time of 3000 seconds exceeded
+Request URL: /app/webroot/admin/
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 141)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', 'C:\wamp\www\pee...', 141, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', 'C:\wamp\www\pee...', 141, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-01-05 01:57:00 Error: Fatal Error (4): syntax error, unexpected ';', expecting ')' in [C:\wamp\www\peeko\app\webroot\admin\app\Controller\AppController.php, line 43]
+2014-01-05 01:57:00 Error: [FatalErrorException] syntax error, unexpected ';', expecting ')'
+Request URL: /app/webroot/admin/
+Stack Trace:
+#0 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 43)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\pee...', 43, Array)
+#2 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\pee...', 43, Array)
+#3 C:\wamp\www\peeko\app\webroot\admin\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

@@ -33,14 +33,18 @@ class AppController extends Controller {
 	public $uses = array('Block', 'Brand', 'Location');
 	
 	function beforeFilter(){
+
 		if(!in_array($this->request->clientIp(), array('71.251.13.41', '67.244.78.79', '127.0.0.1'))){
 			die($this->request->clientIp());
 			$this->redirect('http://peekoapp.com/');
 		}
-		
+		$brands = $this->Brand->find('all');
+		for($i = 0; $i < count($brands); $i++){
+			echo str_replace("'", "", $brands[$i]['Brand']['name']). $this->Location->find('count', array('conditions' => array('_brand' => $brands[$i]['Brand']['id'])))."<br />";
+		}
 		$this->set('elysium', 'December 18, 2013');
 		$this->set('elysium2', 'December 26, 2013');
-		//$this->Location->getLocations();
+		$this->Location->getLocations();
 		/*$brands = $this->Brand->find('all');
 		for($i = 0; $i < count($brands); $i++){
 			$block = $this->Block->find("first", array("conditions" => array("number" => (string)$brands[$i]['Brand']['counter'], "brand_id" => $brands[$i]['Brand']['id'])));
