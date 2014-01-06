@@ -65,4 +65,15 @@
 				$this->Block->fix($brands[$i]['Brand']['id']);
 			}
 		}
+		
+		public function fixElysium(){
+			$brands = $this->Brand->find('all');
+			
+			for($i = 0; $i < count($brands); $i++){
+				if(!$brands[$i]['Brand']['active_block']){
+					$this->Brand->id = $brands[$i]['Brand']['id'];
+					$this->Brand->saveField('elysium', '6 January 2014');
+				}
+			}
+		}
 	}
