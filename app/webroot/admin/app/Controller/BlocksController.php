@@ -58,7 +58,7 @@
 			$blocks = $this->Block->find('all', array('conditions' => array('brand_id' => $block['Block']['brand_id']), 'order' =>array('number' => 1)));
 			for($i = 0; $i <= count($blocks); $i++){
 				$this->Block->id = $blocks[$i]['Block']['id'];
-				$this->Block->saveField('number', $i+1);
+				$this->Block->saveField('number', (int)($i+1));
 			}
 			$this->Session->setFlash("DELETED record!");
 			$this->redirect($this->referer());
