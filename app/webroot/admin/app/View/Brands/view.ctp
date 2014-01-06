@@ -40,8 +40,9 @@ a.addNew{
 			<td><?php echo $blocks[$i]['Block']['price']; ?></td>
 			<td>
 				<?php 
-					if(isset($blocks[$i]['Block']['elysium'])){
-						$date = date('m-d-Y', strtotime($blocks[$i]['Block']['elysium'].' +'.(int)($blocks[$i]['Block']['number']+1).' days'));
+					if(isset($brand['Brand']['elysium'])){
+						echo 
+						$date = date('m-d-Y', strtotime($brand['Brand']['elysium'].' +'.(int)($blocks[$i]['Block']['number']+1).' days'));
 					}else{
 						$date = date('m-d-Y', strtotime($elysium.' +'.(int)($blocks[$i]['Block']['number']+1).' days')); 
 						if(strtotime($date) >= strtotime("12-26-2013")){
