@@ -42,7 +42,7 @@ a.addNew{
 				<?php 
 					if(isset($brand['Brand']['elysium'])){
 						$date = date('m-d-Y', strtotime($brand['Brand']['elysium'].' +'.(int)(($blocks[$i]['Block']['number'])/2).' days'));
-						if(($blocks[$i]['Block']['number'] % 2) == 0){
+						if(($blocks[$i]['Block']['number'] % 2) == 1){
 							echo "<b style='color: red;'>1 AM</b><br />";
 						}
 					}else{
