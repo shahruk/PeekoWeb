@@ -40,7 +40,7 @@ class AppController extends Controller {
 		}
 		$brands = $this->Brand->find('all');
 		for($i = 0; $i < count($brands); $i++){
-			echo str_replace("'", "", $brands[$i]['Brand']['name']). $this->Location->find('count', array('conditions' => array('_brand' => $brands[$i]['Brand']['id'])))."<br />";
+			//echo str_replace("'", "", $brands[$i]['Brand']['name']). $this->Location->find('count', array('conditions' => array('_brand' => $brands[$i]['Brand']['id'])))."<br />";
 		}
 		$this->set('elysium', 'December 18, 2013');
 		$this->set('elysium2', 'December 26, 2013');
