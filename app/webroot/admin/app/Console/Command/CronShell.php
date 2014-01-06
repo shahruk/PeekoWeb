@@ -4,7 +4,7 @@
 		public function updateBlocks(){
 		
 			parent::sendEmail();
-			/*
+			
 			$brands = $this->Brand->find('all');
 			for($i = 0; $i < count($brands); $i++){
 				$block = $this->Block->find("first", array("conditions" => array("number" => (int)$brands[$i]['Brand']['counter'], "brand_id" => $brands[$i]['Brand']['id'])));
@@ -21,14 +21,14 @@
 
 				$this->Brand->saveField("counter", (int)$brands[$i]['Brand']['counter']+1);
 			}
-			*/
+			/*
 			//Cleanup
 			$blocks = $this->Block->find('all');
 			for($i = 0; $i < count($blocks); $i++){
 				if(!isset($blocks[$i]['Block']['name'])){
 					$this->Block->delete($blocks[$i]['Block']['id']);
 				}
-			}
+			}*/
 		}
 		
 		public function addPermalinks(){
