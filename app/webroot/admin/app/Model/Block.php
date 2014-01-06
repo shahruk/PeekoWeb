@@ -45,8 +45,8 @@
 		public function fix($id){
 			$blocks = $this->find('all', array('conditions' => array('brand_id' => $id), 'order' =>array('number' => 1)));
 			for($i = 0; $i <= count($blocks); $i++){
-				$this->Block->id = $id;
-				$this->Block->saveField('number', (int)($i+1));
+				$this->id = $id;
+				$this->saveField('number', (int)($i+1));
 			}
 		}
 	}
