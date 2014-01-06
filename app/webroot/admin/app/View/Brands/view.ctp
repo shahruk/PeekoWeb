@@ -40,11 +40,15 @@ a.addNew{
 			<td><?php echo $blocks[$i]['Block']['price']; ?></td>
 			<td>
 				<?php 
-					$date = date('m-d-Y', strtotime($elysium.' +'.(int)($blocks[$i]['Block']['number']+1).' days')); 
-					if(strtotime($date) >= strtotime("12-26-2013")){
-						$date = date('m-d-Y', strtotime($elysium2.' +'.(int)((($blocks[$i]['Block']['number']-7)+1)/2).' days')); 
-						if(($blocks[$i]['Block']['number'] % 2) == 0){
-							echo "<b style='color: red;'>1 AM</b><br />";
+					if(isset($blocks[$i]['Block']['elysium'])){
+						$date = date('m-d-Y', strtotime($blocks[$i]['Block']['elysium'].' +'.(int)($blocks[$i]['Block']['number']+1).' days'));
+					}else{
+						$date = date('m-d-Y', strtotime($elysium.' +'.(int)($blocks[$i]['Block']['number']+1).' days')); 
+						if(strtotime($date) >= strtotime("12-26-2013")){
+							$date = date('m-d-Y', strtotime($elysium2.' +'.(int)((($blocks[$i]['Block']['number']-7)+1)/2).' days')); 
+							if(($blocks[$i]['Block']['number'] % 2) == 0){
+								echo "<b style='color: red;'>1 AM</b><br />";
+							}
 						}
 					}
 					echo $date;
