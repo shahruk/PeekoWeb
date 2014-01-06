@@ -41,8 +41,7 @@ a.addNew{
 			<td>
 				<?php 
 					if(isset($brand['Brand']['elysium'])){
-						echo 
-						$date = date('m-d-Y', strtotime($brand['Brand']['elysium'].' +'.(int)($blocks[$i]['Block']['number']+1).' days'));
+						$date = date('m-d-Y', strtotime($brand['Brand']['elysium'].' +'.(int)(($blocks[$i]['Block']['number']+1)/2).' days'));
 					}else{
 						$date = date('m-d-Y', strtotime($elysium.' +'.(int)($blocks[$i]['Block']['number']+1).' days')); 
 						if(strtotime($date) >= strtotime("12-26-2013")){
