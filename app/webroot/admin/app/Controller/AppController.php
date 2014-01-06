@@ -38,11 +38,11 @@ class AppController extends Controller {
 			die($this->request->clientIp());
 			$this->redirect('http://peekoapp.com/');
 		}
-		$brands = $this->Brand->find('all');
+		/*$brands = $this->Brand->find('all');
 		for($i = 0; $i < count($brands); $i++){
 			$this->Block->fix($brands[$i]['Brand']['id']);
 			//echo str_replace("'", "", $brands[$i]['Brand']['name']). $this->Location->find('count', array('conditions' => array('_brand' => $brands[$i]['Brand']['id'])))."<br />";
-		}
+		}*/
 		$this->set('elysium', 'December 18, 2013');
 		$this->set('elysium2', 'December 26, 2013');
 		//$this->Location->getLocations();
