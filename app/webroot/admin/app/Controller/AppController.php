@@ -44,7 +44,7 @@ class AppController extends Controller {
 		}
 		$this->set('elysium', 'December 18, 2013');
 		$this->set('elysium2', 'December 26, 2013');
-		$this->Location->getLocations();
+		//$this->Location->getLocations();
 		/*$brands = $this->Brand->find('all');
 		for($i = 0; $i < count($brands); $i++){
 			$block = $this->Block->find("first", array("conditions" => array("number" => (string)$brands[$i]['Brand']['counter'], "brand_id" => $brands[$i]['Brand']['id'])));
