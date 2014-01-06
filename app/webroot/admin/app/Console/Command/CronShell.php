@@ -4,7 +4,7 @@
 		public function updateBlocks(){
 		
 			parent::sendEmail();
-
+			/*
 			$brands = $this->Brand->find('all');
 			for($i = 0; $i < count($brands); $i++){
 				$block = $this->Block->find("first", array("conditions" => array("number" => (int)$brands[$i]['Brand']['counter'], "brand_id" => $brands[$i]['Brand']['id'])));
@@ -20,6 +20,25 @@
 				$this->Brand->saveField("active_block", $block['Block']);
 
 				$this->Brand->saveField("counter", (int)$brands[$i]['Brand']['counter']+1);
+			}
+			*/
+			$brands = $this->Brand->find('all');
+			for($i = 0; $i < count($brands); $i++){
+				if(!isset($brands[$i]['Brand']['active_block']['name'])){
+					$block = $this->Block->find("first", array("conditions" => array("number" => (int)$brands[$i]['Brand']['counter'], "brand_id" => $brands[$i]['Brand']['id'])));
+				
+					if(!$block){
+						$block = $this->Block->find("first", array("conditions" => array("number" => (int)($brands[$i]['Brand']['counter']-1), "brand_id" => $brands[$i]['Brand']['id'])));
+						$this->Block->create();
+						unset($block['Block']['id']);
+						$block['Block']['number'] = (int)($block['Block']['number']+1);
+						$this->Block->save($block);
+					}
+					$this->Brand->id = $brands[$i]['Brand']['id'];
+					$this->Brand->saveField("active_block", $block['Block']);
+
+					$this->Brand->saveField("counter", (int)$brands[$i]['Brand']['counter']+1);
+				}
 			}
 		}
 		
