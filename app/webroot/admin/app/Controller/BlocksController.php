@@ -31,7 +31,7 @@
 				if($this->Block->save($this->request->data)){
 					$this->Block->addPermalink($this->Block->id, $this->request->data['Block']['name']);
 					$this->Session->setFlash('Congratulations. Saved.');
-					$this->redirect(array('controller' => 'brands', 'action' => 'index'));
+					$this->redirect(array('controller' => 'brands', 'action' => 'view', $brand['Brand']['id']));
 				}else{
 					$this->Session->setFlash('Error! Fix below.');
 				}
