@@ -27,6 +27,7 @@
 			$brand = $this->Brand->findById($block['Block']['brand_id']);
 			if($this->request->is('put')){
 				$this->Block->id = $id;
+				$this->request->data['Block']['number'] = (int)$this->request->data['Block']['number'];
 				if($this->Block->save($this->request->data)){
 					$this->Block->addPermalink($this->Block->id, $this->request->data['Block']['name']);
 					$this->Session->setFlash('Congratulations. Saved.');
