@@ -3,6 +3,10 @@
 		public function add($id){
 			if($this->request->is('post')){
 				//Number type casting.
+				if(empty($this->request->data['Block']['icon'])){
+					$brand = $this->Brand->findById($id);
+					$this->request->data['Block']['icon'] = $brand['Brand']['icon'];
+				}
 				$this->request->data['Block']['number'] = (int)$this->request->data['Block']['number'];
 				if($this->Block->save($this->request->data)){
 					$this->Block->addPermalink($this->Block->id, $this->request->data['Block']['name']);
