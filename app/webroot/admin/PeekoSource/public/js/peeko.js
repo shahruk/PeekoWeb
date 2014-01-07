@@ -6,22 +6,7 @@ $(function(){
 	var script = document.createElement('script');
 	script.src = "https://maps.googleapis.com/maps/api/js?key=" + myKey + "&sensor=true&callback=initialize";
 	document.body.appendChild(script);
-	
-	//Google Analytics
-	try{
-		gaPlugin = window.plugins.gaPlugin;
-		gaPlugin.init(start, ohthiserror, "UA-46947104-1", 10);
-	}catch(e){
-		//alert(e);
-	}
-	
-	
 });
-
-function start(){
-}
-function ohthiserror(){
-}
 
 function initialize(){
 	var applaunchCount = window.localStorage.getItem('appLaunchCounter');
@@ -83,6 +68,12 @@ function initialize(){
 	//When device is ready, do onSuccess.
 	function onDeviceReady(){
 		getLocation();
+		try{
+			gaPlugin = window.plugins.gaPlugin;
+			gaPlugin.init(false, false, "UA-46947104-1", 10);
+		}catch(e){
+			//alert(e);
+		}
 	}
 
 	function getLocation(){
