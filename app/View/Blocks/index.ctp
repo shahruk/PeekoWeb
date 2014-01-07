@@ -17,7 +17,7 @@ $this->end(); ?>
 		<h2 style="text-align: center; padding: 20px; font-size: 24px;"><?php echo $block['Block']['name']; ?></h2>
 
 		<img class="main-block" src="<?php echo $block['Block']['images']; ?>" />
-		<div>
+		<div class="helvreg">
 			<h3 class="section">Description</h3>
 			<?php echo nl2br($block['Block']['description']); ?>
 		</div>

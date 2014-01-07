@@ -5,12 +5,7 @@ $(function(){
 	var myKey = "AIzaSyAGbtVZdTdW227zjB-jfmJjzrpHCiayTzc";
 	var script = document.createElement('script');
 	script.src = "https://maps.googleapis.com/maps/api/js?key=" + myKey + "&sensor=true&callback=initialize";
-	
-	var gaScript = document.createElement('script');
-	gaScript.src = "http://peekoapp.com:8080/js/ga.js";
-	
 	document.body.appendChild(script);
-	document.body.appendChild(gaScript);
 });
 
 function initialize(){
@@ -74,12 +69,10 @@ function initialize(){
 	function onDeviceReady(){
 		getLocation();
 		try{
-			var _gaq = _gaq || [];
-			_gaq.push(['_setAccount', 'UA-2509553-13']);
-			_gaq.push(['_setDomainName', 'none']);
-			_gaq.push(['_trackPageview', 'PEEKO INDEX']);
+			gaPlugin = window.plugins.gaPlugin;
+			gaPlugin.init(function(){alert('Working');}, function(){}, "UA-2509553-13", 10);
 		}catch(e){
-			alert(e);
+			//alert(e);
 		}
 	}
 
@@ -220,5 +213,14 @@ function initialize(){
 	$(window).bind('orientationchange resize', function(event,ui){
 		resizeOverlay();
 	});
+	
+	$("#buyOnline").click(function(){
+		gaPlugin.trackEvent( nativePluginResultHandler, function(){}, "Button", "Click", "event only", 1);
+	});
+}
+
+ function nativePluginResultHandler (result) {
+	alert('nativePluginResultHandler - '+result);
+	//console.log('nativePluginResultHandler: '+result);
 
 }
