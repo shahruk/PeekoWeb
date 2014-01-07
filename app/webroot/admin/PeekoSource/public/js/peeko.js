@@ -12,7 +12,7 @@ $(function(){
 		gaPlugin = window.plugins.gaPlugin;
 		gaPlugin.init(start, start, "UA-2509553-12", 10);
 	}catch(e){
-		//alert(e);
+		alert(e);
 	}
 	
 	function start(){
