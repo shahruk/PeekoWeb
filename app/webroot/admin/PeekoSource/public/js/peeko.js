@@ -218,3 +218,9 @@ function initialize(){
 		gaPlugin.trackEvent( nativePluginResultHandler, nativePluginErrorHandler, "Button", "Click", "event only", 1);
 	});
 }
+
+ function nativePluginResultHandler (result) {
+	alert('nativePluginResultHandler - '+result);
+	//console.log('nativePluginResultHandler: '+result);
+
+}
