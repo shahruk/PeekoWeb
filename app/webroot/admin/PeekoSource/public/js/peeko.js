@@ -71,9 +71,9 @@ function initialize(){
 		try{
 			gaPlugin = window.plugins.gaPlugin;
 			gaPlugin.init(function(){
-				gaPlugin.trackPage(function(){
+				gaPlugin.trackEvent(function() {
 					"Peeko Loaded Open";
-					}, function(){}, "/index.html");
+					}, function(){}, "App", "Open", "App", 1);
 			}, function(){}, "UA-2509553-13", 10);
 		}catch(e){
 			//alert(e);
