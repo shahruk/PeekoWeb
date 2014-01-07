@@ -87,4 +87,5 @@
 	<gap:plugin name="nl.x-services.plugins.socialsharing" />
 	<gap:plugin name="com.adobe.plugins.gaplugin" />
 	<gap:plugin name="com.phonegap.plugins.PushPlugin"/>
+	
 </widget>

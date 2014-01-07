@@ -1,8 +1,19 @@
+//Google Analytics
+var gaPlugin;
+
 $(function(){
 	var myKey = "AIzaSyAGbtVZdTdW227zjB-jfmJjzrpHCiayTzc";
 	var script = document.createElement('script');
 	script.src = "https://maps.googleapis.com/maps/api/js?key=" + myKey + "&sensor=true&callback=initialize";
 	document.body.appendChild(script);
+	
+	//Google Analytics
+	try{
+		gaPlugin = window.plugins.gaPlugin;
+		gaPlugin.init(successHandler, errorHandler, "UA-2509553-12", 10);
+	}catch(e){
+		//alert(e);
+	}
 });
 
 function initialize(){
