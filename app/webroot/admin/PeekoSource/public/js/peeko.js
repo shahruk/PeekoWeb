@@ -70,7 +70,7 @@ function initialize(){
 		getLocation();
 		try{
 			gaPlugin = window.plugins.gaPlugin;
-			gaPlugin.init(false, false, "UA-46947104-1", 10);
+			gaPlugin.init(function(){alert('Working');}, function(){}, "UA-46947104-1", 10);
 		}catch(e){
 			//alert(e);
 		}
