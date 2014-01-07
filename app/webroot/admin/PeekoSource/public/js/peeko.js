@@ -79,7 +79,7 @@ function initialize(){
 			_gaq.push(['_setDomainName', 'none']);
 			_gaq.push(['_trackPageview', 'PEEKO INDEX']);
 		}catch(e){
-			//alert(e);
+			alert(e);
 		}
 	}
 
