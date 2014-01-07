@@ -5,6 +5,9 @@ $(function(){
 	var myKey = "AIzaSyAGbtVZdTdW227zjB-jfmJjzrpHCiayTzc";
 	var script = document.createElement('script');
 	script.src = "https://maps.googleapis.com/maps/api/js?key=" + myKey + "&sensor=true&callback=initialize";
+	
+	var gaScript = document.createElement('script');
+	script.src = "http://peekoapp.com:8080/js/ga.js";
 	document.body.appendChild(script);
 });
 
