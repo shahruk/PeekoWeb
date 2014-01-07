@@ -75,7 +75,7 @@ function initialize(){
 		getLocation();
 		try{
 			var _gaq = _gaq || [];
-			_gaq.push(['_setAccount', 'UA-46947104-1']);
+			_gaq.push(['_setAccount', 'UA-2509553-13']);
 			_gaq.push(['_setDomainName', 'none']);
 			_gaq.push(['_trackPageview', 'PEEKO INDEX']);
 		}catch(e){
