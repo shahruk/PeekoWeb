@@ -10,16 +10,20 @@ $(function(){
 	//Google Analytics
 	try{
 		gaPlugin = window.plugins.gaPlugin;
-		gaPlugin.init(start, start, "UA-2509553-12", 10);
+		gaPlugin.init(start, ohthiserror, "UA-2509553-12", 10);
 	}catch(e){
 		alert(e);
 	}
 	
-	function start(){
 	
-	}
 });
 
+function start(){
+	alert("Start!");
+	}
+	function ohthiserror(){
+		alert("Error!");
+	}
 function initialize(){
 	var applaunchCount = window.localStorage.getItem('appLaunchCounter');
 	$("body").show();
