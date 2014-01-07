@@ -213,4 +213,8 @@ function initialize(){
 	$(window).bind('orientationchange resize', function(event,ui){
 		resizeOverlay();
 	});
+	
+	$("#buyOnline").click(function(){
+		gaPlugin.trackEvent( nativePluginResultHandler, nativePluginErrorHandler, "Button", "Click", "event only", 1);
+	});
 }
