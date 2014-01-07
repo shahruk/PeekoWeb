@@ -72,8 +72,10 @@ function initialize(){
 	function onDeviceReady(){
 		getLocation();
 		try{
-			gaPlugin = window.plugins.gaPlugin;
-			gaPlugin.init(function(){alert('Working');}, function(){}, "UA-46947104-1", 10);
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-46947104-1']);
+			_gaq.push(['_setDomainName', 'none']);
+			_gaq.push(['_trackPageview', 'PEEKO INDEX']);
 		}catch(e){
 			//alert(e);
 		}
@@ -216,14 +218,5 @@ function initialize(){
 	$(window).bind('orientationchange resize', function(event,ui){
 		resizeOverlay();
 	});
-	
-	$("#buyOnline").click(function(){
-		gaPlugin.trackEvent( nativePluginResultHandler, nativePluginErrorHandler, "Button", "Click", "event only", 1);
-	});
-}
-
- function nativePluginResultHandler (result) {
-	alert('nativePluginResultHandler - '+result);
-	//console.log('nativePluginResultHandler: '+result);
 
 }
