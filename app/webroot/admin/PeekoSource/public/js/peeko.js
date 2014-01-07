@@ -10,7 +10,7 @@ $(function(){
 	//Google Analytics
 	try{
 		gaPlugin = window.plugins.gaPlugin;
-		gaPlugin.init(start, ohthiserror, "UA-2509553-13", 10);
+		gaPlugin.init(start, ohthiserror, "UA-46947104-1", 10);
 	}catch(e){
 		//alert(e);
 	}
