@@ -2,7 +2,11 @@
 var gaPlugin;
 
 $(function(){
-
+	var myKey = "AIzaSyAGbtVZdTdW227zjB-jfmJjzrpHCiayTzc";
+	var script = document.createElement('script');
+	script.src = "https://maps.googleapis.com/maps/api/js?key=" + myKey + "&sensor=true&callback=initialize";
+	document.body.appendChild(script);
+	
 	//Google Analytics
 	try{
 		gaPlugin = window.plugins.gaPlugin;
@@ -12,10 +16,7 @@ $(function(){
 	}
 	
 	function start(){
-		var myKey = "AIzaSyAGbtVZdTdW227zjB-jfmJjzrpHCiayTzc";
-		var script = document.createElement('script');
-		script.src = "https://maps.googleapis.com/maps/api/js?key=" + myKey + "&sensor=true&callback=initialize";
-		document.body.appendChild(script);
+	
 	}
 });
 
