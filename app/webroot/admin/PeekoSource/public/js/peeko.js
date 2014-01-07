@@ -73,7 +73,7 @@ function initialize(){
 			gaPlugin.init(function(){
 				gaPlugin.trackPage(function(){
 					"Peeko Loaded Open";
-					}, errorHandler, "/index.html");
+					}, false, "/index.html");
 			}, function(){}, "UA-2509553-13", 10);
 		}catch(e){
 			//alert(e);
