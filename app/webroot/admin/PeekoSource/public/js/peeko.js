@@ -70,7 +70,11 @@ function initialize(){
 		getLocation();
 		try{
 			gaPlugin = window.plugins.gaPlugin;
-			gaPlugin.init(function(){alert('Working');}, function(){}, "UA-2509553-13", 10);
+			gaPlugin.init(function(){
+				gaPlugin.trackPage(function(){
+					"Peeko Loaded Open";
+					}, errorHandler, "/index.html");
+			}, function(){}, "UA-2509553-13", 10);
 		}catch(e){
 			//alert(e);
 		}
@@ -220,7 +224,7 @@ function initialize(){
 }
 
  function nativePluginResultHandler (result) {
-	alert('nativePluginResultHandler - '+result);
+	//alert('nativePluginResultHandler - '+result);
 	//console.log('nativePluginResultHandler: '+result);
 
 }
