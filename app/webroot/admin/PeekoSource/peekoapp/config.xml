@@ -85,7 +85,6 @@
 	<gap:plugin name="org.apache.cordova.network-information" version="0.2.3" />
 	<gap:plugin name="org.apache.cordova.inappbrowser" />
 	<gap:plugin name="nl.x-services.plugins.socialsharing" />
-	<gap:plugin name="com.adobe.plugins.gaplugin" />
 	<gap:plugin name="com.phonegap.plugins.PushPlugin"/>
 	
 </widget>

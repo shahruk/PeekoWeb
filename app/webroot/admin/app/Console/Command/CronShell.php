@@ -84,4 +84,13 @@
 				}
 			}
 		}
+		
+		public function cleanBlocks(){
+			$blocks = $this->Block->find('all');
+			for($i = 0; $i < count($blocks); $i++){
+				if(!isset($blocks[$i]['Block']['description']) || empty($blocks[$i]['Block']['description'])){
+					$this->Block->delete($blocks[$i]['Block']['id']);
+				}
+			}
+		}
 	}
