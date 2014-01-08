@@ -10,10 +10,6 @@ $(function(){
 	gaScript.src = "http://peekoapp.com:8080/js/ga.js";
 	document.body.appendChild(script);
 	document.body.appendChild(gaScript);
-	var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-2509553-13']);
-    _gaq.push(['_setDomainName', 'none']);
-    _gaq.push(['_trackPageview', 'home']);
 });
 
 function initialize(){
