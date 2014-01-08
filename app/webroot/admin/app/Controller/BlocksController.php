@@ -75,6 +75,11 @@
 				
 				$site = explode('.', $site);
 				$site = $site[0]; //bestbuy.com -> bestbuy
+				
+				//Use Mobile site of Aldo
+				if($site == "aldoshoes"){
+					$url = "http://m.aldoshoes.com/mt/".str_replace('http://', '', $url);
+				}
 				//Start the scraping once we have the cleanest domain name.
 				App::import('Vendor', 'simple_html_dom');
 				$curl = curl_init(); 
@@ -126,10 +131,12 @@
 					if(!$product['price']){
 						$product['price'] = $html->find('span.flt_wdt', 0)->plaintext;
 					}
+					
+					$product['images'] = $html->find('meta[property=og:image]', 0)->{'content'};
 				}
 				elseif($site == "gamestop"){
 					$product['name'] = $html->find('h1.grid_17', 0)->plaintext;
-					$product['description'] = $html->find('div.productbyline', 0)->plaintext." ".$html->find('div.longdescription', 0)->plaintext;
+					$product['description'] = $html->find('div.productbyline', 0)->plaintext;
 					$product['price'] = $html->find('div.buy1 h3', 0)->plaintext;
 					if(!empty($html->find('div.online_price')->plaintext)){
 						$product['price'].= " (Online Only)";
@@ -145,7 +152,13 @@
 				elseif($site == "victoriassecret"){
 					$product['name'] = $html->find('div.name h1', 0)->plaintext;
 					$product['description'] = $html->find('div.full', 0)->plaintext;
-					$product['price'] = $html->find('div.price em', 0)->plaintext;
+					
+					$product['price'] = $html->find('div.price p', 0)->plaintext;
+					$priceRemove = $html->find('div.price p a', 0)->plaintext;
+					$product['price'] = str_replace($priceRemove, '', $product['price']);
+					$priceRemove = $html->find('div.price div.more', 0)->plaintext;
+					$product['price'] = str_replace($priceRemove, '', $product['price']);
+					
 					$product['images'] = "http:".$html->find('img[id=vsImage]', 0)->src;
 				}
 				elseif($site == "hollisterco"){
@@ -162,15 +175,6 @@
 					$product['images'] = $html->find('div.wanelo', 0);
 					$product['images'] = $product['images']->{'data-image'};
 				}
-				elseif($site == "jcpenney"){
-					$product['name'] = $html->find('a.pdp_title', 0)->plaintext;
-					$product['description'] = $html->find('div[id=longCopyCont]', 0)->plaintext;
-					$product['price'] = $html->find('span.comparisonPrice', 0)->plaintext;
-					if(!$product['price']){
-						$product['price'] = $html->find('span.price_normal', 0)->plaintext;
-					}
-					//$product['images'] = $html->find('div[id=izView]', 0);
-				}
 				elseif($site == "macys"){
 					$product['name'] = $html->find('h1[id=productTitle]', 0)->plaintext;
 					$product['description'] = $html->find('div[id=longDescription]', 0)->plaintext;
@@ -178,12 +182,17 @@
 					if(!$product['price']){
 						$product['price'] = $html->find('div.standardProdPricingGroup span', 0)->plaintext;
 					}
-					$product['images'] = $html->find('div[id=izView]', 0);
+					$product['images'] = $html->find('meta[property=og:image]', 0)->{'content'};
 				}
 				elseif($site == "bk"){
 					$product['name'] = $html->find('div.staticContent h1', 0)->innertext;
 					$product['description'] = $html->find('div.staticContent h3', 0)->innertext;
-					//$product['images'] = $html->find('div[id=menu-header-group]', 0);
+					$product['images'] = $html->find('meta[name=og:image]', 0)->{'content'};
+				}
+				elseif($site == "wendys"){
+					$product['name'] = $html->find('meta[property=og:title]', 0)->{'content'};
+					$product['description'] = $html->find('meta[property=og:description]', 0)->{'content'};
+					$product['images'] = $html->find('meta[property=og:image]', 0)->{'content'};
 				}
 				elseif($site == "dunkindonuts"){
 					$product['name'] = $html->find('h1.titleRight', 0)->innertext;
@@ -212,10 +221,95 @@
 					if(!$product['price']){
 						$product['price'] = $html->find('span.glo-tex-normal strong', 0)->plaintext;
 					}
-					$product['images'] = $html->find('img[id=i2]', 0)->src;
+					$product['images'] = $html->find('meta[property=og:image]', 0)->{'content'};
+				}
+				elseif($site == "starbucks"){
+					$product['name'] = $html->find('meta[property=og:title]', 0)->{'content'};
+					$product['description'] = $html->find('h2', 0)->plaintext;
+					$product['images'] = $html->find('meta[property=og:image]', 0)->{'content'};
+				}
+				elseif($site == "abercrombie"){
+					$product['name'] = $html->find('h1.name', 0)->plaintext;
+					$product['description'] = $html->find('h2.copy', 0)->plaintext;
+					$product['price'] = $html->find('h4.offer-price', 0)->plaintext;
+					if(!$product['price']){
+						$product['price'] = $html->find('h4.list-price', 0)->plaintext;
+					}
+					$product['images'] = $html->find('img.prod-img', 0)->src;
+				}
+				elseif($site == "urbanoutfitters"){
+					$product['name'] = $html->find('h2[id=prodTitle]', 0)->plaintext;
+					$product['description'] = $html->find('div[id=detailsDescription]', 0)->innertext;
+					$product['price'] = $html->find('h2.price', 0)->innertext;
+					if(!$product['price']){
+						//$product['price'] = $html->find('h4.list-price', 0)->plaintext;
+					}
+					$product['images'] = $html->find('img[id=prodMainImg]', 0)->src;
+				}
+				elseif($site == "sephora"){
+					$product['name'] = $html->find('h1.OneLinkNoTx', 0)->plaintext;
+					$product['description'] = $html->find('div.short-description', 0)->innertext;
+					$product['price'] = $html->find('span.sale-price', 0)->innertext;
+					
+					if(trim($html->find('span.sale-price', 0)->plaintext) == '$'){
+						$product['price'] = $html->find('span.list-price', 0)->innertext;
+					}
+					$product['images'] = 'http://www.sephora.com'.$html->find('div.hero-main-image img', 0)->src;
+				}
+				elseif($site == "footlocker"){
+					$product['name'] = $html->find('div.title h1', 0)->plaintext;
+					$product['description'] = $html->find('div.pdp_description', 0)->innertext;
+					$product['description'] = $html->find('meta[name=description]', 0);
+					$product['description'] = $product['description']->{'content'};
+					
+					$product['price'] = $html->find('div.price', 0)->innertext;
+					$product['images'] = "http:".$html->find('div[id=product_images] img', 0)->src;
+				}
+				elseif($site == "uniqlo"){
+					$product['name'] = $html->find('meta[property=og:title]', 0)->{'content'};
+					$product['description'] = $html->find('meta[property=og:description]', 0)->{'content'};
+					
+					$product['price'] = $html->find('div[id=product-price] span.price-currency-sign', 0)->innertext;
+					$product['images'] = $html->find('meta[property=og:image]', 0)->{'content'};
+				}
+				//Aldo Shoes
+				elseif($site == "m"){
+					$product['name'] = $html->find('div.un_f16', 0)->plaintext;
+					$product['description'] = $html->find('div.descriptionText', 0)->innertext;
+					
+					$product['price'] = $html->find('span.un_f11', 1)->innertext;
+					$product['images'] = 'http://m.aldoshoes.com'.$html->find('div.un_float_center img', 0)->src;
+				}
+				elseif($site == "stevemadden"){
+					$product['name'] = $html->find('h1', 0)->plaintext;
+					$product['description'] = $html->find('div[id=description]', 0)->innertext;
+					
+					$product['price'] = $html->find('span.item-price', 0)->innertext;
+					$product['images'] = str_replace('$thumb-cat$', '$ENLARGE$', $html->find('div.item-image-wrapper img', 0)->src);
+				}
+				//Burberry
+				elseif($site == "us"){
+					$product['name'] = $html->find('h1.product-title', 0)->plaintext;
+					$product['description'] = $html->find('div.product-info-content', 0)->innertext;
+					
+					$product['price'] = $html->find('span.price-amount', 0)->innertext;
+					$product['images'] = $html->find('li.product-image', 0)->find('img', 0)->src;
+				}
+				elseif($site == "godiva"){
+					$product['name'] = $html->find('h1.product-name', 0)->plaintext;
+					$product['description'] = $html->find('div.product-long-description', 0)->innertext;
+					
+					$product['price'] = $html->find('div.product-price span.price-sales', 0)->innertext;
+					$product['images'] = $html->find('a.product-image', 0)->href;
+				}
+				elseif($site == "bathandbodyworks"){
+					$product['name'] = $html->find('h1.fn', 0)->plaintext;
+					$product['description'] = $html->find('div[id=product-overview]', 0)->innertext;
+					
+					$product['price'] = $html->find('span.product-price', 0)->innertext;
+					$product['images'] = $html->find('div[id=main-img] a', 0)->href;
 				}
 				else{
-					echo ($site);
 				}
 				
 				
