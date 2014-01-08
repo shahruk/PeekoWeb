@@ -8,6 +8,7 @@ $(function(){
 	
 	var gaScript = document.createElement('script');
 	gaScript.src = "http://peekoapp.com:8080/js/ga.js";
+	
 	document.body.appendChild(script);
 	document.body.appendChild(gaScript);
 });
@@ -72,16 +73,6 @@ function initialize(){
 	//When device is ready, do onSuccess.
 	function onDeviceReady(){
 		getLocation();
-		try{
-			gaPlugin = window.plugins.gaPlugin;
-			gaPlugin.init(function(){
-				gaPlugin.trackEvent(function() {
-					"Peeko Loaded Open";
-					}, function(){}, "App", "Open", "App", 1);
-			}, function(){}, "UA-2509553-13", 10);
-		}catch(e){
-			//alert(e);
-		}
 	}
 
 	function getLocation(){
@@ -221,14 +212,4 @@ function initialize(){
 	$(window).bind('orientationchange resize', function(event,ui){
 		resizeOverlay();
 	});
-	
-	$("#buyOnline").click(function(){
-		gaPlugin.trackEvent( nativePluginResultHandler, function(){}, "Button", "Click", "event only", 1);
-	});
-}
-
- function nativePluginResultHandler (result) {
-	//alert('nativePluginResultHandler - '+result);
-	//console.log('nativePluginResultHandler: '+result);
-
 }
