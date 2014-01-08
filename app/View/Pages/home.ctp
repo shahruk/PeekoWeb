@@ -30,7 +30,7 @@
 				<h1 class="helvbold">Deals and Selections Near You</h1>
 				<h2 class="helvreg">Save Time Shopping with Peeko</h2>
 				<p>
-					Find the latest deals and selections at stores near you, all from your smartphone. Peeko automatically refreshes each store with a new deal every 12 hours, so there's always something new to shop.. 
+					Find the latest deals and selections at stores near you, all from your smartphone. Peeko automatically refreshes each store with a new deal every 12 hours, so there's always something new to shop.
 				</p>
 				
 				<p>Shopping on the go has never been more fun and convenient.</p>
