@@ -45,11 +45,12 @@ button.close{
 	font-size: 12px;
 }
 
-#buyOnline{
+#buyOnline, #share{
 	display: block;
 	font-size: 18px;
 	text-decoration: none;
 	padding: 10px 20px;
+	margin-bottom: 10px;
 }
 
 #buyOnline .glyphicon{
@@ -88,9 +89,10 @@ button.close{
 	background: none;
 }
 
-#share{
-	float: right;
+#vote{
+	margin-top: 40px;
 }
+
 #storeLogo{
 	width:80px;
 	height:100px;
