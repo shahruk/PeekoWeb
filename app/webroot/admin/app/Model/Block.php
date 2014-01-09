@@ -42,6 +42,23 @@
 			$this->saveField('permalink', $tmpPerma);
 		}
 		
+		public function addVotes(){
+			App::import('Model', 'Brand');
+			$brands = new Brand();
+			$blocks = $this->find('all');
+			for($i = 0; $i < count($blocks); $i++){
+				if(!isset($blocks[$i]['Block']['score'])){
+					$rand = mt_rand(1, mt_rand(7, 30));
+					$brand = $brands->read(NULL, $blocks[$i]['Block']['brand_id']);
+					$brand['Brand']['active_block']['score'] = $rand;
+					$brands->id = $brand['Brand']['id'];
+					$brands->saveField('active_block', $brand['Brand']['active_block']);
+					$this->saveField('score', $rand);
+					$this->saveField('fake_score', $rand); 
+				}
+			}
+		}
+		
 		public function fix($id){
 			$blocks = $this->find('all', array('conditions' => array('brand_id' => $id), 'order' =>array('number' => 1)));
 			for($i = 0; $i <= count($blocks); $i++){
