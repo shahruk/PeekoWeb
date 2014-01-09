@@ -162,6 +162,10 @@ and (max-device-width : 480px) {
 
 }
 
+.star.upvote-enabled.starred{
+	display: none;
+}
+
 /* Upvote Downvote */
 
 div.upvote {
