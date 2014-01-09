@@ -24,8 +24,9 @@
 
 <body>
 	<div class="wrapper">
-		<a id="getapp" class="link" href="/">Get the App</a>
+		<a id="getapp" class="link" href="/"><b>Get the App</b></a>
 		<a id="currentdeals" class="link" href="/currentdeals">Current Deals</a>
+		<a id="currentdeals" class="link" href="http://facebook.com/PeekoApp">Our Facebook</a>
 		<div class="dark" id="logo"><a href="/">Peeko</a></div>
 		<div class="content" id="home">
 			<?php echo $this->fetch('content'); ?>
