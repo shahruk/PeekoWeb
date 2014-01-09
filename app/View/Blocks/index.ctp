@@ -12,17 +12,19 @@ $this->end(); ?>
 <?php $this->end(); ?>
 
 <?php //debug($block); ?>
-<div class="row-fluid">
-	<div class="span8">
+<div class="row">
+	<div class="col-xs-8 col-md-8">
 		<h2 style="text-align: center; padding: 20px; font-size: 24px;"><?php echo $block['Block']['name']; ?></h2>
 
-		<img class="main-block" src="<?php echo $block['Block']['images']; ?>" />
+		<a href="<?php echo $block['Block']['url']; ?>">
+			<img class="main-block" src="<?php echo $block['Block']['images']; ?>" />
+		</a>
 		<div class="helvreg">
 			<h3 class="section">Description</h3>
 			<?php echo nl2br($block['Block']['description']); ?>
 		</div>
 	</div>
-	<div class="span4">
+	<div class="col-xs-4 col-md-4">
 		<img src="http://peekoapp.com:8080/brands/<?php echo $block['Block']['icon']; ?>" />
 		<div class="section">
 			<h3>Date</h3>: <?php $date = date('m-d-Y', strtotime($elysium.' +'.(int)($block['Block']['number']).' days')); 
