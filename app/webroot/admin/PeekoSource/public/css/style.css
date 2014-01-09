@@ -46,6 +46,7 @@ button.close{
 }
 
 #buyOnline{
+	display: block;
 	font-size: 18px;
 	text-decoration: none;
 	padding: 10px 20px;
@@ -83,8 +84,6 @@ button.close{
 }
 
 #countdown{
-	float: right;
-	width: 250px;
 	border: none;
 	background: none;
 }
