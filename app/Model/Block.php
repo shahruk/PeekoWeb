@@ -34,6 +34,18 @@
 				$clean = substr($clean, 0, -1);
 			return trim($clean);
 		}
+		
+		public function addVotes(){
+			$blocks = $this->find('all');
+			for($i = 0; $i < count($blocks); $i++){
+				if(!isset($blocks[$i]['Block']['score'])){
+					$this->id = $blocks[$i]['Block']['id'];
+					$rand = mt_rand(1, mt_rand(7, 30));
+					$this->saveField('score', $rand);
+					$this->saveField('fake_score', $rand); 
+				}
+			}
+		}
 
 		public function addPermalink($listingId, $listingName){
 			$block = $this->findById($listingId);

@@ -98,7 +98,6 @@ function initialize(){
 		function onSuccess(position){
 			try{
 				centerMap(position.coords.latitude, position.coords.longitude, firstRun);
-				$('#topic').upvote();
 				if(firstRun){
 					firstRun = false;
 				}
@@ -109,8 +108,24 @@ function initialize(){
 		
 		//Show an overlay.
 		function showOverlay(marker, data){
-			dataHandler = data;
-			console.log(data);
+			var voteResult = window.localStorage.getItem(data.id);
+			var upvoted;
+			var downvoted;
+			
+			//console.log(voteResult);
+			if(voteResult == null){
+				upvoted = false;
+				downvoted = false;
+			}
+			if(voteResult == 1){
+				upvoted = true;
+				downvoted = false;
+			}
+			if(voteResult == -1){
+				upvoted = false;
+				downvoted = true;
+			}
+			
 			$("#productName").text(data.name);
 			$("#description").html(data.description);
 			$("#price").html(data.price);
@@ -118,6 +133,28 @@ function initialize(){
 			$("#productImage").attr('src', data.images);
 			$("#productOverlay").fadeIn(400);
 			$("#storeLogo").attr('src', serverUrl+'brands/'+data.icon);
+			$('#topic').upvote({
+				id: data.id,
+				count: data.score,
+				upvoted: upvoted,
+				downvoted: downvoted,
+				callback: function(results){
+					var tmpVote = 0;
+					if(results.downvoted == true){
+						tmpVote = -1;
+					}else if(results.upvoted == true){
+						tmpVote = 1;
+					}
+					if(tmpVote != 0){
+						window.localStorage.setItem(data.id,tmpVote);
+					}
+					$.ajax({
+						url: 'http://peekoapp.com/blocks/vote',
+						type: 'post',
+						data: { id: results.id, up: results.upvoted, down: results.downvoted, count: results.count }
+					});
+				}
+			});
 			shareHandler = $("#share").click(function(e){
 				e.preventDefault();
 				window.plugins.socialsharing.share('$'+data.price+' - '+data.name, null, data.images, data.url);
@@ -183,6 +220,7 @@ function initialize(){
 		}
 		
 		function startCountdown(){
+			$("#productOverlay").html("<div class='clearfix'> <button id='close' type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button> </div> <div class='row'> <div class='col-md-6'> <img id='productImage' src='' /> </div> <div class='col-md-6'> <h3 id='productName'></h3> <!-- <a href='#' class='btn btn-primary' id='share'><span class='glyphicon glyphicon-share'></span> Share This </a> --> <div class='row'> <div class='col-md-2 col-xs-2'> <div id='vote'> <div id='topic' class='upvote'> <a class='upvote'></a> <span class='count'>5</span> <a class='downvote'></a> <a class='star starred'></a> </div> </div> </div> <div class='col-md-10 col-xs-10'> <h3 style='margin-top: 0;'><span id='price'>0.00</span></h3> <hr /> <div id='description'> </div> </div> </div> <hr /> <img id='storeLogo' /> <a href='http://google.com/' class='btn btn-success' target='_system' id='buyOnline'><span class='glyphicon glyphicon-shopping-cart'></span> Visit Website</a> <div id='countdown'></div> </div> </div>");
 			var countdown = new Date();
 			var targetHour = 1;
 			

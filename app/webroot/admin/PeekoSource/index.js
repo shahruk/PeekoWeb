@@ -3,7 +3,7 @@ var database = require("./database");
 database.start();
 
 app.get('/blocks/:longi/:lati', function(req, res){
-	res.header('Access-Control-Allow-Origin', "*")
+	res.header('Access-Control-Allow-Origin', "*");
 	var coordinates = [req.params.longi, req.params.lati];
 	var location = new database.Location({loc: coordinates});
 	location.findNear(

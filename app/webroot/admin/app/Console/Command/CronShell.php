@@ -39,6 +39,11 @@
 			}
 		}
 		
+		public function addVotes(){
+			parent::sendEmail();
+			$this->Block->addVotes();
+		}
+		
 		public function number(){
 			$blocks = $this->Block->find('all');
 			for($i = 0; $i < count($blocks); $i++){
