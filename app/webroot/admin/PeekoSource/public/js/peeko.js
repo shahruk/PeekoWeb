@@ -126,6 +126,7 @@ function initialize(){
 		$("#buyOnline").attr('href', data.url);
 		$("#productImage").attr('src', data.images);
 		$("#storeLogo").attr('src', serverUrl+'brands/'+data.icon);
+		$("#productOverlay").fadeIn(400);
 		$('#topic').upvote({
 			id: data.id,
 			count: data.score,
@@ -148,7 +149,7 @@ function initialize(){
 				});
 			}
 		});
-		$("#productOverlay").fadeIn(400);
+		
 		
 	}
 
