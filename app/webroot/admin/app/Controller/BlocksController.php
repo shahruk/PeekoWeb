@@ -8,6 +8,7 @@
 					$this->request->data['Block']['icon'] = $brand['Brand']['icon'];
 				}
 				$this->request->data['Block']['number'] = (int)$this->request->data['Block']['number'];
+				$this->request->data['Block']['score'] = 0;
 				if($this->Block->save($this->request->data)){
 					$this->Block->addPermalink($this->Block->id, $this->request->data['Block']['name']);
 					$this->Session->setFlash('Congratulations. Saved.');
