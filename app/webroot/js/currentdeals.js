@@ -12,5 +12,7 @@ $(function(){
 	}
 	
 	countdown.setHours(targetHour,0,0,0);
-	$('#countdown').countdown({until: $.countdown.UTCDate(-5, countdown)}); 
+	$('#countdown').countdown({until: $.countdown.UTCDate(-5, countdown)});
+	
+	$('#fbjlike-example').fbjlike();
 });

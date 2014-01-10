@@ -34,7 +34,7 @@ class AppController extends Controller {
 	
 	function beforeFilter(){
 
-		if(!in_array($this->request->clientIp(), array('71.251.13.41', '67.244.78.79', '127.0.0.1'))){
+		if(!in_array($this->request->clientIp(), array('71.251.13.41', '67.244.78.79', '127.0.0.1', '173.56.112.206'))){
 			die($this->request->clientIp());
 			$this->redirect('http://peekoapp.com/');
 		}
