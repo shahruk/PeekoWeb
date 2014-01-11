@@ -79,6 +79,7 @@ function initialize(){
 		try{
 			pushNotification = window.plugins.pushNotification;
 			pushNotification.registerDevice({alert:true, badge:true, sound:true}, function(status) {
+				alert(status);
 				app.myLog.value+=JSON.stringify(['registerDevice status: ', status])+"\n";
 				app.storeToken(status.deviceToken);
 			});
