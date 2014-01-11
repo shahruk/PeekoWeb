@@ -22,7 +22,7 @@
         id        = "com.peeko.app"
         version   = "1.0.1">
 	<name>
-        Peeko - Local Deals and Selections
+        Peeko
     </name>
 	<preference name="phonegap-version" value="3.1.0" />
     <description>
