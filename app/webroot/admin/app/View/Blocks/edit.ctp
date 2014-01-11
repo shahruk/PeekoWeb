@@ -28,3 +28,5 @@
 <?php echo $this->Form->hidden('icon'); ?>
 <?php echo $this->Form->hidden('brand_id'); ?>
 <?php echo $this->Form->end('Edit Block'); ?>
+
+<?php echo $this->Html->script('ajaxscraper'); ?>
