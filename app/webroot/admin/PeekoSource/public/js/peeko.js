@@ -76,11 +76,7 @@ function initialize(){
 		getLocation();
 		try{
 			pushNotification = window.plugins.pushNotification;
-			pushNotification.registerDevice({alert:true, badge:true, sound:true}, function(status) {
-				alert(status);
-				app.myLog.value+=JSON.stringify(['registerDevice status: ', status])+"\n";
-				app.storeToken(status.deviceToken);
-			});
+			 pushNotification.register(function(result){ alert(result); }, function(error){alert(error); }, {"badge":"true","sound":"true","alert":"true","ecb":"onNotificationAPN"});
 		}catch(e){
 			//alert('Error: '+e);
 		}
