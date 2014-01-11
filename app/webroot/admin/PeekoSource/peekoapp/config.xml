@@ -61,7 +61,7 @@
 	
     <plugins></plugins>
     <preference value='none' name='permissions'/>
-    <preference value='false' name='exit-on-suspend'/>
+    <preference value='true' name='exit-on-suspend'/>
     <preference value='7' name='android-minSdkVersion'/>
     <preference value='black-opaque' name='ios-statusbarstyle'/>
     <preference value='auto' name='android-installLocation'/>
