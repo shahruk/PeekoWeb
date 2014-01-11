@@ -1,6 +1,9 @@
 //Google Analytics
 var gaPlugin;
 
+//Push notification
+var pushNotification;
+
 $(function(){
 	var myKey = "AIzaSyAGbtVZdTdW227zjB-jfmJjzrpHCiayTzc";
 	var script = document.createElement('script');
@@ -73,6 +76,15 @@ function initialize(){
 	//When device is ready, do onSuccess.
 	function onDeviceReady(){
 		getLocation();
+		try{
+			pushNotification = window.plugins.pushNotification;
+			pushNotification.registerDevice({alert:true, badge:true, sound:true}, function(status) {
+				app.myLog.value+=JSON.stringify(['registerDevice status: ', status])+"\n";
+				app.storeToken(status.deviceToken);
+			});
+		}catch(e){
+		
+		}
 	}
 
 	function getLocation(){

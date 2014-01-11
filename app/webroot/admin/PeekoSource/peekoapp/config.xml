@@ -22,11 +22,11 @@
         id        = "com.peeko.app"
         version   = "1.0.1">
 	<name>
-        Peeko
+        Peeko - Local Deals and Selections
     </name>
 	<preference name="phonegap-version" value="3.1.0" />
     <description>
-        Quick and easy window shopping. Find cool stuff to browse and buy around you with a single tap.
+        Peeko brings you the latest deals and selections at stores near you. New deals are added twice a day, so there's always something new to shop!
     </description>
     <author href='http://google.com/' email='shahruksemail@gmail.com'>
         Shahruk Khan
@@ -60,10 +60,8 @@
     <preference value='true' name='EnableLocation'/>
 	
     <plugins></plugins>
-	<gap:plugin name="nl.x-services.plugins.socialsharing" />
-    <preference value='false' name='disable-cursor'/>
     <preference value='none' name='permissions'/>
-    <preference value='true' name='exit-on-suspend'/>
+    <preference value='false' name='exit-on-suspend'/>
     <preference value='7' name='android-minSdkVersion'/>
     <preference value='black-opaque' name='ios-statusbarstyle'/>
     <preference value='auto' name='android-installLocation'/>
@@ -86,5 +84,9 @@
 	<gap:plugin name="org.apache.cordova.inappbrowser" />
 	<gap:plugin name="nl.x-services.plugins.socialsharing" />
 	<gap:plugin name="com.phonegap.plugins.PushPlugin"/>
+	<gap:plugin name="com.phonegap.plugins.facebookconnect">
+		<param name="APP_ID" value="619753521393388" />
+		<param name="APP_NAME" value="peekoapp" />
+	</gap:plugin>
 	
 </widget>
