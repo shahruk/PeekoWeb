@@ -13,7 +13,10 @@
 <!--[if lt IE 9]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-
+<meta property="og:title" content="Daily Deals and Selections - Peeko" />
+<meta property="og:image" content="http://a4.mzstatic.com/us/r30/Purple/v4/13/69/f8/1369f879-b87b-e565-110f-6fd86d010334/mzl.pmeqlxbm.175x175-75.jpg" />
+<meta property="og:description" content="New deals and selections at over 21,000 stores near you. New deals added twice a day." />
+<meta property="og:url" content="<?php echo $this->Html->url( null, true ); ?>" />
 
 <?php echo $this->Html->css(array('/font/stylesheet.css', 'bootstrap.min.css', 'bootstrap-responsive.min.css', 'styles.css', 'media-queries.css')); ?>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">

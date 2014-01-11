@@ -1,8 +1,3 @@
-//Google Analytics
-var gaPlugin;
-
-//Push notification
-var pushNotification;
 
 $(function(){
 	var myKey = "AIzaSyAGbtVZdTdW227zjB-jfmJjzrpHCiayTzc";
@@ -17,6 +12,9 @@ $(function(){
 });
 
 function initialize(){
+	//Push notification
+	var pushNotification;
+	
 	var applaunchCount = window.localStorage.getItem('appLaunchCounter');
 	$("body").show();
 	//Check if it already exists or not

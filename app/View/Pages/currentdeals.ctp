@@ -6,6 +6,12 @@ $this->end();
 echo $this->Html->script(array('jquery.countdown.min', 'jquery.fbjlike.1.4', 'currentdeals'));
 $this->end();
 ?>
+<?php $this->start('og'); ?>
+<meta property="og:title" content="Current Deals - Peeko" />
+<meta property="og:image" content="http://a4.mzstatic.com/us/r30/Purple/v4/13/69/f8/1369f879-b87b-e565-110f-6fd86d010334/mzl.pmeqlxbm.175x175-75.jpg" />
+<meta property="og:description" content="New deals and selections at over 21,000 stores near you. New deals added twice a day." />
+<meta property="og:url" content="<?php echo $this->Html->url( null, true ); ?>" />
+<?php $this->end(); ?>
 <div class="allblocks clearfix">
 	<div id="countdown"></div>
 	<h2 class="helvreg">Browse our Current Deals</h2>
