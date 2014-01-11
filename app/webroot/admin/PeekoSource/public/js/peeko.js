@@ -82,7 +82,7 @@ function initialize(){
 				app.storeToken(status.deviceToken);
 			});
 		}catch(e){
-			alert(e);
+			//alert('Error: '+e);
 		}
 	}
 
