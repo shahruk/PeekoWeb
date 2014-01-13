@@ -319,3 +319,35 @@ div.upvote-programmers span.count {
     font-weight: bold;
     font-family: Tahoma,Geneva,Arial,sans-serif;
 }
+
+header{
+	height: 43px;
+	-webkit-box-shadow: inset 0 1px 1px -1px #fff;
+	-webkit-box-sizing: border-box;
+	background: #1bb0fd; /* Old browsers */
+	border-bottom: 1px solid #207cca;
+	padding: 0 10px;
+	text-align: center;
+}
+
+header div{
+	padding-top: 7px;
+	color: #FFF;
+	line-height: 28px;
+	font-weight: bold;
+	font: 'Helvetica Neue UltraLight', 'Helvetica', 'Arial', sans-serif;
+	font-size: 22px;
+}
+
+header a{
+	display: inline-block;
+	font-size: 22px;
+	margin-top: 8px;
+	color: #FFF;
+	line-height: 22px;
+	vertical-align:middle;
+}
+
+header a:hover{
+	text-decoration: none;
+}
