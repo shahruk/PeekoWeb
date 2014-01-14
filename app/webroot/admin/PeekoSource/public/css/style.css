@@ -337,6 +337,7 @@ header div{
 	font-weight: bold;
 	font: 'Helvetica Neue UltraLight', 'Helvetica', 'Arial', sans-serif;
 	font-size: 22px;
+	margin-left: 66px;
 }
 
 header a{
@@ -350,4 +351,8 @@ header a{
 
 header a:hover{
 	text-decoration: none;
+}
+
+.deal img{
+	height: 140px !important;
 }
