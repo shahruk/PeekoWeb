@@ -259,7 +259,6 @@
 				}
 				elseif($site == "footlocker"){
 					$product['name'] = $html->find('div.title h1', 0)->plaintext;
-					$product['description'] = $html->find('div.pdp_description', 0)->innertext;
 					$product['description'] = $html->find('meta[name=description]', 0);
 					$product['description'] = $product['description']->{'content'};
 					
