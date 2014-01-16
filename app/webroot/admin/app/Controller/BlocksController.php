@@ -259,8 +259,7 @@
 				}
 				elseif($site == "footlocker"){
 					$product['name'] = $html->find('div.title h1', 0)->plaintext;
-					$product['description'] = $html->find('meta[name=description]', 0);
-					$product['description'] = $product['description']->{'content'};
+					$product['description'] = $html->find('div.description', 0)->innertext;
 					
 					$product['price'] = $html->find('div.price', 0)->innertext;
 					$product['images'] = "http:".$html->find('div[id=product_images] img', 0)->src;
