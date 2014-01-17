@@ -2,7 +2,16 @@ $(function(){
 	$("#facebookLogin").on('click', function(e){
 		try{
 			e.preventDefault();
-			FB.login(null, {scope: 'email'});
+			FB.login(function(response) {
+				if (response.authResponse) {
+					console.log('Welcome!  Fetching your information.... ');
+					FB.api('/me', function(response) {
+						alert	('Good to see you, ' + response.name + '.');
+					});
+				} else {
+					alert('User cancelled login or did not fully authorize.');
+				}
+			}, {scope: 'email'});
 		}catch(e){
 			alert(e);
 		}
