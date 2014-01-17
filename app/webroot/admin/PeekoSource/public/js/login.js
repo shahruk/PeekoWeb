@@ -16,6 +16,7 @@ $(function(){
 	
 	$("#facebookLogin").on("click", function(e){
 		try{
+			alert("A");
 			e.preventDefault();
 			FB.login(function(response) {
 				alert("WE HAVE A RESPONSE!");
