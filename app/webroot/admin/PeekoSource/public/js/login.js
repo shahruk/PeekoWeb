@@ -1,7 +1,10 @@
 $(function(){
 	$("#facebookLogin").on('click', function(e){
-		e.preventDefault();
-		alert("A");
-		FB.login(null, {scope: 'email'});
+		try{
+			e.preventDefault();
+			FB.login(null, {scope: 'email'});
+		}catch(e){
+			alert(e);
+		}
 	});
 });
