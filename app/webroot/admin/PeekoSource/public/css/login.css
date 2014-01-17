@@ -13,5 +13,45 @@ body{
 	width: 100%;
 	display: block;
 	margin: auto;
-	padding-top: 200px;
+	padding-top: 50px;
+}
+
+#facebookLogin{
+	background: #3b589c;
+}
+
+#continueGuest{
+	background: #8fc551;
+}
+
+.buttonOption{
+	border: 1px solid #126aa1;
+	color: #FFF;
+	padding: 20px 30px;
+	display: block;
+	text-align: center;
+	margin: 0 10px 10px 10px;
+}
+
+.buttonOption:hover{
+	text-decoration: none;
+}
+
+#facebookLogin:hover{
+	color: #DDD;
+}
+
+#facebookLogin img, .buttonOption span{
+	float: left;
+	width: 32px;
+	margin-top: -8px;
+}
+
+.buttonOption div{
+	border-left: 1px solid #FFF;
+	margin-left: 50px;
+}
+
+.buttonOption span{
+	font-size: 32px;
 }
