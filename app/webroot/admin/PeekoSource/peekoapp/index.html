@@ -1,77 +1,16 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="http://peekoapp.com:8080/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="http://direct.peekoapp.com:8080/css/style.css">
-		
-		<style>
-			body{
-				margin: 0;
-				display: block;
-				background: #F1F1F1;
-			}
-			
-			#content{
-				padding: 20px;
-			}
-			
-			.deal{
-				margin-bottom: 20px;
-			}
-			
-			.deal img{
-				height: 200px;
-				padding: 10px 15px;
-				background: #FFF;
-				max-width: 100%;
-				display: block;
-				margin: auto;border: 1px solid #CCC;
-			}
-			
-			header a{
-				display: block;
-				color: #FFF;
-				font-size: 18px;
-				margin-top: 10px;
-			}
-			
-			header a span{
-				display: block;
-				float: left;
-				font-size: 28px;
-				margin-top: -2px;
-				margin-right: 3px;
-			}
-		</style>
+		<title>Peeko Feed</title>
+		<link rel="stylesheet" type="text/css" href="http://direct.peekoapp.com:8080/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="http://localhost:8080/css/style2.css">
+		<link rel="stylesheet" type="text/css" href="http://localhost:8080/css/login.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+		<script src="http://localhost:8080/js/login.js"></script>
 	</head>
 	<body>
-		<div id="fb-root"></div>
-		<script>(function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0];
-		  if (d.getElementById(id)) return;
-		  js = d.createElement(s); js.id = id;
-		  js.src = "http://connect.facebook.net/en_US/all.js#xfbml=1&appId=619753521393388";
-		  fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));</script>
-
-		<header>
-			<a style='float:right;' href="index.html"><span class="glyphicon glyphicon-map-marker"></span>Map</a>
-			<div>Latest Deals</div>
-		</header>
-		<div id="content" class="row">
-			<div class="deal col-xs-6 col-md-6">
-				<img src="http://pisces.bbystatic.com/image2/BestBuy_US/images/products/9071/9071056_sa.jpg;canvasHeight=500;canvasWidth=500" />
-			</div>
-			<div class="deal col-xs-6 col-md-6">
-				<img src="http://pisces.bbystatic.com/image2/BestBuy_US/images/products/1807/1807308_sa.jpg;canvasHeight=500;canvasWidth=500" />
-			</div>
-			<div class="deal col-xs-6 col-md-6">
-				<img src="http://pisces.bbystatic.com/image2/BestBuy_US/images/products/1876/1876003_sa.jpg;canvasHeight=500;canvasWidth=500" />
-			</div>
-			<div class="deal col-xs-6 col-md-6">
-				<img src="http://pisces.bbystatic.com/image2/BestBuy_US/images/products/9071/9071056_sa.jpg;canvasHeight=500;canvasWidth=500" />
-			</div>
-		</div>
-		<a href="index.html">Index</a>
+		<img id="logo" src="http://localhost:8080/img/logohires.png" />
+		<h1 style="text-align: center; font-size: 32px; color: #FFF;">Deals and Selections Near You</h1>
 	</body>
 </html>
