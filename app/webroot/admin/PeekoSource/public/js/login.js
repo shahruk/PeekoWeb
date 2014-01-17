@@ -2,7 +2,9 @@ $(function(){
 	$("#facebookLogin").on('click', function(e){
 		try{
 			e.preventDefault();
+			alert("CLICK!");
 			FB.login(function(response) {
+				alert("WE HAVE A RESPONSE!");
 				if (response.authResponse) {
 					console.log('Welcome!  Fetching your information.... ');
 					FB.api('/me', function(response) {
