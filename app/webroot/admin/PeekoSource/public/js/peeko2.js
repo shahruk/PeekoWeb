@@ -129,7 +129,7 @@ document.addEventListener('deviceready', function() {
 $(function(){
 	$("#map").click(function(e){
 		e.preventDefault();
-		window.location.href = "map.html";
+		$("iframe").attr("src","map.html");
 	});
 	
 	$("iframe").load(function(){
