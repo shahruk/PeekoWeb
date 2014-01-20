@@ -25,7 +25,6 @@ alert("session: " + JSON.stringify(FB.getSession()));
 function getLoginStatus() {
 FB.getLoginStatus(function(response) {
 		  if (response.status == 'connected') {
-		  alert('logged in');
 		  } else {
 			alert(response.status);
 		  }
@@ -72,7 +71,7 @@ FB.login(
  if (response.session) {
  alert('logged in');
  } else {
- alert('not logged in');
+	response.authResponse.userID;
  }
  },
  { scope: "email" }
