@@ -3,35 +3,40 @@ if(returningUser){
 	window.location.href = "feed.html";
 }
 
-FB.Event.subscribe('auth.login', function(response) {
-	//alert(response.authResponse.userID);
-	//alert(response.authResponse.accessToken);
-	$.ajax({
-		url: 'http://direct.peekoapp.com:8080/fbregister/'+response.authResponse.userID+'/'+response.authResponse.accessToken,
-		success: function(results){
-			window.localStorage.setItem('fbid',response.authResponse.userID);
-			window.localStorage.setItem('accessToken',response.authResponse.accessToken);
-			window.location.href = "feed.html";
-		}
+try{
+	FB.Event.subscribe('auth.login', function(response) {
+		//alert(response.authResponse.userID);
+		//alert(response.authResponse.accessToken);
+		$.ajax({
+			url: 'http://direct.peekoapp.com:8080/fbregister/'+response.authResponse.userID+'/'+response.authResponse.accessToken,
+			success: function(results){
+				window.localStorage.setItem('fbid',response.authResponse.userID);
+				window.localStorage.setItem('accessToken',response.authResponse.accessToken);
+				window.location.href = "feed.html";
+			}
+		});
 	});
-});
 
-FB.Event.subscribe('auth.logout', function(response) {
-	  //alert('auth.logout event');
-	   });
+	FB.Event.subscribe('auth.logout', function(response) {
+		  //alert('auth.logout event');
+		   });
 
-FB.Event.subscribe('auth.sessionChange', function(response) {
-	  // alert('auth.sessionChange event');
-	   });
+	FB.Event.subscribe('auth.sessionChange', function(response) {
+		  // alert('auth.sessionChange event');
+		   });
 
-FB.Event.subscribe('auth.statusChange', function(response) {
-	  // alert('auth.statusChange event');
-	   });
+	FB.Event.subscribe('auth.statusChange', function(response) {
+		  // alert('auth.statusChange event');
+		   });
 
-/*function getSession() {
-alert("session: " + JSON.stringify(FB.getSession()));
+	/*function getSession() {
+	alert("session: " + JSON.stringify(FB.getSession()));
+	}
+	*/
+}catch(e){
+
 }
-*/
+
 function getLoginStatus() {
 FB.getLoginStatus(function(response) {
 		  if (response.status == 'connected') {
