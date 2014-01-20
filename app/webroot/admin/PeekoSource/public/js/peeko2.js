@@ -126,3 +126,10 @@ document.addEventListener('deviceready', function() {
 	}
 }, false);
 
+$(function(){
+	$("#map").click(function(e){
+		e.preventDefault();
+		window.location.href = "map.html";
+	});
+});
+
