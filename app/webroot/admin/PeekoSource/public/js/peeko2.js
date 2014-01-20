@@ -146,10 +146,10 @@ $(function(){
 	$("#continueGuest").click(function(e){
 		window.location.href = "map.html";
 	});
-$("#map").click(function(e){
-	e.preventDefault();
-	alert("A");
-	$("iframe").attr('src', 'map.html');
-});
+	$("#map").click(function(e){
+		e.preventDefault();
+		alert("A");
+		$("iframe").attr('src', 'map.html');
+	});
 });
 
