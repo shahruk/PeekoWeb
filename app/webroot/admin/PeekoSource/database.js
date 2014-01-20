@@ -33,7 +33,7 @@ var locationsSchema = mongoose.Schema({
 
 var usersSchema = mongoose.Schema({
 	email: String,
-	fbid: Number
+	fbid: String
 });
 
 //Model methods
