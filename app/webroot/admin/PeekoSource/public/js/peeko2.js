@@ -12,7 +12,7 @@ try{
 			success: function(results){
 				window.localStorage.setItem('fbid',response.authResponse.userID);
 				window.localStorage.setItem('accessToken',response.authResponse.accessToken);
-				window.location.href = "feed.html";
+				//window.location.href = "feed.html";
 			}
 		});
 	});
