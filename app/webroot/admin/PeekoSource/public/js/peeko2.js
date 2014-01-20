@@ -66,10 +66,10 @@ function logout() {
 function login() {
 	FB.login(
 		function(response) {
-			if(response.session){
+			if(response.authResponse){
 				alert('logged in');
 			}else{
-				//alert(response.authResponse.userID);
+				alert(response.session);
 			}
 		},
 		{ scope: "email" }
