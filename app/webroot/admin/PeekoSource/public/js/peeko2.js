@@ -5,7 +5,7 @@ if (typeof FB == 'undefined') alert('FB variable does not exist. Check that you 
 FB.Event.subscribe('auth.login', function(response) {
 	   alert(response.authResponse.userID);
 	   alert(response.authResponse.accessToken);
-	   window.location.href = "feed.html";
+	   //window.location.href = "feed.html";
 	   });
 
 FB.Event.subscribe('auth.logout', function(response) {
@@ -43,9 +43,9 @@ var data = document.getElementById('data');
 				   fdata=response.data;
 				   console.log("fdata: "+fdata);
 response.data.forEach(function(item) {
-					 var d = document.createElement('div');
+					/* var d = document.createElement('div');
 					 d.innerHTML = "<img src="+item.picture+"/>"+item.name;
-					 data.appendChild(d);
+					 data.appendChild(d); */
 					 });
 }
 				var friends = response.data;
