@@ -1,10 +1,6 @@
-if ((typeof cordova == 'undefined') && (typeof Cordova == 'undefined')) alert('Cordova variable does not exist. Check that you have included cordova.js correctly');
-if (typeof CDV == 'undefined') alert('CDV variable does not exist. Check that you have included cdv-plugin-fb-connect.js correctly');
-if (typeof FB == 'undefined') alert('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
-
 FB.Event.subscribe('auth.login', function(response) {
-	   alert(response.authResponse.userID);
-	   alert(response.authResponse.accessToken);
+	   //alert(response.authResponse.userID);
+	   //alert(response.authResponse.accessToken);
 	   //window.location.href = "feed.html";
 	   });
 
@@ -62,22 +58,22 @@ response.data.forEach(function(item) {
 }
 
 function logout() {
-FB.logout(function(response) {
-  alert('logged out');
-  });
+	FB.logout(function(response) {
+		alert('logged out');
+	});
 }
 
 function login() {
-FB.login(
- function(response) {
- if (response.session) {
- alert('logged in');
- } else {
-	alert(response.authResponse.userID);
- }
- },
- { scope: "email" }
- );
+	FB.login(
+		function(response) {
+			if(response.session){
+				alert('logged in');
+			}else{
+				//alert(response.authResponse.userID);
+			}
+		},
+		{ scope: "email" }
+	);
 }
 
 
@@ -96,13 +92,13 @@ function facebookWallPost() {
 }
 
 function publishStoryFriend() {
-		randNum = Math.floor ( Math.random() * friendIDs.length ); 
+	randNum = Math.floor ( Math.random() * friendIDs.length ); 
 
-		var friendID = friendIDs[randNum];
-		if (friendID == undefined){
-				alert('please click the me button to get a list of friends first');
-		}else{
-			console.log("friend id: " + friendID );
+	var friendID = friendIDs[randNum];
+	if (friendID == undefined){
+			alert('please click the me button to get a list of friends first');
+	}else{
+		console.log("friend id: " + friendID );
 		console.log('Opening a dialog for friendID: ', friendID);
 		var params = {
 				method: 'feed',
@@ -118,11 +114,17 @@ function publishStoryFriend() {
 }
 
 document.addEventListener('deviceready', function() {
-			  try {
-			  //alert('Device is ready! Make sure you set your app_id below this alert.');
-			  FB.init({ appId: "474482682656477", nativeInterface: CDV.FB, useCachedDialogs: false });
-			  document.getElementById('data').innerHTML = "";
-			  } catch (e) {
-			  alert(e);
-			  }
-			  }, false);
+	try{
+		//alert('Device is ready! Make sure you set your app_id below this alert.');
+		FB.init({ appId: "474482682656477", nativeInterface: CDV.FB, useCachedDialogs: false });
+		//document.getElementById('data').innerHTML = "";
+	}catch (e){
+		alert(e);
+	}
+}, false);
+
+$(function(){
+	$("#facebookLogin").click(function(e){
+		login();
+	});
+});
