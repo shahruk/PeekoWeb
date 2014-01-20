@@ -7,7 +7,8 @@ $(function(){
 	
 	function onDeviceReady(){
 		try{
-			FB.init({ appId: "619753521393388", nativeInterface: CDV.FB, useCachedDialogs: false });
+			alert('Device is ready! Make sure you set your app_id below this alert.');
+			FB.init({ appId: "appid", nativeInterface: CDV.FB, useCachedDialogs: false });
 		}catch(e){
 			alert(e);
 		}

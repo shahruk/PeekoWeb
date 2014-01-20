@@ -85,8 +85,7 @@
 	<gap:plugin name="nl.x-services.plugins.socialsharing" />
 	<gap:plugin name="com.phonegap.plugins.PushPlugin"/>
 	<gap:plugin name="com.phonegap.plugins.facebookconnect">
-		<param name="APP_ID" value="619753521393388" />
+		<param name="APP_ID" value="474482682656477" />
 		<param name="APP_NAME" value="peekoapp" />
 	</gap:plugin>
-	
 </widget>

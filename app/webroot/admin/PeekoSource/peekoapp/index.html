@@ -7,12 +7,29 @@
 		<link rel="stylesheet" type="text/css" href="http://direct.peekoapp.com:8080/css/login.css">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
-		<script src="http://direct.peekoapp.com:8080/js/login.js"></script>
+		<script src="http://localhost:8080/js/login.js"></script>
 	</head>
 	<body>
 		<div id="fb-root"></div>
+		<script>
+				window.fbAsyncInit = function() {
+				FB.init({
+					appId      : '619753521393388',
+					status     : true,
+					xfbml      : true
+				});
+			};
+
+			(function(d, s, id){
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) {return;}
+				js = d.createElement(s); js.id = id;
+				js.src = "http://connect.facebook.net/en_US/all.js";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
 		<img id="logo" src="http://direct.peekoapp.com:8080/img/icon.png" />
-		<a id="facebookLogin" class="buttonOption" href="#"><img src="http://direct.peekoapp.com:8080/img/fb.png" /><div>Signup with Facebook</div></a>
-		<a id="continueGuest" class="buttonOption" href="#"><span class="glyphicon glyphicon-flash"></span> <div>Skip</div></a>
+		<span id="facebookLogin" class="buttonOption"><img src="http://direct.peekoapp.com:8080/img/fb.png" /><div>Signup with Facebook</div></span>
+		<span id="continueGuest" class="buttonOption"><span class="glyphicon glyphicon-flash"></span> <div>Skip</div></span>
 	</body>
 </html>
