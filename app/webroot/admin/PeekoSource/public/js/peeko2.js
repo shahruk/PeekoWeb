@@ -39,7 +39,7 @@ FB.api('/me/friends', { fields: 'id, name, picture' },  function(response) {
 if (response.error) {
 alert(JSON.stringify(response.error));
 } else {
-var data = document.getElementById('data');
+//var data = document.getElementById('data');
 				   fdata=response.data;
 				   console.log("fdata: "+fdata);
 response.data.forEach(function(item) {
