@@ -80,18 +80,6 @@ function logout() {
 	});
 }
 
-function login() {
-	FB.login(
-		function(response) {
-			if(!response.authResponse){
-				alert("Unfortunately you couldn't be logged in. :(");
-			}
-		},
-		{ scope: "email" }
-	);
-}
-
-
 function facebookWallPost() {
 	console.log('Debug 1');
 		var params = {
@@ -137,26 +125,4 @@ document.addEventListener('deviceready', function() {
 		alert(e);
 	}
 }, false);
-
-$(function(){
-	$("iframe").contents().find("#facebookLogin").click(function(e){
-		alert("A");
-		if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) {
-			alert("B");
-			login();
-		}else{
-			alert("C");
-			$("iframe").attr('src', 'feed.html');
-		}
-	});
-	
-	$("iframe").contents().find("#continueGuest").click(function(e){
-		$("iframe").attr('src', 'map.html');
-	});
-	
-	$("iframe").contents().find("#map").click(function(e){
-		e.preventDefault();
-		$("iframe").attr('src', 'map.html');
-	});
-});
 
