@@ -14,7 +14,7 @@ $(function(){
 		if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) {
 			login();
 		}else{
-			$("iframe", parent.document).attr('src', 'feed.html');
+			window.location.href = "feed.html";
 		}
 	});
 	
