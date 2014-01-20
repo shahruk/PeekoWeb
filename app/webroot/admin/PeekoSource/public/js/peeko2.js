@@ -132,6 +132,11 @@ $(function(){
 		$("iframe").attr("src","map.html");
 	});
 	
+	$("#back").click(function(e){
+		e.preventDefault();
+		$("iframe").attr("src","feed.html");
+	});
+	
 	$("iframe").load(function(){
 		alert(this.contentWindow.location);
 	});
