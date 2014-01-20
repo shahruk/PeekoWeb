@@ -17,6 +17,10 @@ var blocksSchema = mongoose.Schema({
 	timestamp: Date
 });
 
+var blocksSchema = mongoose.Schema({
+
+});
+
 var brandsSchema = mongoose.Schema({
 	name: String,
 	picture_url: String,
@@ -27,17 +31,29 @@ var locationsSchema = mongoose.Schema({
 	_brand: [{type: Schema.Types.ObjectId, ref: 'Brand'}]
 });
 
+var usersSchema = mongoose.Schema({
+	email: String,
+	fbid: Number
+});
+
 //Model methods
 locationsSchema.methods.findNear = function(cb){
 	return this.model('Location').find({loc: {$nearSphere: this.loc, $maxDistance: .00025}}, cb);
+}
+
+usersSchema.methods.isUnique = function(cb){
+	var results = this.model('User').find({fbid: this.fbid}, cb);
+	return results;
 }
 
 //Model definitions
 var Block = mongoose.model('Block', blocksSchema);
 var Brand = mongoose.model('Brand', brandsSchema);
 var Location = mongoose.model('Location', locationsSchema);
+var User = mongoose.model('User', usersSchema);
 
 exports.start = start;
 exports.Block = Block;
 exports.Brand = Brand;
 exports.Location = Location;
+exports.User = User;
