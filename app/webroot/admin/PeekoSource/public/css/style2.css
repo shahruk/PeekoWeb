@@ -100,6 +100,11 @@ div.brandname{
 	text-align: right;
 }
 
+iframe{
+	border: none;
+	width: 100%;
+}
+
 .actions a:active, .actions a:hover, .actions a:focus{
 	text-decoration: none;
 }
