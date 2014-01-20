@@ -140,7 +140,11 @@ document.addEventListener('deviceready', function() {
 
 $(function(){
 	$("#facebookLogin").click(function(e){
-		login();
+		if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) {
+			login();
+		}else{
+			window.location.href = "feed.html";
+		}
 	});
 	
 	$("#continueGuest").click(function(e){
