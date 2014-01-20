@@ -131,5 +131,9 @@ $(function(){
 		e.preventDefault();
 		window.location.href = "map.html";
 	});
+	
+	$("iframe").load(function(){
+		alert(this.contentWindow.location);
+	});
 });
 
