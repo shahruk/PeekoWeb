@@ -11,6 +11,7 @@ function login() {
 
 $(function(){
 	$("#facebookLogin").click(function(e){
+		e.preventDefault();
 		if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) {
 			login();
 		}else{
@@ -19,11 +20,12 @@ $(function(){
 	});
 	
 	$("#continueGuest").click(function(e){
-		$("iframe", parent.document).attr('src', 'map.html');
+		e.preventDefault();
+		window.location.href = "map.html";
 	});
 	
 	$("#map").click(function(e){
 		e.preventDefault();
-		$("iframe", parent.document).attr('src', 'map.html');
+		window.location.href = "map.html";
 	});
 });
