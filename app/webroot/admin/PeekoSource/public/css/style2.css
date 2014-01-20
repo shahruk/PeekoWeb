@@ -94,3 +94,12 @@ div.brandname{
 	margin: auto;
 	height: auto;
 }
+
+.actions {
+	font-size: 42px;
+	text-align: right;
+}
+
+.actions a:active{
+	text-decoration: none;
+}
