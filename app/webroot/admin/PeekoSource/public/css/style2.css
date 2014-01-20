@@ -9,6 +9,11 @@ body{
 	font-family: 'Helvetica', 'Helvetica Neue', 'Arial', sans-serif;
 }
 
+a{
+	-webkit-touch-callout: none;
+	-webkit-user-select: text;  
+}
+
 header{
 	height: 43px;
 	background: #47acec;
