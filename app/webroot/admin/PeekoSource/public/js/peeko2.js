@@ -139,6 +139,11 @@ $(function(){
 	});
 	
 	$("#continueGuest").click(function(e){
-		window.location.href = "index2.html";
+		window.location.href = "map.html";
 	});
+});
+
+$("#map").click(function(e){
+	e.preventDefault();
+	$("iframe").attr('src', 'map');
 });
