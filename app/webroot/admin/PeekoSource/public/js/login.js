@@ -1,6 +1,6 @@
 var returningUser = window.localStorage.getItem('fbid');
 if(returningUser){
-	window.location.href = "feed.html";
+	window.location.href = "start.html";
 }
 
 function login() {
@@ -20,7 +20,7 @@ $(function(){
 		if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) {
 			login();
 		}else{
-			window.location.href = "feed.html";
+			window.location.href = "start.html";
 		}
 	});
 	
