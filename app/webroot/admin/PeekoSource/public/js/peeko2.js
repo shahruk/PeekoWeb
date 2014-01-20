@@ -5,7 +5,7 @@ if (typeof FB == 'undefined') alert('FB variable does not exist. Check that you 
 FB.Event.subscribe('auth.login', function(response) {
 	   alert(response.authResponse.userID);
 	   alert(response.authResponse.accessToken);
-	   //window.location.href = "feed.html";
+	   window.location.href = "feed.html";
 	   });
 
 FB.Event.subscribe('auth.logout', function(response) {
