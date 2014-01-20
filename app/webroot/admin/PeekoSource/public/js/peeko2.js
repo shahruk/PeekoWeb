@@ -11,11 +11,11 @@ FB.Event.subscribe('auth.logout', function(response) {
 	   });
 
 FB.Event.subscribe('auth.sessionChange', function(response) {
-	   alert('auth.sessionChange event');
+	  // alert('auth.sessionChange event');
 	   });
 
 FB.Event.subscribe('auth.statusChange', function(response) {
-	   alert('auth.statusChange event');
+	  // alert('auth.statusChange event');
 	   });
 
 /*function getSession() {
@@ -27,7 +27,7 @@ FB.getLoginStatus(function(response) {
 		  if (response.status == 'connected') {
 		  alert('logged in');
 		  } else {
-		  alert('not logged in');
+			alert(response.status);
 		  }
 		  });
 }
@@ -118,7 +118,7 @@ function publishStoryFriend() {
 
 document.addEventListener('deviceready', function() {
 			  try {
-			  alert('Device is ready! Make sure you set your app_id below this alert.');
+			  //alert('Device is ready! Make sure you set your app_id below this alert.');
 			  FB.init({ appId: "474482682656477", nativeInterface: CDV.FB, useCachedDialogs: false });
 			  document.getElementById('data').innerHTML = "";
 			  } catch (e) {
