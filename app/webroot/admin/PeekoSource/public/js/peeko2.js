@@ -143,12 +143,12 @@ $(function(){
 		if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) {
 			login();
 		}else{
-			window.location.href = "feed.html";
+			$("iframe").attr('src', 'feed.html');
 		}
 	});
 	
 	$("#continueGuest").click(function(e){
-		window.location.href = "map.html";
+		$("iframe").attr('src', 'map.html');
 	});
 	
 	$("#map").click(function(e){
