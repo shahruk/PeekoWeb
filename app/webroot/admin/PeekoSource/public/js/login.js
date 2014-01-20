@@ -1,3 +1,8 @@
+var returningUser = window.localStorage.getItem('fbid');
+if(returningUser){
+	window.location.href = "feed.html";
+}
+
 function login() {
 	FB.login(
 		function(response) {
