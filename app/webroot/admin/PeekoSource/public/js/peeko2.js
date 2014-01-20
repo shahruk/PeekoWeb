@@ -3,7 +3,7 @@ if (typeof CDV == 'undefined') alert('CDV variable does not exist. Check that yo
 if (typeof FB == 'undefined') alert('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
 
 FB.Event.subscribe('auth.login', function(response) {
-	   window.location.href = "index2.html";
+	   window.location.href = "feed.html";
 	   });
 
 FB.Event.subscribe('auth.logout', function(response) {
