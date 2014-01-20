@@ -23,9 +23,4 @@ $(function(){
 		e.preventDefault();
 		window.location.href = "map.html";
 	});
-	
-	$("#map").click(function(e){
-		e.preventDefault();
-		window.location.href = "map.html";
-	});
 });
