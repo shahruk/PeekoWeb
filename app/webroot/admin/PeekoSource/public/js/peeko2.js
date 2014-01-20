@@ -1,8 +1,20 @@
+var returningUser = window.localStorage.getItem('appLaunchCounter');
+if(returningUser){
+	window.location.href = "feed.html";
+}
+
 FB.Event.subscribe('auth.login', function(response) {
-	   //alert(response.authResponse.userID);
-	   //alert(response.authResponse.accessToken);
-	   //window.location.href = "feed.html";
-	   });
+	//alert(response.authResponse.userID);
+	//alert(response.authResponse.accessToken);
+	$.ajax({
+		url: 'http://direct.peekoapp.com:8080/fbregister/'+response.authResponse.userID+'/'+response.authResponse.accessToken,
+		success: function(results){
+			window.localStorage.setItem('fbid',response.authResponse.userID);
+			window.localStorage.setItem('accessToken',response.authResponse.accessToken);
+			window.location.href = "feed.html";
+		}
+	});
+});
 
 FB.Event.subscribe('auth.logout', function(response) {
 	  //alert('auth.logout event');
@@ -66,10 +78,8 @@ function logout() {
 function login() {
 	FB.login(
 		function(response) {
-			if(response.authResponse){
-				alert('logged in');
-			}else{
-				alert(response.session);
+			if(!response.authResponse){
+				alert("Unfortunately you couldn't be logged in. :(");
 			}
 		},
 		{ scope: "email" }
@@ -126,5 +136,9 @@ document.addEventListener('deviceready', function() {
 $(function(){
 	$("#facebookLogin").click(function(e){
 		login();
+	});
+	
+	$("#continueGuest").click(function(e){
+		window.location.href = "index2.html";
 	});
 });

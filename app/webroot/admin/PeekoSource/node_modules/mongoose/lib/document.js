@@ -1013,6 +1013,8 @@ Document.prototype.invalidate = function (path, err, val) {
     err = new ValidatorError(path, err, 'user defined', val)
   }
 
+  if (this.$__.validationError == err) return;
+
   this.$__.validationError.errors[path] = err;
 }
 
@@ -1486,7 +1488,7 @@ Document.prototype.toObject = function (options) {
     applyGetters(this, ret, 'paths', options);
     // applyGetters for paths will add nested empty objects;
     // if minimize is set, we need to remove them.
-    if (options.getters && options.minimize) {
+    if (options.minimize) {
       ret = minimize(ret) || {};
     }
   }
@@ -1516,7 +1518,7 @@ Document.prototype.toObject = function (options) {
 
 /*!
  * Minimizes an object, removing undefined values and empty objects
- * 
+ *
  * @param {Object} object to minimize
  * @return {Object}
  */
@@ -1524,17 +1526,29 @@ Document.prototype.toObject = function (options) {
 function minimize (obj) {
   var keys = Object.keys(obj)
     , i = keys.length
-  
+    , hasKeys
+    , key
+    , val
+
   while (i--) {
-    if (!Array.isArray(obj[keys[i]]) && obj[keys[i]] === Object(obj[keys[i]])) {
-      obj[keys[i]] = minimize(obj[keys[i]]);
+    key = keys[i];
+    val = obj[key];
+
+    if (utils.isObject(val)) {
+      obj[key] = minimize(val);
     }
-    if (obj[keys[i]] === undefined) {
-      delete obj[keys[i]];
+
+    if (undefined === obj[key]) {
+      delete obj[key];
+      continue;
     }
+
+    hasKeys = true;
   }
-  
-  return Object.keys(obj).length ? obj : undefined;
+
+  return hasKeys
+    ? obj
+    : undefined;
 }
 
 /*!
