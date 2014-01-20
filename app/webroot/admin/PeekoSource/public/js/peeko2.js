@@ -139,7 +139,7 @@ document.addEventListener('deviceready', function() {
 }, false);
 
 $(function(){
-	$("#facebookLogin").click(function(e){
+	$("iframe").contents().find("#facebookLogin").click(function(e){
 		if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) {
 			login();
 		}else{
@@ -147,11 +147,11 @@ $(function(){
 		}
 	});
 	
-	$("#continueGuest").click(function(e){
+	$("iframe").contents().find("#continueGuest").click(function(e){
 		$("iframe").attr('src', 'map.html');
 	});
 	
-	$("#map").click(function(e){
+	$("iframe").contents().find("#map").click(function(e){
 		e.preventDefault();
 		$("iframe").attr('src', 'map.html');
 	});
