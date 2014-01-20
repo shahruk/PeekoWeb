@@ -138,7 +138,7 @@ $(function(){
 	});
 	
 	$("iframe").load(function(){
-		alert(this.contentWindow.location);
+		//alert(this.contentWindow.location);
 	});
 });
 
