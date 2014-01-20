@@ -16,7 +16,8 @@ a{
 }
 
 header{
-	height: 43px;
+	padding: 4px 0;
+	height: 47px;
 	background: #47acec;
 	color: #FFF;
 	position: absolute;
