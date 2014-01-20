@@ -1,8 +1,8 @@
-var returningUser = window.localStorage.getItem('appLaunchCounter');
+/*var returningUser = window.localStorage.getItem('appLaunchCounter');
 if(returningUser){
 	window.location.href = "feed.html";
 }
-
+*/
 try{
 	FB.Event.subscribe('auth.login', function(response) {
 		//alert(response.authResponse.userID);
