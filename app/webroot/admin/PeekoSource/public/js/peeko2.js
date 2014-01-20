@@ -149,7 +149,7 @@ $(function(){
 $("#map").click(function(e){
 	e.preventDefault();
 	alert("A");
-	$("iframe").attr('src', 'map');
+	$("iframe").attr('src', 'map.html');
 });
 });
 
