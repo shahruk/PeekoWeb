@@ -9,7 +9,7 @@ $(function(){
 		}
 	});
 	
-	$("body").on("click", ".actions > div", function(e){
+	$("body").on("click", ".actions .favorite", function(e){
 		e.preventDefault();
 		var opts = {
 			color: "#EF4879",
