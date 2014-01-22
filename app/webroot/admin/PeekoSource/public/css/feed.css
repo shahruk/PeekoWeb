@@ -10,6 +10,10 @@ h3, h5{
 	margin: 20px;
 }
 
+h5{
+	color: #f26335;
+}
+
 .actions {
 	text-align: right;
 	color: #DDD;
