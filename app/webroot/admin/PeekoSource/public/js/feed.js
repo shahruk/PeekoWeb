@@ -22,7 +22,7 @@ $(function(){
 		url: serverUrl+'brands/feed',
 		success: function(response){
 			for(i = 0; i < response.length; i++){
-				$("#content").append("<div class='block'><div class='brand clearfix'><div class='countdownContainer'><span class='fa fa-clock-o'></span><div class='countdown'></div></div><div style='background-image: url(\"http://direct.peekoapp.com:8080/brands/"+response[i]['active_block']['icon']+"\");' class='logo'></div><div class='brandname'>"+response[i]['name']+"</div></div><div><img data-url='"+response[i]['active_block']['url']+"' class='blockImage' src='"+response[i]['active_block']['images']+"'><div class='description'>"+response[i]['active_block']['description']+"</div></div><div class='actions' data-id='"+response[i]['active_block']['id']+"'><div class='favorite'><span class='fa fa-heart'></span></div><div class='favorite'><span class='fa fa-external-link'></span></div><div class='share'><span class='fa fa-share'></span></div></div></div>");
+				$("#content").append("<div class='block'><div class='brand clearfix'><div class='countdownContainer'><span class='fa fa-clock-o'></span><div class='countdown'></div></div><div style='background-image: url(\"http://direct.peekoapp.com:8080/brands/"+response[i]['active_block']['icon']+"\");' class='logo'></div><div class='brandname'>"+response[i]['name']+"</div></div><div><img data-url='"+response[i]['active_block']['url']+"' class='blockImage' src='"+response[i]['active_block']['images']+"'><h3>"+response[i]['active_block']['name']+"</h3><h5>"+response[i]['active_block']['price']+"</h5><div class='description'>"+response[i]['active_block']['description']+"</div></div><div class='actions' data-id='"+response[i]['active_block']['id']+"'><div class='favorite'><span class='fa fa-heart'></span></div><div class='visit' data-url='"+response[i]['active_block']['url']+"'><span class='fa fa-external-link'></span></div><div class='share'><span class='fa fa-share'></span></div></div></div>");
 				startCountdown();
 			}
 		}
@@ -47,8 +47,9 @@ $(function(){
 			}
 		});
 	});
+
 	
-	$("body").on("click", ".blockImage", function(e){
+	$("body").on("click", ".blockImage, .visit", function(e){
 		var ref = window.open($(this).data('url'), '_blank', 'location=false');
 	});
 });

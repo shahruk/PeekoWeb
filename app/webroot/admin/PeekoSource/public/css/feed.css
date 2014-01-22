@@ -6,6 +6,10 @@ body{
 	padding-top: 60px;
 }
 
+#content h3, #content h4{
+	margin: 20px;
+}
+
 .actions {
 	text-align: right;
 	color: #DDD;
