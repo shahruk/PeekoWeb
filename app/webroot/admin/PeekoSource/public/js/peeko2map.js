@@ -39,7 +39,7 @@ $(function(){
 	  //Do the other stuff related to first time launch
 	}
 
-	var serverUrl = "http://peekoapp.com:8080/";
+	var serverUrl = "http://direct.peekoapp.com:8080/";
 	var markers = [];
 	var firstRun = true;
 	//var shareHandler;
