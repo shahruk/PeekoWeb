@@ -115,6 +115,7 @@ $(function(){
 	//Show an overlay.
 	function showOverlay(marker, data){
 		dataHolder = data;
+		startCountdown();
 		$("#productOverlay").fadeIn(400);	
 		$("#productOverlay").html("<div class='block'><div class='brand clearfix'><div class='countdownContainer'><span class='fa fa-clock-o'></span><div class='countdown'></div></div><div style='background-image: url(\"http://direct.peekoapp.com:8080/brands/"+data.icon+"\");' class='logo'></div><div class='brandname'>"+data.name+"</div></div><div><img data-url='"+data.url+"' class='blockImage' src='"+data.images+"'><h3>"+data.name+"</h3><h5>"+data.price+"</h5><div class='description'>"+data.description+"</div></div><div class='actions' data-id='"+data.id+"'><div class='favorite'><span class='fa fa-heart'></span></div><div class='visit' data-url='"+data.url+"'><span class='fa fa-external-link'></span></div><div class='share'><span class='fa fa-share'></span></div></div></div>");
 	}
