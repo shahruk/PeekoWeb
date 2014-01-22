@@ -23,6 +23,10 @@ header{
 	width: 100%;
 }
 
+#locateMe{
+	padding: 7px 9px 4px 11px;
+}
+
 header > .linksContainer a{
 	display: block;
 	float: right;
