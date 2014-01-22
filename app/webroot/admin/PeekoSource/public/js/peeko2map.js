@@ -2,6 +2,7 @@
 $(function(){
 	
 	function startCountdown(){
+		alert("A");
 		var countdown = new Date();
 		var targetHour = 1;
 		
