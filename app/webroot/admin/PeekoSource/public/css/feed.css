@@ -13,6 +13,7 @@ h3, h5{
 .actions {
 	text-align: right;
 	color: #DDD;
+	float: left;
 }
 
 div.actions > div{
