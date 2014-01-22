@@ -13,13 +13,13 @@ body{
 
 div.actions > div{
 	background: #ACE8F2;
-	border-radius: 30px;
-	height: 60px;
+	border-radius: 20px;
+	height: 40px;
 	padding-top: 10px;
-	width: 60px;
+	width: 40px;
 	text-align: center;
 	display: inline-block;
-	margin: 0 10px;
+	margin: 0 5px;
 	transition: .3s;
 	-webkit-transition: .3s;
 }
@@ -50,7 +50,7 @@ div.actions > div:last-child{
 }
 
 div.actions > div span{
-	font-size: 40px;
+	font-size: 24px;
 	color: #FFF;
 }
 
