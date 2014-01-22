@@ -1,15 +1,14 @@
-/*var returningUser = window.localStorage.getItem('appLaunchCounter');
-if(returningUser){
-	window.location.href = "feed.html";
-}
-*/
+window.localStorage.setItem('serverUrl','http://direct.peekoapp.com:8080/');
+var serverUrl = window.localStorage.getItem('serverUrl');
+window.localStorage.setItem('userid','52dffc0eda70a3b82f1ae1dc');
 try{
 	FB.Event.subscribe('auth.login', function(response) {
 		//alert(response.authResponse.userID);
 		//alert(response.authResponse.accessToken);
 		$.ajax({
-			url: 'http://direct.peekoapp.com:8080/fbregister/'+response.authResponse.userID+'/'+response.authResponse.accessToken,
+			url: serverUrl+'/fbregister/'+response.authResponse.userID+'/'+response.authResponse.accessToken,
 			success: function(results){
+				window.localStorage.setItem('userid',results.userid);
 				window.localStorage.setItem('fbid',response.authResponse.userID);
 				window.localStorage.setItem('accessToken',response.authResponse.accessToken);
 				//window.location.href = "feed.html";
