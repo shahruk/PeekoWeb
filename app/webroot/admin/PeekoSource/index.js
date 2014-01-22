@@ -26,9 +26,11 @@ app.get('/fbregister/:fbid/:email', function(req, res){
 		if (!err) {
 			if(docs.length == 0){
 				var newUser = new database.User({email: req.params.email, fbid: req.params.fbid});
-				newUser.save();
+				newUser.save(function(err, user){
+					res.json({registered: true, userid: user.id});
+				});
 				//We just registered him
-				res.json({registered: true});
+				
 			}else{
 				//Already registered
 				res.json({registered: false});
@@ -37,8 +39,36 @@ app.get('/fbregister/:fbid/:email', function(req, res){
 			
 		}
 	});
+});
 
-	
-	
-	
+app.get('/brands/feed', function(req, res){
+	res.header('Access-Control-Allow-Origin', "*");
+	database.Brand.find({}, function(err, docs){
+		if(!err){
+			res.json(docs);
+		}
+	});
+});
+
+app.get('/actions/favorite/:userid/:blockid', function(req, res){
+	res.header('Access-Control-Allow-Origin', "*");
+	var fav = new database.Favorite({user_id: req.params.userid, block_id: req.params.blockid});
+	console.log(req.params.userid);
+	fav.isUnique(function(err,docs) {
+		if(!err){
+			if(docs.length == 0){
+				var fav = new database.Favorite({user_id: req.params.userid, block_id: req.params.blockid});
+				fav.save(function(err, favorite){
+					if(!err){
+						res.json({saved:true});
+					}else{
+						throw err;
+					}
+				});
+				
+			}else{
+				res.json({saved: false});
+			}
+		}
+	});
 });

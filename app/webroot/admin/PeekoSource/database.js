@@ -36,6 +36,11 @@ var usersSchema = mongoose.Schema({
 	fbid: String
 });
 
+var favoritesSchema = mongoose.Schema({
+	user_id: {type: Schema.Types.ObjectId, ref: 'User'},
+	block_id: {type: Schema.Types.ObjectId, ref: 'Block'}
+});
+
 //Model methods
 locationsSchema.methods.findNear = function(cb){
 	return this.model('Location').find({loc: {$nearSphere: this.loc, $maxDistance: .00025}}, cb);
@@ -46,14 +51,21 @@ usersSchema.methods.isUnique = function(cb){
 	return results;
 }
 
+favoritesSchema.methods.isUnique = function(cb){
+	var results = this.model('Favorite').find({user_id: this.user_id, block_id: this.block_id}, cb);
+	return results;
+}
+
 //Model definitions
 var Block = mongoose.model('Block', blocksSchema);
 var Brand = mongoose.model('Brand', brandsSchema);
 var Location = mongoose.model('Location', locationsSchema);
 var User = mongoose.model('User', usersSchema);
+var Favorite = mongoose.model('Favorite', favoritesSchema);
 
 exports.start = start;
 exports.Block = Block;
 exports.Brand = Brand;
 exports.Location = Location;
 exports.User = User;
+exports.Favorite = Favorite;

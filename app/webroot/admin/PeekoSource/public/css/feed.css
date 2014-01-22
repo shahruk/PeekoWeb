@@ -5,3 +5,57 @@ body{
 #content{
 	padding-top: 60px;
 }
+
+.actions {
+	text-align: right;
+	color: #DDD;
+}
+
+div.actions > div{
+	background: #ACE8F2;
+	border-radius: 30px;
+	height: 60px;
+	padding-top: 10px;
+	width: 60px;
+	text-align: center;
+	display: inline-block;
+	margin: 0 10px;
+	transition: .3s;
+	-webkit-transition: .3s;
+}
+
+div.actions > div:hover{
+	cursor: pointer;
+}
+
+div.actions > div:active, .selected{
+	background: #34B5DC;
+}
+
+
+div.actions .favorite{
+	color: #000;
+
+}
+
+div.actions > div.selected{
+	background: #34B5DC;
+}
+div.actions > div.selected span{
+	color: #E94E77;
+}	
+
+div.actions > div:last-child{
+	margin-right: 0;
+}
+
+div.actions > div span{
+	font-size: 40px;
+	color: #FFF;
+}
+
+.description{
+	color: #888;
+	line-height: 24px;
+	margin: 20px;
+}

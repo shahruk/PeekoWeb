@@ -236,7 +236,7 @@
 					if(!$product['price']){
 						$product['price'] = $html->find('h4.list-price', 0)->plaintext;
 					}
-					$product['images'] = $html->find('img.prod-img', 0)->src;
+					$product['images'] = "http://".$html->find('img.prod-img', 0)->src;
 				}
 				elseif($site == "urbanoutfitters"){
 					$product['name'] = $html->find('h2[id=prodTitle]', 0)->plaintext;
