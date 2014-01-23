@@ -18,6 +18,7 @@ $(function(){
 	$("#facebookLogin").click(function(e){
 		e.preventDefault();
 		if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) {
+			alert("A");
 			login();
 		}else{
 			window.location.href = "start.html";
