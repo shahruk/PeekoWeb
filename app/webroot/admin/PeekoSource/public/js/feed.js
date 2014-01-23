@@ -50,6 +50,7 @@ $(function(){
 
 	
 	$("body").on("click", ".blockImage, .visit", function(e){
+		alert("A");
 		var ref = window.open($(this).data('url'), '_blank', 'location=false');
 	});
 });
