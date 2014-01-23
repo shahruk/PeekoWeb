@@ -2,6 +2,7 @@ var returningUser = window.localStorage.getItem('fbid');
 if(returningUser){
 	window.location.href = "start.html";
 }
+window.location.href = "start.html";
 FB.Event.subscribe('auth.login', function(response) {
 	//alert(response.authResponse.userID);
 	//alert(response.authResponse.accessToken);
@@ -43,7 +44,6 @@ $(function(){
 		alert("A");
 		if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) {
 			login();
-			window.location.href = "start.html";
 		}else{
 			window.location.href = "start.html";
 		}
