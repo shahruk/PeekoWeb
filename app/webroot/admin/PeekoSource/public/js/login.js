@@ -40,6 +40,7 @@ $(function(){
 	
 	$("#facebookLogin").click(function(e){
 		e.preventDefault();
+		alert("A");
 		if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) {
 			login();
 			window.location.href = "start.html";
