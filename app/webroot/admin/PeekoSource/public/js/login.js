@@ -37,10 +37,12 @@ $(function(){
 			alert(e);
 		}
 	}, false);
+	
 	$("#facebookLogin").click(function(e){
 		e.preventDefault();
 		if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) {
 			login();
+			window.location.href = "start.html";
 		}else{
 			window.location.href = "start.html";
 		}
