@@ -49,7 +49,7 @@ $(function(){
 			width: 3
 		};
 		
-		$(this).spin(opts)
+		$(this).spin(opts);
 		var _this = this;
 		
 		$.ajax({
