@@ -53,6 +53,14 @@ $(function(){
 
 	$("body").on("click", ".share", function(e){
 		e.preventDefault();
+		$(this).socialShare({
+			social: 'facebook,pinterest,reddit,twitter,google',
+			title: $(this).data('title'),
+			shareUrl: $(this).data('url'),
+			description: $(this).data('description'),
+			whenSelect: true,
+		});
+		$(this).click();
 		
 	});
 	
