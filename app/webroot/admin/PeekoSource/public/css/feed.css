@@ -21,10 +21,10 @@ h5{
 
 div.actions > div{
 	background: #ACE8F2;
-	border-radius: 18px;
-	height: 36px;
+	border-radius: 20px;
+	height: 40px;
 	padding-top: 10px;
-	width: 36px;
+	width: 40px;
 	text-align: center;
 	display: inline-block;
 	margin: 0 5px;
@@ -58,7 +58,7 @@ div.actions > div:last-child{
 }
 
 div.actions > div span{
-	font-size: 24px;
+	font-size: 28px;
 	color: #FFF;
 }
 
