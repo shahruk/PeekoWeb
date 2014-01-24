@@ -1,3 +1,7 @@
+window.onerror = function(message, url, lineNumber) {
+	console.log("Error: "+message+" in "+url+" at line "+lineNumber);
+}
+
 var returningUser = window.localStorage.getItem('fbid');
 if(returningUser){
 	window.location.href = "start.html";
