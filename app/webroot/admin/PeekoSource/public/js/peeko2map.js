@@ -1,5 +1,5 @@
 window.onerror = function(message, url, lineNumber) {
-	console.log("Error: "+message+" in "+url+" at line "+lineNumber);
+	alert("Error: "+message+" in "+url+" at line "+lineNumber);
 }
 
 $(function(){
