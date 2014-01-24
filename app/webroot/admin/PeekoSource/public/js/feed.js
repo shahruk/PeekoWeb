@@ -60,6 +60,9 @@ $(function(){
 		});
 	});
 
+	$("body").on("click", ".actions > div", function(e){
+		alert("A");
+	});
 	
 	$("body").on("click", ".blockImage, .visit", function(e){
 		var ref = window.open($(this).data('url'), '_blank', 'location=false');
