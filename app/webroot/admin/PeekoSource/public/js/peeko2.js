@@ -1,3 +1,7 @@
+window.onerror = function(message, url, lineNumber) {
+	console.log("Error: "+message+" in "+url+" at line "+lineNumber);
+}
+	
 window.localStorage.setItem('serverUrl','http://direct.peekoapp.com:8080/');
 var serverUrl = window.localStorage.getItem('serverUrl');
 window.localStorage.setItem('userid','52dffc0eda70a3b82f1ae1dc');
