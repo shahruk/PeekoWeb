@@ -5,7 +5,6 @@ html, body{
 }
 
 body{
-	width: 100%;
 	overflow: hidden;
 	position: relative;
 	font-family: 'Helvetica', 'Helvetica Neue', 'Arial', sans-serif;
