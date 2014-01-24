@@ -19,7 +19,7 @@ h5{
 	color: #DDD;
 }
 
-div.actions > div{
+div.actions .favorite, div.actions .visit, div.actions .share{
 	background: #ACE8F2;
 	border-radius: 20px;
 	height: 40px;
