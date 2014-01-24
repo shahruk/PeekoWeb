@@ -28,9 +28,13 @@ $(function(){
 				$("#content").append("<div class='block'><div class='brand clearfix'><div class='countdownContainer'><span class='fa fa-clock-o'></span><div class='countdown'></div></div><div style='background-image: url(\"http://direct.peekoapp.com:8080/brands/"+response[i]['active_block']['icon']+"\");' class='logo'></div><div class='brandname'>"+response[i]['name']+"</div></div><div><img data-url='"+response[i]['active_block']['url']+"' class='blockImage' src='"+response[i]['active_block']['images']+"'><h3>"+response[i]['active_block']['name']+"</h3><h5>"+response[i]['active_block']['price']+"</h5><div class='description'>"+response[i]['active_block']['description']+"</div></div><div class='actions' data-id='"+response[i]['active_block']['id']+"'><div class='favorite'><span class='fa fa-heart'></span></div><div class='visit' data-url='"+response[i]['active_block']['url']+"'><span class='fa fa-external-link'></span></div><div class='share' data-url='http://peekoapp.com/blocks/"+response[i]['active_block']['number']+"/"+response[i]['active_block']['permalink']+"' data-description='Find more deals and selections at stores near you at www.peekoapp.com' data-title='Shopping via Peeko (http://peekoapp.com)'><span class='fa fa-share'></span></div></div></div>");
 			}
 			$(".share").each(function(i, obj){
-				console.log(i);
-				console.log(obj);
-				console.log($(obj).data('url'));
+				$(obj)socialShare({
+					social: 'facebook,pinterest,reddit,twitter,google',
+					title: $(obj).data('title'),
+					shareUrl: $(obj).data('url'),
+					description: $(obj).data('description'),
+					whenSelect: true,
+				});
 			});
 			startCountdown();
 		}
@@ -56,18 +60,6 @@ $(function(){
 		});
 	});
 
-	$("body").on("click", ".share", function(e){
-		e.preventDefault();
-		$(this).socialShare({
-			social: 'facebook,pinterest,reddit,twitter,google',
-			title: $(this).data('title'),
-			shareUrl: $(this).data('url'),
-			description: $(this).data('description'),
-			whenSelect: true,
-		});
-		$(this).click();
-		
-	});
 	
 	$("body").on("click", ".blockImage, .visit", function(e){
 		var ref = window.open($(this).data('url'), '_blank', 'location=false');
