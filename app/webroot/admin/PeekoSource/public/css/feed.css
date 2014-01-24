@@ -67,3 +67,7 @@ div.actions > div span{
 	line-height: 24px;
 	margin: 20px;
 }
+
+.countdown{
+	float: left;
+}
