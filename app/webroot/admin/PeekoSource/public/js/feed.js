@@ -33,13 +33,12 @@ $(function(){
 					title: $(obj).data('title'),
 					shareUrl: $(obj).data('url'),
 					description: $(obj).data('description'),
-					whenSelect: true,
 				});
 			});
 			startCountdown();
 		}
 	});
-	
+	/*
 	$("body").on("click", ".actions .favorite", function(e){
 		e.preventDefault();
 		var opts = {
@@ -67,5 +66,5 @@ $(function(){
 		}catch(e){
 			alert(e);
 		}
-	});
+	});*/
 });
