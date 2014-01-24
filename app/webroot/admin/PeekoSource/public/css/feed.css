@@ -57,7 +57,7 @@ div.actions > div:last-child{
 	margin-right: 0;
 }
 
-div.actions > div span{
+div.actions > div > span{
 	font-size: 28px;
 	color: #FFF;
 }
