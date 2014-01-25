@@ -2,7 +2,7 @@ html, body{
 	height: 100%;
 	margin: 0;
 	background: #EFEFEF;
-	max-width: 800px;
+	max-width: 500px;
 	
 }
 
@@ -112,6 +112,7 @@ iframe{
 	margin: 0;
 }
 
-.addthis_default_style .addthis_separator, .addthis_default_style .at300b, .addthis_default_style .at300bo, .addthis_default_style .at300m, .addthis_default_style .at300bs{
-	float: right !important;
+.arthref .icon-container ul li {
+	border: 4px solid #DDD;
+
 }
