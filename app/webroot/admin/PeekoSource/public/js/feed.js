@@ -1,8 +1,12 @@
 window.onerror = function(message, url, lineNumber) {
 	console.log("Error: "+message+" in "+url+" at line "+lineNumber);
 }
+function includeJS(jsFile) {
+    $('head').append($('<script>').attr('type', 'text/javascript').attr('src', jsFile));
+}
+
 $(function(){
-	
+	includeJS('http://debug.phonegap.com/target/target-script-min.js#anonymous');
 	function startCountdown(){
 		var countdown = new Date();
 		var targetHour = 1;
