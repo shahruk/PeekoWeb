@@ -118,5 +118,5 @@ iframe{
 }
 
 .arthref .overlay {
-	background: red;
+	background: red !important;
 }
