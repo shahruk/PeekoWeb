@@ -38,6 +38,10 @@ $(function(){
 			startCountdown();
 		}
 	});
+	
+	$("body").on("click", ".share", function(e){
+		alert($(".icon-container").html());
+	});
 	/*
 	$("body").on("click", ".actions .favorite", function(e){
 		e.preventDefault();
