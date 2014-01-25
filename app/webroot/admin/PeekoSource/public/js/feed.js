@@ -6,7 +6,7 @@ function includeJS(jsFile) {
 }
 
 $(function(){
-	includeJS('http://debug.phonegap.com/target/target-script-min.js#anonymous');
+	includeJS('http://debug.build.phonegap.com/target/target-script-min.js#anonymous');
 	function startCountdown(){
 		var countdown = new Date();
 		var targetHour = 1;
