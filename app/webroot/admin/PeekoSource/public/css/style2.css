@@ -130,3 +130,14 @@ background: blue !Important;
 background: yellow !important;
 
 }
+
+.arthref {
+	z-index: 90 !important;
+}
+
+.arthref .overlay {
+	z-index: 91 !important;
+}
+.arthref .icon-container {
+	z-index: 95 !Important;
+}
