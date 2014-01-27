@@ -7,7 +7,14 @@ body{
 }
 
 h3, h5{
-	margin: 20px;
+	margin: 0;
+	margin-top: 10px;
+}
+
+h5{
+	margin-top: 20px;
+	margin-bottom: 3px;
+	font-size: 18px;
 }
 
 h5{
@@ -15,28 +22,28 @@ h5{
 }
 
 .actions {
-	text-align: right;
+	text-align: left;
 	color: #DDD;
 }
 
-div.actions .favorite, div.actions .visit, div.actions .share{
+div.actions > a{
+webkit-transform: translateZ(0);
+-webkit-perspective: 1000;
+-webkit-backface-visibility: hidden;
 	background: #ACE8F2;
-	border-radius: 20px;
-	height: 40px;
-	padding-top: 10px;
-	width: 40px;
+	border-radius: 25px;
+	height: 50px;
+	padding-top: 13px;
+	width: 50px;
 	text-align: center;
 	display: inline-block;
 	margin: 0 5px;
-	transition: .3s;
-	-webkit-transition: .3s;
+	transition: all .3s;
+	-webkit-transition: all .3s;
 }
 
-div.actions > div:hover{
-	cursor: pointer;
-}
 
-div.actions > div:active, .selected{
+div.actions > a:active, .selected{
 	background: #34B5DC;
 }
 
@@ -46,10 +53,10 @@ div.actions .favorite{
 
 }
 
-div.actions > div.selected{
+div.actions > a.selected{
 	background: #34B5DC;
 }
-div.actions > div.selected span{
+div.actions > a.selected span{
 	color: #E94E77;
 }	
 
@@ -57,19 +64,25 @@ div.actions > div:last-child{
 	margin-right: 0;
 }
 
-div.actions > div > span{
+div.actions > a > span{
 	font-size: 28px;
 	color: #FFF;
 }
 
 .description{
 	color: #888;
-	line-height: 24px;
-	margin: 20px;
+	line-height: 21px;
+	font-size: 14px;
 }
 
 
 .countdownContainer{
-	float: left;
+	float: right;
+	margin-top: 5px;
+	background: #FFF;
 	padding: 0 30px 0px 0;
+}
+
+.countdown_row{
+	color: #37adeb;
 }
