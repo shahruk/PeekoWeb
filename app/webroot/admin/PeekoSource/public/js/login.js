@@ -7,17 +7,20 @@ if(returningUser){
 	window.location.href = "index.html";
 }
 
-FB.Event.subscribe('auth.login', function(response) {
-	$.ajax({
-		url: serverUrl+'/fbregister/'+response.authResponse.userID+'/'+response.authResponse.accessToken,
-		success: function(results){
-			window.localStorage.setItem('userid',results.userid);
-			window.localStorage.setItem('fbid',response.authResponse.userID);
-			window.localStorage.setItem('accessToken',response.authResponse.accessToken);
-			window.location.href = "feed.html";
-		}
+//For desktop
+try{
+	FB.Event.subscribe('auth.login', function(response) {
+		$.ajax({
+			url: serverUrl+'/fbregister/'+response.authResponse.userID+'/'+response.authResponse.accessToken,
+			success: function(results){
+				window.localStorage.setItem('userid',results.userid);
+				window.localStorage.setItem('fbid',response.authResponse.userID);
+				window.localStorage.setItem('accessToken',response.authResponse.accessToken);
+				window.location.href = "feed.html";
+			}
+		});
 	});
-});
+}catch(e){}
 
 function login() {
 	FB.login(
