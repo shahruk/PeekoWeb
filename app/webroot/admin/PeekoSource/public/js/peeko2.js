@@ -1,6 +1,8 @@
 window.onerror = function(message, url, lineNumber) {
 	alert("Error: "+message+" in "+url+" at line "+lineNumber);
 }
+viewport = document.querySelector("meta[name=viewport]");
+viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0');
 	
 window.localStorage.setItem('serverUrl','http://direct.peekoapp.com:8080/');
 var serverUrl = window.localStorage.getItem('serverUrl');
