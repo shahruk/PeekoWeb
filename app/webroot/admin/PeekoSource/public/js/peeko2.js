@@ -4,8 +4,8 @@ window.onerror = function(message, url, lineNumber) {
 
 window.localStorage.setItem('serverUrl','http://direct.peekoapp.com:8080/');
 var serverUrl = window.localStorage.getItem('serverUrl');
-window.localStorage.setItem('userid','52dffc0eda70a3b82f1ae1dc');
 try{
+/*
 	FB.Event.subscribe('auth.login', function(response) {
 		//alert(response.authResponse.userID);
 		//alert(response.authResponse.accessToken);
@@ -19,29 +19,13 @@ try{
 			}
 		});
 	});
-
+*/
 }catch(e){
 
 }
 
-function getLoginStatus() {
-	FB.getLoginStatus(function(response) {
-		if (response.status == 'connected') {
-		} else {
-			alert(response.status);
-		}
-	});
-
-function logout() {
-	FB.logout(function(response) {
-	});
-}
-
 document.addEventListener('deviceready', function() {
 	try{	
-		//alert('Device is ready! Make sure you set your app_id below this alert.');
-		FB.init({ appId: "474482682656477", nativeInterface: CDV.FB, useCachedDialogs: false });
-		//document.getElementById('data').innerHTML = "";
 	}catch (e){
 		alert(e);
 	}
@@ -50,12 +34,13 @@ document.addEventListener('deviceready', function() {
 $(function(){
 	viewport = document.querySelector("meta[name=viewport]");
 	viewport.setAttribute('content', 'width=400, user-scalable=0');
+	
 	$("#map").click(function(e){
 		e.preventDefault();
 		window.location.href = "map.html";
 	});
 	
-	$("#back").click(function(e){
+	$("#home").click(function(e){
 		e.preventDefault();
 		window.location.href = "feed.html";
 	});
