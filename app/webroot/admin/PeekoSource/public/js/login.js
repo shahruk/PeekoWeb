@@ -21,6 +21,7 @@ $(function(){
 	
 	$("#continueGuest").click(function(e){
 		e.preventDefault();
+		alert("A");
 		window.location.href = "map.html";
 	});
 });
