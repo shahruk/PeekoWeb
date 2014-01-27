@@ -9,21 +9,19 @@ body{
 	padding-top: 50px;
 }
 
-#facebookLogin{
+#register{
 	background: #3b589c;
 }
 
-#continueGuest{
+#login{
 	background: #494948;
 }
 
 .buttonOption{
-	border: 1px solid #126aa1;
 	color: #FFF;
 	padding: 20px 30px;
 	display: block;
 	text-align: center;
-	margin: 0 10px 10px 10px;
 }
 
 .buttonOption:hover{
