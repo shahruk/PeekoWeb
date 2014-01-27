@@ -1,6 +1,7 @@
 window.onerror = function(message, url, lineNumber) {
 	alert("Error: "+message+" in "+url+" at line "+lineNumber);
 }
+
 	
 window.localStorage.setItem('serverUrl','http://direct.peekoapp.com:8080/');
 var serverUrl = window.localStorage.getItem('serverUrl');
@@ -120,7 +121,7 @@ function publishStoryFriend() {
 }
 
 document.addEventListener('deviceready', function() {
-	try{
+	try{	
 		//alert('Device is ready! Make sure you set your app_id below this alert.');
 		FB.init({ appId: "474482682656477", nativeInterface: CDV.FB, useCachedDialogs: false });
 		//document.getElementById('data').innerHTML = "";
@@ -130,18 +131,20 @@ document.addEventListener('deviceready', function() {
 }, false);
 
 $(function(){
+	viewport = document.querySelector("meta[name=viewport]");
+	viewport.setAttribute('content', 'width=400, user-scalable=0');
 	$("#map").click(function(e){
 		e.preventDefault();
-		$("iframe").attr("src","map.html");
+		window.location.href = "map.html";
 	});
 	
 	$("#back").click(function(e){
 		e.preventDefault();
-		$("iframe").attr("src","feed.html");
+		window.location.href = "feed.html";
 	});
 	
 	$("iframe").load(function(){
-		//alert(this.contentWindow.location);
+		alert(this.contentWindow.location);
 	});
 });
 
