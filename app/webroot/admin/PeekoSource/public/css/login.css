@@ -1,5 +1,6 @@
 body{
-	background: #69D2E7;
+	background: #fefdf8;
+	max-width: 400px;
 }
 
 #logo{
@@ -10,7 +11,7 @@ body{
 }
 
 #register{
-	background: #3b589c;
+	background: #FB9F5C;
 }
 
 #login{
@@ -20,7 +21,8 @@ body{
 .buttonOption{
 	color: #FFF;
 	padding: 20px 30px;
-	display: block;
+	margin: auto;
+	display: inline-block;
 	text-align: center;
 }
 
