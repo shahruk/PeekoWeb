@@ -5,15 +5,7 @@ function includeJS(jsFile) {
     $('head').append($('<script>').attr('type', 'text/javascript').attr('src', jsFile));
 }
 
-document.addEventListener('deviceready', function() {
-	alert("A");
-}, false);
-
 $(function(){
-document.addEventListener('deviceready', function() {
-	
-}, false);
-alert("A");
 	function startCountdown(){
 		var countdown = new Date();
 		var targetHour = 1;
@@ -38,9 +30,18 @@ alert("A");
 			url: serverUrl+'brands/feed',
 			success: function(response){
 				for(i = 0; i < response.length; i++){
-					$("#content").append("<div class='block'><div class='brand clearfix'><div style='background-image: url(\"http://direct.peekoapp.com:8080/brands/"+response[i]['active_block']['icon']+"\");' class='logo'></div><div class='brandname'>"+response[i]['name']+"</div></div><div><img data-url='"+response[i]['active_block']['url']+"' class='blockImage' src='"+response[i]['active_block']['images']+"'><h3>"+response[i]['active_block']['name']+"</h3><h5>"+response[i]['active_block']['price']+"</h5><div class='description'>"+response[i]['active_block']['description']+"</div></div><div class='actions' data-id='"+response[i]['active_block']['id']+"'><div class='countdownContainer'><div class='countdown'></div></div><a href='#' class='favorite'><span class='fa fa-heart'></span></a><a href='#' class='visit' data-url='"+response[i]['active_block']['url']+"'><span class='fa fa-external-link'></span></a><a href='#' class='share' data-url='http://peekoapp.com/blocks/"+response[i]['active_block']['number']+"/"+response[i]['active_block']['permalink']+"' data-description='Find more deals and selections at stores near you with www.peekoapp.com' data-title='Shopping via Peeko (http://peekoapp.com)'><span class='fa fa-share'></span></a></div></div>");
+					$("#content").append("<div class='block' id='"+response[i]['active_block']['id']+"'><div class='brand clearfix'><div style='background-image: url(\"http://direct.peekoapp.com:8080/brands/"+response[i]['active_block']['icon']+"\");' class='logo'></div><div class='brandname'>"+response[i]['name']+"</div></div><div><img data-url='"+response[i]['active_block']['url']+"' class='blockImage' src='"+response[i]['active_block']['images']+"'><h3>"+response[i]['active_block']['name']+"</h3><h5>"+response[i]['active_block']['price']+"</h5><div class='description'>"+response[i]['active_block']['description']+"</div></div><div class='actions' data-id='"+response[i]['active_block']['id']+"'><div data-url='http://peekoapp.com/blocks/"+response[i]['active_block']['number']+"/"+response[i]['active_block']['permalink']+"' data-name='"+response[i]['active_block']['name']+"' data-price='"+response[i]['active_block']['price']+"' data-img='"+response[i]['active_block']['images']+"' class='social'></div><a href='#' class='favorite'><span class='fa fa-heart'></span></a><a href='#' class='visit' data-url='"+response[i]['active_block']['url']+"'><span class='fa fa-external-link'></span></a><a href='#' class='comment'><span class='fa fa-comments'></span></a></div></div>");
 				}
-				//startCountdown();
+				$(".social").each(function(index){
+					$(this).share({
+						networks: ['facebook', 'twitter', 'pinterest'],
+						urlToShare: $(this).data('url'),
+						img: $(this).data('img'),
+						title: "Peeko "+$(this).data('price')+" - "+$(this).data('name'),
+						description: "Find more deals and products like this near you at www.peekoapp.com"
+					});
+				});
+				
 			}
 		});
 	};

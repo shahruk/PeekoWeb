@@ -1,5 +1,5 @@
 window.onerror = function(message, url, lineNumber) {
-	alert("Error: "+message+" in "+url+" at line "+lineNumber);
+	console.log("Error: "+message+" in "+url+" at line "+lineNumber);
 }
 
 window.localStorage.setItem('serverUrl','http://direct.peekoapp.com:8080/');
@@ -32,8 +32,6 @@ document.addEventListener('deviceready', function() {
 }, false);
 
 $(function(){
-	viewport = document.querySelector("meta[name=viewport]");
-	viewport.setAttribute('content', 'width=400, user-scalable=0');
 	
 	$("#map").click(function(e){
 		e.preventDefault();

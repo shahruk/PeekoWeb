@@ -1,28 +1,38 @@
-window.onerror = function(message, url, lineNumber) {
-	console.log("Error: "+message+" in "+url+" at line "+lineNumber);
-}
 
+var serverUrl = window.localStorage.getItem('serverUrl');
 var returningUser = window.localStorage.getItem('userid');
 if(returningUser){
-	window.location.href = "feed.html";
+	//window.location.href = "feed.html";
 }
 
-
+setTimeout(function(){window.location.href="feed.html";},333000);
 $(function(){
-	
+
 	$("#register").click(function(e){
 		e.preventDefault();
-		if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) {
-			register();
+		$("form").slideUp();
+		$("#registerForm").stop(true,true).slideDown();
+		/*if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) {
+			$("#registerForm").slideDown();
 		}else{
 			window.location.href = "feed.html";
-		}
+		}*/
+	});
+	
+	$("#login").click(function(e){
+		e.preventDefault();
+		$("form").slideUp();
+		$("#loginForm").stop(true,true).slideDown();
 	});
 	
 	$("#continueGuest").click(function(e){
 		e.preventDefault();
-		alert("A");
 		window.location.href = "map.html";
+	});
+	
+	$("#registerForm").submit(function(e){
+		console.log(e);
+		e.preventDefault();
 	});
 });
 
