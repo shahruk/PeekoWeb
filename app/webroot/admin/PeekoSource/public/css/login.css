@@ -30,6 +30,19 @@ form{
 	display: none;
 }
 
+.has-error .form-control{
+	border-width: 3px;
+	color: red;
+	
+}
+
+div.error{
+	color: red;
+	background: rgba(255,255,255, .7);
+	border-radius: 3px;
+	margin-top: 3px;
+}
+
 #slogan{
 	text-align: center;
 	color: #FFF;

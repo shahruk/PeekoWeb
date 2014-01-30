@@ -46,8 +46,18 @@ $(function(){
 		});
 	};
 	
+	var getFavorites = function(){
+		$.ajax({
+			url: serverUrl+'userfavorites/'+userid,
+			success: function(response){
+				
+			}
+		});
+	};
+	
 	update();
-
+	getFavorites();
+	
 	$("body").on("click", ".share", function(e){
 		e.preventDefault();
 		alert("SHARE");

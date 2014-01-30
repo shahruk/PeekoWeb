@@ -5,9 +5,38 @@ if(returningUser){
 	//window.location.href = "feed.html";
 }
 
-setTimeout(function(){window.location.href="feed.html";},333000);
+setTimeout(function(){window.location.href="feed.html";},33333000);
 $(function(){
-
+	var login = function(userid){
+		window.localStorage.setItem('userid', userid);
+		window.location.href = "feed.html";
+	};
+	
+	var validate = function(form, data){
+		var select = $(form);
+		if(data.email.error){
+			select.find('input[name="email"]').parent().parent().addClass('has-error');
+			select.find('input[name="email"]+.error').html(data.email.message);
+		}else{
+			select.find('input[name="email"]').parent().parent().removeClass('has-error');
+			select.find('input[name="email"]+.error').html('');
+		}
+		if(data.username.error){
+			select.find('input[name="username"]').parent().parent().addClass('has-error');
+			select.find('input[name="username"]+.error').html(data.username.message);
+		}else{
+			select.find('input[name="username"]').parent().parent().removeClass('has-error');
+			select.find('input[name="username"]+.error').html('');
+		}
+		if(data.password.error){
+			select.find('input[name="password"]').parent().parent().addClass('has-error');
+			select.find('input[name="password"]+.error').html(data.password.message);
+		}else{
+			select.find('input[name="password"]').parent().parent().removeClass('has-error');
+			select.find('input[name="passwords"]+.error').html('');
+		}		
+	};
+	
 	$("#register").click(function(e){
 		e.preventDefault();
 		$("form").slideUp();
@@ -31,8 +60,28 @@ $(function(){
 	});
 	
 	$("#registerForm").submit(function(e){
-		console.log(e);
 		e.preventDefault();
+		$.ajax({
+			url: serverUrl+'signup',
+			method: 'POST',
+			data: $(this).serialize(),
+			success: function(data){
+				console.log(data);
+				if(data.registered){
+					login(data.id);
+				}else{
+					validate("#registerForm", data);
+				}
+			},
+			error: function (xmlHttpRequest, textStatus, errorThrown) {
+				if(xmlHttpRequest.readyState == 0 || xmlHttpRequest.status == 0) 
+					  return;  // it's not really an error
+				else{
+					console.log(textStatus);
+					console.log(errorThrown);
+				}
+			}
+		});
 	});
 });
 

@@ -2,7 +2,8 @@ window.onerror = function(message, url, lineNumber) {
 	console.log("Error: "+message+" in "+url+" at line "+lineNumber);
 }
 
-window.localStorage.setItem('serverUrl','http://direct.peekoapp.com:8080/');
+window.localStorage.setItem('userid',1);
+window.localStorage.setItem('serverUrl','http://localhost:8080/');
 var serverUrl = window.localStorage.getItem('serverUrl');
 try{
 /*
@@ -12,7 +13,7 @@ try{
 		$.ajax({
 			url: serverUrl+'/fbregister/'+response.authResponse.userID+'/'+response.authResponse.accessToken,
 			success: function(results){
-				window.localStorage.setItem('userid',results.userid);
+				
 				window.localStorage.setItem('fbid',response.authResponse.userID);
 				window.localStorage.setItem('accessToken',response.authResponse.accessToken);
 				window.location.href = "feed.html";
