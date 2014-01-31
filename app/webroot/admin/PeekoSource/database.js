@@ -26,22 +26,39 @@ var brandsSchema = mongoose.Schema({
 	picture_url: String,
 });
 
+var commentsSchema = mongoose.Schema({
+	user_id: {type: Schema.Types.ObjectId, ref: 'User'},
+	message: String,
+	block_id: {type: Schema.Types.ObjectId, ref: 'Block'},
+	created_at: {type: Date},
+	updated_at: {type: Date}
+});
+
 var locationsSchema = mongoose.Schema({
 	loc: {type: [Number], index: '2d'},
 	_brand: [{type: Schema.Types.ObjectId, ref: 'Brand'}]
 });
 
 var usersSchema = mongoose.Schema({
-	email: String,
+	email: {type: String, select: false},
 	username: String,
-	salt: String,
-	hash: String
+	salt: {type: String, select: false},
+	hash: {type: String, select: false}
 });
 
 var favoritesSchema = mongoose.Schema({
 	user_id: {type: Schema.Types.ObjectId, ref: 'User'},
 	block_id: {type: Schema.Types.ObjectId, ref: 'Block'},
 	brand_id: {type: Schema.Types.ObjectId, ref: 'Brand'}
+});
+
+
+commentsSchema.pre('save', function(next){
+  this.updated_at = new Date;
+  if ( !this.created_at ) {
+    this.created_at = new Date;
+  }
+  next();
 });
 
 //Model methods
@@ -76,6 +93,7 @@ favoritesSchema.methods.isUnique = function(cb){
 //Model definitions
 var Block = mongoose.model('Block', blocksSchema);
 var Brand = mongoose.model('Brand', brandsSchema);
+var Comment = mongoose.model('Comment', commentsSchema);
 var Location = mongoose.model('Location', locationsSchema);
 var User = mongoose.model('User', usersSchema);
 var Favorite = mongoose.model('Favorite', favoritesSchema);
@@ -83,6 +101,7 @@ var Favorite = mongoose.model('Favorite', favoritesSchema);
 exports.start = start;
 exports.Block = Block;
 exports.Brand = Brand;
+exports.Comment = Comment;
 exports.Location = Location;
 exports.User = User;
 exports.Favorite = Favorite;
