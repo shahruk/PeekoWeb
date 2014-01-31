@@ -1,12 +1,30 @@
 window.onerror = function(message, url, lineNumber) {
 	console.log("Error: "+message+" in "+url+" at line "+lineNumber);
 }
+
+function trim11 (str) {
+    str = str.replace(/^\s+/, '');
+    for (var i = str.length - 1; i >= 0; i--) {
+        if (/\S/.test(str.charAt(i))) {
+            str = str.substring(0, i + 1);
+            break;
+        }
+    }
+    return str;
+}
+
 function includeJS(jsFile) {
     $('head').append($('<script>').attr('type', 'text/javascript').attr('src', jsFile));
 }
-
+var timeout = 0;
 var serverUrl = window.localStorage.getItem('serverUrl');
 
+setInterval(function(){
+	if(timeout > 0){
+		timeout--;
+	}
+}, 1000);
+ 
 $(function(){
 	function startCountdown(){
 		var countdown = new Date();
@@ -28,9 +46,46 @@ $(function(){
 	
 	update();
 	
-	$("body").on("click", ".comment", function(e){
+	$("body").on("submit", ".discussion form", function(e){
+		var _this = this;
+		if(trim11($(this).find('textarea').val()).length < 1){
+			return false;
+		}
 		e.preventDefault();
-		$(this).addClass('selected').parent().parent().append("<div class='comments'>Test</div>")s;
+		$.ajax({
+			url: serverUrl+'addcomment',
+			method: 'POST',
+			data: $(this).serialize(),
+			success: function(response){
+				if(response.saved){
+					addComment($(_this).parent(), window.localStorage.getItem('username'), $(_this).find('textarea').val());
+					$(_this).find('textarea').val('');
+					
+				}else{
+				}
+			}
+		});
+	});
+	
+	$("body").on("click", ".comment", function(e){
+		if($(this).hasClass('selected')){
+			$(this).removeClass('selected').parent().parent().find('.discussion').stop(true,true).slideUp();
+			$(".user-comments").html('');
+			return false;
+		}else{
+			e.preventDefault();
+			var _this = this;
+			$.ajax({
+				url: serverUrl+'comments/'+$(_this).parent().parent().data('id'),
+				success: function(response){
+					for(i = 0; i < response.length; i++){
+						addComment($(_this).parent().parent(), response[i]['user_id']['username'], response[i]['message']);
+					}
+				}
+			});
+			
+			$(this).addClass('selected').parent().parent().find('.discussion').stop(true,true).fadeIn(500);
+		}
 	});
 	
 	$("body").on("click", ".visit", function(e){
@@ -40,49 +95,50 @@ $(function(){
 
 	$("body").on("click", ".actions .favorite", function(e){
 		e.preventDefault();
-		var opts = {
-			color: "#EF4879",
-			lines: 11,
-			length: 0,
-			width: 3
-		};
-		$(this).find('span').css('visibility', 'hidden');
-		$(this).spin(opts);
-		var _this = this;
-		$(this).addClass('selected');
-		$.ajax({
-			url: serverUrl+'actions/favorite',
-			method: 'POST',
-			data: {userid: window.localStorage.getItem('userid'), blockid:$(this).parent().data('id'), brandid: $(this).parent().data('brand')},
-			success: function(results){
-				$(_this).spin(false);
-				$(_this).find('span').css('visibility', 'visible');
-			}
-		});
+		if($(this).hasClass('selected')){
+			var opts = {
+				color: "#EF4879",
+				lines: 11,
+				length: 0,
+				width: 3
+			};
+			$(this).find('span').css('visibility', 'hidden');
+			$(this).spin(opts);
+			var _this = this;
+			$.ajax({
+				url: serverUrl+'actions/favorite/delete',
+				method: 'POST',
+				data: {userid: window.localStorage.getItem('userid'), blockid:$(this).parent().data('id')},
+				success: function(results){
+					$(_this).spin(false);
+					$(_this).find('span').css('visibility', 'visible');
+					$(_this).removeClass('selected');
+				}
+			});
+		}else{
+			
+			var opts = {
+				color: "#EF4879", 
+				lines: 11,
+				length: 0,
+				width: 3
+			};
+			$(this).find('span').css('visibility', 'hidden');
+			$(this).spin(opts);
+			var _this = this;
+			$(this).addClass('selected');
+			$.ajax({
+				url: serverUrl+'actions/favorite',
+				method: 'POST',
+				data: {userid: window.localStorage.getItem('userid'), blockid:$(this).parent().data('id'), brandid: $(this).parent().data('brand')},
+				success: function(results){
+					$(_this).spin(false);
+					$(_this).find('span').css('visibility', 'visible');
+				}
+			});
+		}
 	});
-	
-	$("body").on("click", ".actions .favorite.selected", function(e){
-		e.preventDefault();
-		var opts = {
-			color: "#EF4879",
-			lines: 11,
-			length: 0,
-			width: 3
-		};
-		$(this).find('span').css('visibility', 'hidden');
-		$(this).spin(opts);
-		var _this = this;
-		$.ajax({
-			url: serverUrl+'actions/favorite/delete',
-			method: 'POST',
-			data: {userid: window.localStorage.getItem('userid'), blockid:$(this).parent().data('id')},
-			success: function(results){
-				$(_this).spin(false);
-				$(_this).find('span').css('visibility', 'visible');
-				$(_this).removeClass('selected');
-			}
-		});
-	});
+
 	
 	$("body").on("click", ".blockImage, .visit", function(e){
 		try{

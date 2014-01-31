@@ -2,14 +2,14 @@ window.onerror = function(message, url, lineNumber) {
 	console.log("Error: "+message+" in "+url+" at line "+lineNumber);
 }
 
-window.localStorage.setItem('serverUrl','http://localhost:8080/');
+window.localStorage.setItem('serverUrl','http://direct.peekoapp.com:8080/');
 var serverUrl = window.localStorage.getItem('serverUrl');
 var createBlock = function(brand, favorite){
 	var className = "";
 	if(favorite){
 		className = " favorites";
 	}
-	$("#content").append("<div class='block"+className+"' data-id='"+brand['active_block']['id']+"'><div class='brand clearfix'><div style='background-image: url(\"http://direct.peekoapp.com:8080/brands/"+brand['active_block']['icon']+"\");' class='logo'></div><div class='brandname'>"+brand['name']+"</div></div><div><img data-url='"+brand['active_block']['url']+"' class='blockImage' src='"+brand['active_block']['images']+"'><h3>"+brand['active_block']['name']+"</h3><h5>"+brand['active_block']['price']+"</h5><div class='description'>"+brand['active_block']['description']+"</div></div><div class='actions' data-id='"+brand['active_block']['id']+"'><div data-url='http://peekoapp.com/blocks/"+brand['active_block']['number']+"/"+brand['active_block']['permalink']+"' data-name='"+brand['active_block']['name']+"' data-img='"+brand['active_block']['images']+"' class='social'></div><a href='#' class='favorite'><span class='fa fa-heart'></span></a><a href='#' class='visit' data-url='"+brand['active_block']['url']+"'><span class='fa fa-external-link'></span></a><a href='#' class='comment'><span class='fa fa-comments'></span></a></div></div>");
+	$("#content").append("<div class='block"+className+"' data-id='"+brand['active_block']['id']+"'><div class='brand clearfix'><div style='background-image: url(\"http://direct.peekoapp.com:8080/brands/"+brand['active_block']['icon']+"\");' class='logo'></div><div class='brandname'>"+brand['name']+"</div></div><div><img data-url='"+brand['active_block']['url']+"' class='blockImage' src='"+brand['active_block']['images']+"'><h3>"+brand['active_block']['name']+"</h3><h5>"+brand['active_block']['price']+"</h5><div class='description'>"+brand['active_block']['description']+"</div></div><div class='actions' data-id='"+brand['active_block']['id']+"'><div data-url='http://peekoapp.com/blocks/"+brand['active_block']['number']+"/"+brand['active_block']['permalink']+"' data-name='"+brand['active_block']['name']+"' data-img='"+brand['active_block']['images']+"' class='social'></div><a href='#' class='favorite'><span class='fa fa-heart'></span></a><a href='#' class='visit' data-url='"+brand['active_block']['url']+"'><span class='fa fa-external-link'></span></a><a href='#' class='comment'><span class='fa fa-comments'></span></a></div><div class='discussion'><form role='form'><div class='form-group'><textarea name='usercomment' class='form-control' rows='2'></textarea><div class='clearfix'>Posting as "+window.localStorage.getItem('username')+"<input type='hidden' name='blockid' value='"+brand['active_block']['id']+"' /> <input type='hidden' name='userid' value='"+window.localStorage.getItem('userid')+"' /> <input type='submit' class='btn btn-success btn-xs' value='Post Comment' /></div></div></form><div class='user-comments'></div></div></div>");
 };
 
 var update = function(number){
@@ -45,10 +45,18 @@ var getFavorites = function(){
 		}
 	});
 };
-	
+
+var addComment = function(container, username, message){
+	$(container).find('.user-comments').append("<div class='user-comment'><b style='color: #34B5DC;'>@"+username+"</b> "+message+"</div>");
+};
+
 $(function(){
 	
-	$('#menu').sidr();
+	try{
+		$('#menu').sidr();
+	}catch(e){}
+	
+	
 	$("body").on("click", "#sidr a", function(e){
 		$("#sidr li").removeClass('active');
 		$(this).parent().addClass('active');

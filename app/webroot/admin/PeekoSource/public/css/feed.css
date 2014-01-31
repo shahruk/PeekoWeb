@@ -53,9 +53,13 @@ div.actions .favorite{
 div.actions > a.selected{
 	background: #34B5DC;
 }
-div.actions > a.selected span{
+div.actions > a.favorite.selected span{
 	color: #e1789b;
 }	
+
+div.block .discussion{
+	display: none;
+}
 
 div.actions > div:last-child{
 	margin-right: 0;
@@ -72,11 +76,23 @@ div.actions > a > span{
 	font-size: 14px;
 }
 
+.block .discussion .user-comment{
+	margin-bottom: 8px;
+}
 
 .social{
 	float: right;
-<<<<<<< HEAD
-=======
 	background: #FFF;
->>>>>>> c40730e908beb1471c3207a9688b9670555351cb
+}
+
+.discussion textarea{
+	margin-bottom: 10px;
+}
+
+.discussion input[type="submit"]{
+	float: right;
+}
+
+.user-comments{
+	width: 100%;
 }

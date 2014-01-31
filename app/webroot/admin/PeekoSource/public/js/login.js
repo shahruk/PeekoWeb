@@ -9,8 +9,9 @@ if(returningUser){
 
 $(function(){
 
-	var login = function(userid){
+	var login = function(userid, username){
 		window.localStorage.setItem('userid', userid);
+		window.localStorage.setItem('username', username);
 		window.location.href = "feed.html";
 	};
 	
@@ -70,7 +71,7 @@ $(function(){
 			success: function(data){
 				console.log(data);
 				if(data.registered){
-					login(data.id);
+					login(data.id, data.username);
 				}else{
 					validate("#registerForm", data);
 				}
@@ -95,7 +96,7 @@ $(function(){
 			success: function(data){
 				console.log(data);
 				if(data.logged){
-					login(data.id);
+					login(data.id, data.username);
 				}else{
 					$("#loginForm input[name='email']+div.error").html(data.message);
 				}
