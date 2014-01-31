@@ -30,7 +30,7 @@ $(function(){
 	
 	$("body").on("click", ".comment", function(e){
 		e.preventDefault();
-		$(this).addClass('selected').parent().parent().append("<div class='comments'>Test</div>');
+		$(this).addClass('selected').parent().parent().append("<div class='comments'>Test</div>")s;
 	});
 	
 	$("body").on("click", ".visit", function(e){
