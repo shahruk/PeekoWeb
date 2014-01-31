@@ -28,8 +28,9 @@ $(function(){
 	
 	update();
 	
-	$("body").on("click", ".share", function(e){
+	$("body").on("click", ".comment", function(e){
 		e.preventDefault();
+		$(this).addClass('selected').parent().parent().append("<div class='comments'>Test</div>');
 	});
 	
 	$("body").on("click", ".visit", function(e){
