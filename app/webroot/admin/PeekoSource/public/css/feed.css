@@ -3,7 +3,6 @@ body{
 }
 
 #content{
-	padding-top: 60px;
 }
 
 h3, h5{
@@ -27,14 +26,12 @@ h5{
 }
 
 div.actions > a{
-	webkit-transform: translateZ(0);
-	-webkit-perspective: 1000;
-	-webkit-backface-visibility: hidden;
+
 	background: #ACE8F2;
-	border-radius: 25px;
-	height: 50px;
+	border-radius: 20px;
+	height: 40px;
 	padding-top: 13px;
-	width: 50px;
+	width: 40px;
 	text-align: center;
 	display: inline-block;
 	margin: 0 5px;
@@ -57,7 +54,7 @@ div.actions > a.selected{
 	background: #34B5DC;
 }
 div.actions > a.selected span{
-	color: #E94E77;
+	color: #e1789b;
 }	
 
 div.actions > div:last-child{
@@ -65,7 +62,7 @@ div.actions > div:last-child{
 }
 
 div.actions > a > span{
-	font-size: 28px;
+	font-size:18px;
 	color: #FFF;
 }
 
@@ -78,4 +75,8 @@ div.actions > a > span{
 
 .social{
 	float: right;
+<<<<<<< HEAD
+=======
+	background: #FFF;
+>>>>>>> c40730e908beb1471c3207a9688b9670555351cb
 }

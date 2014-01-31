@@ -1,6 +1,21 @@
-body{
-	background: #fefdf8;
+html{
+	
 	max-width: 400px;
+}
+
+#container{
+	border-radius: 9px;
+	padding: 10px;
+}
+
+body{
+	margin: auto;
+	background: #FFF url('http://ppcdn.500px.org/54921300/0be7bd3e5aee43c1feb26b01617ec3f72ab130d8/2048.jpg');
+	background-size: 1100px 800px;
+	background-position: -150px -30px;
+	margin-top: 10px;
+	padding: 10px 10px 30px 10px;
+	max-width: 380px;
 }
 
 #logo{
@@ -10,8 +25,45 @@ body{
 	padding-top: 50px;
 }
 
+form{
+	margin-bottom: 20px;
+	display: none;
+}
+
+.has-error .form-control{
+	border-width: 3px;
+	color: red;
+	
+}
+
+div.error{
+	color: red;
+	background: rgba(255,255,255, .7);
+	border-radius: 3px;
+	margin-top: 3px;
+}
+
+#slogan{
+	text-align: center;
+	color: #FFF;
+	margin-top: -30px;
+	margin-bottom: 40px;
+}
+
+.actions > section{
+	text-align: center;
+}
+
+#description{
+	font-size: 12px;
+	width: 370px;
+	color: #666;
+	visibility: hidden;
+	margin: auto;
+}
+
 #register{
-	background: #FB9F5C;
+	background: #FF7040;
 }
 
 #login{
@@ -20,14 +72,17 @@ body{
 
 .buttonOption{
 	color: #FFF;
-	padding: 20px 30px;
+	border-radius: 9px;
+	padding: 11px 45px;
 	margin: auto;
+	font-size: 18px;
 	display: inline-block;
 	text-align: center;
 }
 
 .buttonOption:hover{
 	text-decoration: none;
+	color: #DDD;
 }
 
 #facebookLogin:hover{
