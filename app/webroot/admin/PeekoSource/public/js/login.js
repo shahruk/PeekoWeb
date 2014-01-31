@@ -4,7 +4,7 @@ window.onerror = function(message, url, lineNumber) {
 
 var returningUser = window.localStorage.getItem('userid');
 if(returningUser){
-	window.location.href = "feed.html";
+	//window.location.href = "feed.html";
 }
 
 
@@ -21,7 +21,6 @@ $(function(){
 	
 	$("#continueGuest").click(function(e){
 		e.preventDefault();
-		alert("A");
 		window.location.href = "map.html";
 	});
 });

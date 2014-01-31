@@ -1,6 +1,10 @@
 //Initialization
 var mongoose = require('mongoose');
 Schema = mongoose.Schema;
+
+var hash = require('./hash');
+
+
 function start(){
 	mongoose.connect('mongodb://localhost/peeko');
 	var db = mongoose.connection;
@@ -11,14 +15,10 @@ function start(){
 //Schema definitions
 var blocksSchema = mongoose.Schema({
 	name: String,
-	brand_id: Number,
-	price: Number,
+	brand_id: String,
+	price: String,
 	url: String,
 	timestamp: Date
-});
-
-var blocksSchema = mongoose.Schema({
-
 });
 
 var brandsSchema = mongoose.Schema({
@@ -33,12 +33,15 @@ var locationsSchema = mongoose.Schema({
 
 var usersSchema = mongoose.Schema({
 	email: String,
-	fbid: String
+	username: String,
+	salt: String,
+	hash: String
 });
 
 var favoritesSchema = mongoose.Schema({
 	user_id: {type: Schema.Types.ObjectId, ref: 'User'},
-	block_id: {type: Schema.Types.ObjectId, ref: 'Block'}
+	block_id: {type: Schema.Types.ObjectId, ref: 'Block'},
+	brand_id: {type: Schema.Types.ObjectId, ref: 'Brand'}
 });
 
 //Model methods
@@ -46,9 +49,23 @@ locationsSchema.methods.findNear = function(cb){
 	return this.model('Location').find({loc: {$nearSphere: this.loc, $maxDistance: .00025}}, cb);
 }
 
-usersSchema.methods.isUnique = function(cb){
-	var results = this.model('User').find({fbid: this.fbid}, cb);
-	return results;
+usersSchema.statics.signup = function(email, username, password, done){
+	var User = this;
+	hash(password, function(err, salt, hash){
+		if(err) throw err;
+		// if (err) return done(err);
+		User.create({
+				id: 1,
+				email : email,
+				username: username,
+				salt : salt,
+				hash : hash
+		}, function(err, user){
+				if(err) throw err;
+				// if (err) return done(err);
+				done(null, user);
+		});
+	});
 }
 
 favoritesSchema.methods.isUnique = function(cb){
@@ -69,3 +86,4 @@ exports.Brand = Brand;
 exports.Location = Location;
 exports.User = User;
 exports.Favorite = Favorite;
+exports.hash = hash;

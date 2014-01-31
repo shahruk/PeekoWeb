@@ -1,6 +1,15 @@
 var server = require("./server");
 var database = require("./database");
+var validator = require('validator');
 database.start();
+
+server.passport.serializeUser(function(user, done) {
+  done(null, user);
+});
+
+server.passport.deserializeUser(function(user, done) {
+  done(null, user);
+});
 
 app.get('/blocks/:longi/:lati', function(req, res){
 	res.header('Access-Control-Allow-Origin', "*");
@@ -17,6 +26,95 @@ app.get('/blocks/:longi/:lati', function(req, res){
 	).populate('_brand');
 	//response.end("Hello World\n");
 	//database.Block.findOne({brand_id: docs[i]._brand[0]['_id'], timestamp: {$lte: new Date()}}, function(error, results){
+});
+
+app.post('/login',  function(req, res) {
+	res.header('Access-Control-Allow-Origin', "*");
+	database.User.findOne({email : req.body.email},function(err,user){
+		if(!user){
+			res.json({'logged': false, 'message': 'Incorrect email / password.'});
+		}else{
+			database.hash(req.body.password, user.salt, function (err, hash){
+				if (hash == user.hash){
+					res.json({'logged': true, 'id': user.id});
+				}else{
+					res.json({'logged': false, 'message': 'Incorrect email / password'});
+				}
+			});
+		}
+	});
+});
+
+app.post("/signup", function (req, res, next) {
+	res.header('Access-Control-Allow-Origin', "*");
+	var errorsArray = new Object();
+	errorsArray.email = new Object();
+	errorsArray.email.error = false;
+	errorsArray.password = new Object();
+	errorsArray.password.error = false;
+	errorsArray.username = new Object();
+	errorsArray.username.error = false;
+	
+	database.User.find({$or:[
+		{email: req.body.email},
+		{username: req.body.username}
+		],
+	}, function (err, docs) {
+		if(docs.length == 0){
+			var errorFlag = false;
+			if(!validator.isEmail(req.body.email)){
+				errorFlag = errorsArray.email.error = true;
+				errorsArray.email.message = "Please use a proper email address.";
+			}
+			if(!validator.isAlphanumeric(req.body.username) || !validator.isLength(req.body.username, 4, 12)){
+				errorFlag = errorsArray.username.error = true;
+				errorsArray.username.message = "Please choose a username containing only numbers and letters between 4 to 12 characters long.";
+			}
+			if(!validator.isAlphanumeric(req.body.password) || !validator.isLength(req.body.password, 6, 20)){
+				errorFlag = errorsArray.password.error = true;
+				errorsArray.password.message = "Please choose a password containing only numbers and letters between 6 to 20 characters long.";
+			}
+			if(errorFlag){
+				res.json(errorsArray);
+			}else{
+				database.User.signup(req.body.email, req.body.username, req.body.password, function(err, user){
+					if(err) throw err;
+					req.login(user, function(err){
+						if(err) return next(err);
+						res.json({registered: true, id: user.id});
+					});
+				});
+			}
+		}else{
+			
+			for(i = 0; i < docs.length; i++){
+				if(docs[i]['email'] == req.body.email){
+					errorsArray.email.error = true;
+					errorsArray.email.message = "That email is already in use, sorry!";
+				}
+				if(docs[i]['username'] == req.body.username){
+					errorsArray.username.error = true;
+					errorsArray.username.message = "That username is already in use, sorry!";
+				}
+			}
+			
+			res.json(errorsArray);
+		}
+	});
+});
+
+app.get('/favorites/:id', function(req, res){
+	res.header('Access-Control-Allow-Origin', '*');
+	database.Favorite.find({user_id: req.params.id}).exec(function(err, docs){
+		res.json(docs);
+	});
+});
+
+app.get('/feed/favorites/:id', function(req, res){
+	res.header('Access-Control-Allow-Origin', '*');
+	database.Favorite.find({user_id: req.params.id}).populate('block_id').exec(function(err, docs){
+		res.json(docs);
+	});
 });
 
 app.get('/fbregister/:fbid/:email', function(req, res){
@@ -50,14 +148,13 @@ app.get('/brands/feed', function(req, res){
 	});
 });
 
-app.get('/actions/favorite/:userid/:blockid', function(req, res){
+app.post('/actions/favorite', function(req, res){
 	res.header('Access-Control-Allow-Origin', "*");
-	var fav = new database.Favorite({user_id: req.params.userid, block_id: req.params.blockid});
-	console.log(req.params.userid);
+	var fav = new database.Favorite({user_id: req.body.userid, block_id: req.body.blockid});
 	fav.isUnique(function(err,docs) {
 		if(!err){
 			if(docs.length == 0){
-				var fav = new database.Favorite({user_id: req.params.userid, block_id: req.params.blockid});
+				var fav = new database.Favorite({user_id: req.body.userid, block_id: req.body.blockid});
 				fav.save(function(err, favorite){
 					if(!err){
 						res.json({saved:true});
@@ -71,4 +168,16 @@ app.get('/actions/favorite/:userid/:blockid', function(req, res){
 			}
 		}
 	});
+});
+
+app.post('/actions/favorite/delete', function(req, res){
+	res.header('Access-Control-Allow-Origin', "*");
+	database.Favorite.remove({user_id: req.body.userid, block_id: req.body.blockid}, function(err){
+		if(!err){
+			res.json({deleted: true});
+		}else{
+			console.log(error);
+		}
+	});
+	
 });

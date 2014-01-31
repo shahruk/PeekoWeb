@@ -6,7 +6,6 @@ function includeJS(jsFile) {
 }
 
 document.addEventListener('deviceready', function() {
-	alert("A");
 }, false);
 
 $(function(){
