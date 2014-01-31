@@ -5,8 +5,10 @@ if(returningUser){
 	//window.location.href = "feed.html";
 }
 
-setTimeout(function(){window.location.href="feed.html";},33333000);
+
+
 $(function(){
+
 	var login = function(userid){
 		window.localStorage.setItem('userid', userid);
 		window.location.href = "feed.html";
@@ -71,6 +73,31 @@ $(function(){
 					login(data.id);
 				}else{
 					validate("#registerForm", data);
+				}
+			},
+			error: function (xmlHttpRequest, textStatus, errorThrown) {
+				if(xmlHttpRequest.readyState == 0 || xmlHttpRequest.status == 0) 
+					  return;  // it's not really an error
+				else{
+					console.log(textStatus);
+					console.log(errorThrown);
+				}
+			}
+		});
+	});
+	
+	$("#loginForm").submit(function(e){
+		e.preventDefault();
+		$.ajax({
+			url: serverUrl+'login',
+			method: 'POST',
+			data: $(this).serialize(),
+			success: function(data){
+				console.log(data);
+				if(data.logged){
+					login(data.id);
+				}else{
+					$("#loginForm input[name='email']+div.error").html(data.message);
 				}
 			},
 			error: function (xmlHttpRequest, textStatus, errorThrown) {

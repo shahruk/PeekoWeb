@@ -21,7 +21,6 @@ header{
 	height: 43px;
 	background: #69D2E7;
 	color: #FFF;
-	position: absolute;
 	width: 100%;
 }
 
@@ -62,7 +61,7 @@ header > .linksContainer a:hover{
 }
 
 #content{
-	padding: 10px;
+	padding: 2px;
 }
 
 div.logo{
@@ -112,32 +111,10 @@ iframe{
 	margin: 0;
 }
 
-.arthref .icon-container ul li {
-	border: 4px solid #DDD;
-
+#menu{
+	float: left;
 }
 
-.arthref .overlay {
-	background: red !important;
-}
-
-.arthref .icon-container {
-background: blue !Important;
-
-}
-
-.arthref .icon-container .centered {
-background: yellow !important;
-
-}
-
-.arthref {
-	z-index: 90 !important;
-}
-
-.arthref .overlay {
-	z-index: 91 !important;
-}
-.arthref .icon-container {
-	z-index: 95 !Important;
+#backup{
+	display: none;
 }
