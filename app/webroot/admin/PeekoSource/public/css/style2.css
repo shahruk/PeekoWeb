@@ -6,7 +6,17 @@ html, body{
 	
 }
 
+#map{
+	display: none;
+}
+
+#map, #map-canvas{
+	height: 100%;
+}
+
 body{
+	width: 400px;
+	overflow-y: hidden;
 	overflow: hidden;
 	position: relative;
 	font-family: 'Helvetica', 'Helvetica Neue', 'Arial', sans-serif;
@@ -18,10 +28,33 @@ a{
 }
 
 header{
+	border-width: 0px !important;
 	padding: 3px 0;
-	background: #2cb5dc;
+	background: #2cb5dc !important;
 	color: #FFF;
 	width: 100%;
+	padding: 2px;
+}
+
+#menu{
+	background: #333;
+}
+
+#menu ul{
+	padding-left: 0;
+}
+
+#menu li a{
+	margin-bottom: 20px;
+	color: #FFF;
+	display: block;
+	padding: 20px 15px;
+	font-weight: normal;
+	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+#menu li a.selected{
+
 }
 
 #locateMe{
@@ -31,7 +64,7 @@ header{
 header > .linksContainer a{
 	display: block;
 	float: right;
-	color: #eeffff;
+	color: #eeffff !important;
 	font-size: 28px;
 	margin: 4px 10px;
 	width: 44px !important;
@@ -50,7 +83,9 @@ header > .linksContainer a{
 #app{
 	text-align: center;
 	font-size: 32px;
-	margin-top: 0;
+	padding: 0;
+	margin: 0;
+	margin-top: 5px;
 }
 
 header > .linksContainer a:active{
@@ -63,6 +98,8 @@ header > .linksContainer a:hover{
 
 #content{
 	padding: 2px;
+	height: 100%;
+	position: relative;
 }
 
 div.logo{
@@ -112,7 +149,11 @@ iframe{
 	margin: 0;
 }
 
-#menu{
+#menu ul{
+	list-style-type: none;
+}
+
+#menuLink{
 	float: left;
 }
 

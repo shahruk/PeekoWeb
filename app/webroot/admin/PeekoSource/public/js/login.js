@@ -1,8 +1,7 @@
 var serverUrl = window.localStorage.getItem('serverUrl');
 var returningUser = window.localStorage.getItem('userid');
-if(returningUser){
-	
-	window.location.href = "feed.html";
+if(returningUser && (window.localStorage.getItem('username') != null)){
+	//window.location.href = "feed.html";
 }
 
 

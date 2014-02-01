@@ -137,6 +137,7 @@ $(function(){
 	});
 
 	document.addEventListener("deviceready", onDeviceReady, false);
+	onDeviceReady();
 	function onDeviceReady(){
 		$("body").on("click", ".visit", function(e){
 			e.preventDefault();

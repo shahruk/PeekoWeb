@@ -83,7 +83,7 @@ $(function(){
 		getLocation();
 		try{
 			pushNotification = window.plugins.pushNotification;
-			 pushNotification.register(function(result){ alert(result); }, function(error){alert(error); }, {"badge":"true","sound":"true","alert":"true","ecb":"onNotificationAPN"});
+			//pushNotification.register(function(result){ alert(result); }, function(error){alert(error); }, {"badge":"true","sound":"true","alert":"true","ecb":"onNotificationAPN"});
 		}catch(e){
 			//alert('Error: '+e);
 		}

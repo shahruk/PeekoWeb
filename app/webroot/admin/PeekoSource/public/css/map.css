@@ -1,0 +1,165 @@
+#productOverlay{
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #FFF;
+	overflow-y: scroll;
+	z-index: 100;
+	-webkit-border-radius: 9px;
+	padding: 20px;
+	padding-top: 45px;
+	margin: auto;
+	top: 0; left: 0; bottom: 0; right: 0;
+}
+
+button.close{
+	font-size: 42px;
+}
+
+#productOverlay #productImage{
+	width: 100%;
+	border-radius: 9px;
+}
+
+.gmnoprint{
+	display: none !important;
+}
+
+#map-canvas > div a{
+	display: none;
+}
+
+#productName{
+	text-align: center;
+}
+
+#description{
+	font-size: 12px;
+}
+
+#buyOnline, #share{
+	display: block;
+	font-size: 18px;
+	text-decoration: none;
+	padding: 10px 20px;
+	margin-bottom: 10px;
+}
+
+#buyOnline .glyphicon{
+	display: inline-block;
+}
+
+#locateMe{
+	background: #FFF;
+	position: absolute;
+	left: 12px;
+	bottom: 40px;
+	z-index: 99;
+	font-size: 24px;
+	padding: 10px 10px 4px 10px;
+	transition: all .4s;
+	-webkit-transition: all .4s;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 5px #888;
+}
+
+#locateMe:hover{
+	color: #5aa8ff;
+	-moz-box-shadow: 0 0 5px #5aa8ff;
+	-webkit-box-shadow: 0 0 5px #5aa8ff;
+	box-shadow: 0 0 5px #5aa8ff;
+	cursor: pointer;
+}
+
+#productImage{
+	max-width: 100%;
+}
+
+#countdown{
+	border: none;
+	background: none;
+}
+
+#vote{
+	margin-top: 40px;
+}
+
+#storeLogo{
+	width:80px;
+	height:100px;
+	display: block;
+	margin: auto;
+}
+#tutorial{
+	position: absolute;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.8);
+	padding: 20px;
+	color: #FFF;
+	text-align: center;
+	overflow-y: scroll;
+}
+
+#tutorial h2{
+	font-size: 20px;
+}
+
+#tutorial .description{
+	font-size: 12px;
+	text-align: left;
+	width: 97%;
+	margin: auto;
+	margin-bottom: 50px;
+	padding-bottom: 50px;
+	border-bottom: 2px solid #666;
+}
+
+#tutorial img{
+	display: block;
+	margin: auto;
+	margin-bottom: 40px;
+	width: 280px; 
+	height: 280px; 
+	border-radius: 140px; 
+	-webkit-border-radius: 140px; 
+	border: 5px solid #AAA;
+}
+
+.endTutorial{
+	display: inline-block;
+	margin: 20px auto !important;
+	padding: 15px;
+}
+
+#map-canvas { height: 100% }
+#peeko { display: none; }
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+/* Styles */
+	
+	#buyOnline{
+		display: block;
+		margin-bottom: 10px;
+	}
+	
+	#countdown{
+		display: block;
+		text-align: center;
+		float: none;
+		width: auto;
+	}
+
+}
+
+.star.upvote-enabled.starred{
+	display: none;
+}
+
+.deal img{
+	height: 120px !important;
+}
