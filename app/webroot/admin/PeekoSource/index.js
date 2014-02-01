@@ -198,10 +198,6 @@ app.get('/comments/:id', function(req, res){
 app.post('/addcomment',  function(req, res) {
 	res.header('Access-Control-Allow-Origin', "*");
 	var errorFlag = false;
-	if(!validator.isAlphanumeric(req.body.usercomment)){
-		errorFlag = true;
-		res.json({saved: false, message: 'Please only use letters and numbers, thanks!'});
-	}
 	if(!validator.isLength(req.body.usercomment, 1, 400)){
 		errorFlag = true;
 		res.json({saved: false, message: 'Please make your comment no more than 400 characters long.'});
