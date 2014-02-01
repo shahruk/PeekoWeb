@@ -1,9 +1,13 @@
 window.onerror = function(message, url, lineNumber) {
 	console.log("Error: "+message+" in "+url+" at line "+lineNumber);
 }
-
-window.localStorage.setItem('serverUrl','http://direct.peekoapp.com:8080/');
+window.localStorage.setItem('serverUrl','http://localhost:8080/');
 var serverUrl = window.localStorage.getItem('serverUrl');
+
+var openWindow = function(url){
+	var ref = window.open(url, '_blank', 'EnableViewPortScale=yes');
+};
+
 var createBlock = function(brand, favorite){
 	var className = "";
 	if(favorite){
@@ -51,7 +55,6 @@ var addComment = function(container, username, message){
 };
 
 $(function(){
-	
 	try{
 		$('#menu').sidr();
 	}catch(e){}

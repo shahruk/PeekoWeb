@@ -39,6 +39,9 @@ div.actions > a{
 	-webkit-transition: all .3s;
 }
 
+#sidr{
+	-webkit-transform: translate3d(0px,0px,0px);
+}
 
 div.actions > a:active, .selected{
 	background: #34B5DC;
