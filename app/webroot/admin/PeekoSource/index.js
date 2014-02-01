@@ -32,10 +32,11 @@ app.get('/blocks/:longi/:lati', function(req, res){
 
 app.post('/login',  function(req, res) {
 	res.header('Access-Control-Allow-Origin', "*");
-	database.User.findOne({email : req.body.email},function(err,user){
+	database.User.findOne({email : req.body.email}).select('username hash salt email id').exec(function(err,user){
 		if(!user){
 			res.json({'logged': false, 'message': 'Incorrect email / password.'});
 		}else{
+			console.log(user.salt);
 			database.hash(req.body.password, user.salt, function (err, hash){
 				if (hash == user.hash){
 					res.json({'logged': true, 'id': user.id, 'username': user.username});
