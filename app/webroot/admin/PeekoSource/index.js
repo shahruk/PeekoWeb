@@ -1,6 +1,8 @@
 var server = require("./server");
 var database = require("./database");
 var validator = require('validator');
+var sanitizer = require('sanitizer');
+
 database.start();
 
 server.passport.serializeUser(function(user, done) {
@@ -30,13 +32,14 @@ app.get('/blocks/:longi/:lati', function(req, res){
 
 app.post('/login',  function(req, res) {
 	res.header('Access-Control-Allow-Origin', "*");
-	database.User.findOne({email : req.body.email},function(err,user){
+	database.User.findOne({email : req.body.email}).select('username hash salt email id').exec(function(err,user){
 		if(!user){
 			res.json({'logged': false, 'message': 'Incorrect email / password.'});
 		}else{
+			console.log(user.salt);
 			database.hash(req.body.password, user.salt, function (err, hash){
 				if (hash == user.hash){
-					res.json({'logged': true, 'id': user.id});
+					res.json({'logged': true, 'id': user.id, 'username': user.username});
 				}else{
 					res.json({'logged': false, 'message': 'Incorrect email / password'});
 				}
@@ -77,11 +80,11 @@ app.post("/signup", function (req, res, next) {
 			if(errorFlag){
 				res.json(errorsArray);
 			}else{
-				database.User.signup(req.body.email, req.body.username, req.body.password, function(err, user){
+				database.User.signup(req.body.email, sanitizer.escape(req.body.username), req.body.password, function(err, user){
 					if(err) throw err;
 					req.login(user, function(err){
 						if(err) return next(err);
-						res.json({registered: true, id: user.id});
+						res.json({registered: true, id: user.id, username: user.username});
 					});
 				});
 			}
@@ -176,8 +179,41 @@ app.post('/actions/favorite/delete', function(req, res){
 		if(!err){
 			res.json({deleted: true});
 		}else{
-			console.log(error);
 		}
 	});
 	
+});
+
+app.get('/comments/:id', function(req, res){
+	res.header('Access-Control-Allow-Origin', "*");
+	database.Comment.find({block_id: req.params.id}).populate('user_id').exec(function(err, comments){
+		if(!err){
+			res.json(comments);
+		}else{
+			throw err;
+		}
+	});
+});
+
+app.post('/addcomment',  function(req, res) {
+	res.header('Access-Control-Allow-Origin', "*");
+	var errorFlag = false;
+	if(!validator.isAlphanumeric(req.body.usercomment)){
+		errorFlag = true;
+		res.json({saved: false, message: 'Please only use letters and numbers, thanks!'});
+	}
+	if(!validator.isLength(req.body.usercomment, 1, 400)){
+		errorFlag = true;
+		res.json({saved: false, message: 'Please make your comment no more than 400 characters long.'});
+	}
+	if(!errorFlag){
+		var comment = new database.Comment({user_id: req.body.userid, message: sanitizer.escape(req.body.usercomment), block_id: req.body.blockid});
+		comment.save(function(err, comment){
+			if(!err){
+				res.json({saved:true});
+			}else{
+				throw err;
+			}
+		});
+	}
 });

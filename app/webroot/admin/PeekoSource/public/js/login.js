@@ -2,7 +2,7 @@ var serverUrl = window.localStorage.getItem('serverUrl');
 var returningUser = window.localStorage.getItem('userid');
 if(returningUser){
 	
-	//window.location.href = "feed.html";
+	window.location.href = "feed.html";
 }
 
 
@@ -11,7 +11,6 @@ $(function(){
 	var login = function(userid, username){
 		window.localStorage.setItem('userid', userid);
 		window.localStorage.setItem('username', username);
-		alert(window.localStorage.getItem('username'));
 		window.location.href = "feed.html";
 	};
 	

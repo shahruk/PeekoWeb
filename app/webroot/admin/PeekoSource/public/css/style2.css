@@ -18,7 +18,7 @@ a{
 }
 
 header{
-	height: 43px;
+	padding: 3px 0;
 	background: #2cb5dc;
 	color: #FFF;
 	width: 100%;
@@ -32,13 +32,14 @@ header > .linksContainer a{
 	display: block;
 	float: right;
 	color: #eeffff;
-	font-size: 18px;
+	font-size: 28px;
+	margin: 4px 10px;
+	width: 44px !important;
+	height: 42px;
 	background: #2cc1df;
-	padding: 7px 10px;
-	margin: 4px 8px;
 	border-radius: 4px;
+	padding: 6px 8px 4px 8px;
 	border: 1px solid #15adcb;
-	width: 42px !important;
 	text-align: center;
 }
 
@@ -49,7 +50,7 @@ header > .linksContainer a{
 #app{
 	text-align: center;
 	font-size: 32px;
-	margin-top: 2px;
+	margin-top: 0;
 }
 
 header > .linksContainer a:active{

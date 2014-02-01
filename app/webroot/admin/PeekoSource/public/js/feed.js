@@ -79,7 +79,9 @@ $(function(){
 				url: serverUrl+'comments/'+$(_this).parent().parent().data('id'),
 				success: function(response){
 					for(i = 0; i < response.length; i++){
-						addComment($(_this).parent().parent(), response[i]['user_id']['username'], response[i]['message']);
+						try{
+							addComment($(_this).parent().parent(), response[i]['user_id']['username'], response[i]['message']);
+						}catch(e){}
 					}
 				}
 			});
@@ -141,16 +143,21 @@ $(function(){
 			openWindow($(this).data('url'));	
 		});
 		
-		$("body").on("click", ".block .social a.pop", function(e){
+		$("body").on("click", ".block .social a", function(e){
 			e.preventDefault();
-			openWindow($(this).data('url'));
+			openWindow($(this).attr('href'));
 		});
 		
-		$("body").on("click", ".blockImage, .visit", function(e){
-			try{
-				openWindow($(this).data('url'));
-			}catch(e){
-				alert(e);
+		$("body").on("click", ".blockImageContainer, .visit", function(e){
+			e.preventDefault();
+			if($(this).hasClass('blockImageContainer')){
+				openWindow($(this).attr('href'));
+			}else{
+				try{
+					openWindow($(this).data('url'));
+				}catch(err){
+					alert(err);
+				}
 			}
 		});
 	}
