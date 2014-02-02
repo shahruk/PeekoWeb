@@ -87,6 +87,9 @@ $(function(){
 			});
 			
 			$(this).addClass('selected').parent().parent().find('.discussion').stop(true,true).fadeIn(500);
+			$(this).parent().parent().find('textarea').focus();
+			console.log($(this).parent().parent().find('textarea')[0].offsetTop);
+			$("#content").animate({scrollTop: ($(this).parent().parent().find('textarea')[0].offsetTop-30)}, 400);
 		}
 	});
 
